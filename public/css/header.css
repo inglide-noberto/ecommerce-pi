@@ -4,7 +4,6 @@
 /*----------------- MENU TOP ------------------*/
 .menu-top{
     background-color: var(--color-background-1);
-    color: var(--color-text);
     height: 65px;
     
     display: flex;
@@ -17,14 +16,7 @@
     width: 100%;
 }
 
-/*--------- LOGO ---------*/
-.menu-top-logo {
-    width: 203px;
-    height: auto;
 
-    background-image: url('../img/logotipo.svg');
-    background-repeat: no-repeat;
-}
 
 /*--------- BUTTONS ---------*/
 .menu-top-buttons {
@@ -41,23 +33,6 @@
     gap: 15px;
 }
 
-.menu-top-acessibility-buttons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    width: 25px;
-    height: 25px;
-    background-color: var(--color-contrast-1);
-    border-radius: 50%;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 0;
-}
-
-.menu-top-acessibility-buttons .theme {
-    font-size: 18px;
-}
 
 /*--------- USER BUTTONS ---------*/
 .menu-top-user-buttons {
@@ -68,10 +43,6 @@
     text-transform: uppercase;
     font-weight: 600;
 }
-
-
-
-
 
 /*----------------- MENU BOTTOM ------------------*/
 .menu-bottom {
@@ -90,6 +61,7 @@
 }
 
 
+
 /*--------- LINKS TO PAGES ---------*/
 .menu-bottom-links {
     width: 60%;
@@ -102,43 +74,22 @@
     position: relative;
 }
 
-/*--------- UNDERLINE LINK ---------*/
-.menu-bottom-links .home {
-    text-shadow: 0 0 20px var(--color-text);
-}
-
-.home::after {
-    content: "";
-    width: 70px;
-    height: 3px;
-
-    background: var(--color-gradient);
-
-    position: absolute;
-    left: -13px;
-    bottom: -5px;
-}
 
 
+/*----------------- MENU BOTTOM ------------------*/
 /*--------- SEARCH FIELD ---------*/
-.seach-field {
+input.seach-field {
     width: 320px;
     height: 35px;
     padding: 0 16px;
     font-size: 16px;
 
     color: var(--color-text);
-    
-    /*--------- GRADIENT BORDER ---------*/
-    border: 1px solid transparent;
     border-radius: 20px;
-    background: linear-gradient(to right, #090B0D, #090B0D), var(--color-gradient); 
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
 }
 
 /*--------- SEARCH FIELD ON FOCUS ---------*/
-.seach-field:focus {
+input.seach-field:focus {
     border: 1px solid transparent;
     border-radius: 20px;
     background: linear-gradient(to right, #090B0D, #090B0D), var(--color-gradient); 

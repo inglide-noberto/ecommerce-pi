@@ -3,7 +3,7 @@
 body {
     background-image: var(--color-gradient-purple);
     height: 200%;
-    width: 100%;
+    width: 100%; 
 }
 
 .menu-top{
