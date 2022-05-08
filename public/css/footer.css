@@ -1,0 +1,182 @@
+@import url('./general.css');
+
+
+/*-------------- GENERAL FOOTER --------------*/
+footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+
+
+/*-------------- NEWSLETTER --------------*/
+.footer-newsletter {
+    width: 100%;
+    height: 170px;
+    padding: 0 5.5%;
+    background: var(--color-gradient);
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 10%;
+
+    position: absolute;
+    top: -230px;
+    left: 0;
+    z-index: 3;
+}
+
+.newsletter-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.newsletter-text h3 {
+    font-size: 44px;
+}
+
+.newsletter-text p {
+    font-size: 18px;
+}
+
+.newsletter-input{
+    width: 100%;
+    position: relative;
+}
+
+input.newsletter-email {
+    background-color: var(--color-text-opacity-70);
+    height: 80px;
+    padding: 0 10%;
+    border-radius: 50px;
+
+    color: var(--color-background-1);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+}
+
+input.newsletter-email:focus {
+    background: none;
+    background-color: var(--color-text-opacity-70);
+    height: 80px;
+    padding: 0 10%;
+    border-radius: 50px;
+}
+
+.newsletter-button {
+    width: 170px;
+    height: 45px;
+
+    border-radius: 300px;
+    background: var(--color-gradient);
+
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    position: absolute;
+    right: 17px;
+    top: 22%;    
+    cursor: pointer;
+}
+
+.newsletter-button:hover {
+    background: var(--color-gradient-hover); 
+}
+
+
+
+/*-------------- INFOS AND LINKS --------------*/
+
+.footer-links {
+    padding: 150px 0 115px;
+    margin-top: 85px;
+    background-color: var(--color-background-3);
+}
+.footer-links-conteiner {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.footer-description {
+    width: 23%;
+    text-align: justify;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-collum {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+} 
+
+.footer-colluns-links{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-collum a {
+    font-size: 14px;
+}
+
+.footer-collum a:hover {
+    color: var(--color-contrast-1);
+}
+
+.footer-collum h4 {
+    color: var(--color-contrast-1);
+}
+
+
+
+/*-------------- COPYRIGHT --------------*/
+.footer-copyright {
+    width: 100%;
+    height:75px;
+    background: var(--color-background-3);
+}
+
+.footer-copyright-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background: var(--color-gradient);
+}
+
+.footer-copyright-conteiner h5 {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.footer-copyright-conteiner a{
+    color: var(--color-contrast-1);
+}
+
+
+
