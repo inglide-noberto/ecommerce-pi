@@ -1,4 +1,5 @@
 .left-arrow-button, .right-arrow-button {
+    flex-shrink: 1;
     width: 37px;
     height: 37px;
     border-radius: 50%;
