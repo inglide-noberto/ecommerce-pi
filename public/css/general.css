@@ -76,9 +76,10 @@ input[type=text], input[type=email], input[type=number], input[type=date], input
     background: none;
     border: 1px solid var(--color-border);
     border-radius: 10px;
+    padding: 0 10px;
 }
 
-input[type=text]:focus, input[type=email]:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, input[type=date]:focus, input[type=tel]:focus, select:focus  {
     border: .13rem solid transparent;
     background: linear-gradient(to right, var(--color-background-pages), var(--color-background-pages)), var(--color-gradient); 
     background-clip: padding-box, border-box;

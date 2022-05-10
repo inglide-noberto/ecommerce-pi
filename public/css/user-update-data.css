@@ -1,1 +1,53 @@
-@import url("./general.css");
+@import url("./general.css"); 
+@import url("./buttons/button-submit.css");
+
+
+.secao-meus-dados{
+    display: flex;
+    gap:50px;
+
+}
+
+.itens{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.itens h3 {
+    height: 60px;
+    padding: 0 0 0 60px;
+
+    display: flex;
+    align-items: center;
+    background-color: var(--color-background-3);
+}
+
+.itens .item-meus-dados {
+    background-color: var(--color-background-2);
+}
+
+
+
+.meus-dados-inputs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+.dados-pessoas #cpf {
+    width: 48%;
+}
+
+.dados-pessoas #data {
+    width: 48%;
+}
+
+
+.formulario-dados-pessoais {
+    display: flex;
+    flex-direction: column;
+    
+}
