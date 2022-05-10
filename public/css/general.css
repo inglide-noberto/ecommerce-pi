@@ -47,7 +47,7 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1170px;
 }
 
 
@@ -107,7 +107,7 @@ input[type=text]:focus, input[type=email]:focus {
 
 /*---------------- BUTTONS ----------------*/
 
-.buttom-icon {
+.button-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +121,7 @@ input[type=text]:focus, input[type=email]:focus {
 
 }
 
-div .buttom-icon-material {
+div .button-icon-material {
     display: flex;
     justify-content: center;
     align-items: center;

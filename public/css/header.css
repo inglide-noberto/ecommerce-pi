@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.menu-top-conteiner {
+.menu-top-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -23,7 +23,7 @@
     gap: 80px;
 }
 
-.menu-top-buttons, .menu-top-acessibility-buttons, .menu-top-user-buttons, .menu-top-user-buttom {
+.menu-top-buttons, .menu-top-acessibility-buttons, .menu-top-user-buttons, .menu-top-user-button {
     display: flex;
     align-items: center;  
 }
@@ -53,7 +53,7 @@
     align-items: center;
 }
 
-.menu-bottom-conteiner {
+.menu-bottom-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
