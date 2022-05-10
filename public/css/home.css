@@ -1,9 +1,27 @@
 @import url('./general.css');
 
+
+
+/*---------------- GLOBAL ----------------*/
 body {
     height: 300vh;
 }
 
+main {
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.h2-sections {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+
+/*---------------- HERO(BANNER) ----------------*/
 .hero {
     width: 100%;
     height: 635px;
@@ -56,6 +74,7 @@ body {
 }
 
 
+
 /*---------------- BAR ----------------*/
 .bar {
     width: 100%;
@@ -63,7 +82,7 @@ body {
     background-color: var(--color-background-3);
 }
 
-.bar-conteiner {
+.bar-container {
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -99,21 +118,11 @@ body {
 
 
 /*---------------- SECTION SELECIONADOS ----------------*/
-.section-list-products {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.section-list-products h2 {
-    font-size: 28px;
-    text-transform: uppercase;
-}
-
 .product-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1vw;
+    gap: .5vw;
 }
 
 .product-list .button {
@@ -122,6 +131,7 @@ body {
 
 .product-list-item {
     width: 100%;
+    max-width: 23%;
     height: 370px;
     border-radius: 20px;
 
@@ -148,6 +158,7 @@ body {
     background-color: var(--color-background-3);
     
     object-fit: contain;
+    object-position: top;
 }
 
 
@@ -178,3 +189,63 @@ body {
 }
 
 
+
+
+/*---------------- SECTION VERTICAL BANNERS ----------------*/
+.banners-vertical {
+    width: 100%;
+    height: 420px;
+
+    display: flex;
+    gap: 2%;
+}
+
+
+.banners-vertical div {
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-background-3);
+    border-radius: 20px;
+
+    background-image: url("../img/products/Metal-gear-solid-v-the-phantom-pain-cover-art-from-konami.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/*---------------- SECTION GALERY PRODUCTS ----------------*/
+.gallery-products {
+    display: flex;
+    gap: 2%;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+
+
+/*---------------- SECTION HORIZONTAL BANNERS ----------------*/
+.banners-horizontal {
+    width: 100%;
+    height: 290px;
+
+    display: flex;
+    gap: 2%;
+}
+
+
+.banners-horizontal div {
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-background-3);
+    border-radius: 20px;
+
+    background-image: url("../img/products/Metal-gear-solid-v-the-phantom-pain-cover-art-from-konami.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
