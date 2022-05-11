@@ -1,0 +1,106 @@
+@import url('./general.css');
+@import url('./partials/buttons/button-submit.css');
+@import url('./partials/product-item.css');
+
+
+
+body {
+    height: 300vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+/*---------------- STORE BANNER ----------------*/
+.store-banner-container {
+    position: relative;
+}
+
+.store-banner img {
+    width: 100%;
+    height: 330px;
+    opacity: 70%;
+
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 3;
+}
+
+.store-banner::after {
+    content: "";
+    width: 100vw;
+    height: 330px;
+    display: block;
+
+    background: var(--color-gradient);
+
+    z-index: -1;
+    position: absolute;
+    top: 0;
+}
+
+.store-banner h1 {
+    max-width: 40%;
+    font-size: 64px;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 115px;
+}
+
+
+
+
+/*---------------- STORE FILTER ----------------*/
+.store-container {
+    display: flex;
+    gap: 50px
+}
+
+.store-filters {
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.store-filters-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.store-filter-rule {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.store-options{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.store-options-values {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+
+
+
+.store-gallery {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+

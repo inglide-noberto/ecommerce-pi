@@ -1,13 +1,14 @@
 .left-arrow-button, .right-arrow-button {
-    flex-shrink: 1;
     width: 37px;
     height: 37px;
+    padding-top: 2px;
     border-radius: 50%;
     background: var(--color-gradient);
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0.95;
 
     cursor: pointer;
 }
@@ -22,6 +23,11 @@
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+}
+
+
+.left-arrow-button:hover, .right-arrow-button:hover {
+    background: var(--color-gradient-hover);
 }
 
 .left-arrow-button::after {

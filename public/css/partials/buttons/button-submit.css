@@ -1,15 +1,17 @@
 .button-submit {
     width: 100%;
-    max-width: 340px;
+    max-width: 280px;
     height: 40px;
 
     border-radius: 20px;
-    font-size: 16px;
-    font-weight: 900;
+    font-size: 14px;
+    font-weight: 800;
     text-transform: uppercase;
 
-    color: var(--color-background-3);
+    color: var(--color-background-1);
     background: var(--color-gradient);
+
+    cursor: pointer;
 }
 
 .button-submit:hover {

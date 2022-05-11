@@ -27,13 +27,15 @@
     --color-gradient-hover: linear-gradient(to right, #0095be, #8803ca);
     --color-contrast-1: #6B79F6;  
     --color-contrast-2: #43A6F4;
+
     --color-border: #C4C4C4;
 
     --color-text: #ebeeff;
     --color-text-opacity-70: rgba(235, 238, 255, 80%);
     --color-icons: #fff;
 
-    --color-shadow-normal: 0 0 40px rgb(4, 4, 13);
+    --color-shadow-normal: 0 0 30px rgb(4, 4, 13);
+    --color-shadow-color-1: 0 0 40px rgba(84, 3, 255,60%);
 
 }
 
@@ -73,9 +75,13 @@ a {
 input[type=text], input[type=email], input[type=number], input[type=date], input[type=tel], select {
     width: 100%;
     height: 40px;
+    padding: 0 10px;
     background: none;
     border: 1px solid var(--color-border);
     border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
 }
 
 input[type=text]:focus, input[type=email]:focus {
