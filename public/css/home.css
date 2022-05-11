@@ -12,12 +12,6 @@ main {
     gap: 100px;
 }
 
-.h2-sections {
-    font-size: 28px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
 
 /*---------------- HERO(BANNER) ----------------*/
 .hero {
@@ -109,22 +103,6 @@ main {
     width: 50px;
     height: 40px;
     object-fit: contain;
-}
-
-
- 
-
-
-/*---------------- SECTION SELECIONADOS ----------------*/
-.product-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1vw;
-}
-
-.product-list .button {
-    width: 15%;
 }
 
 
