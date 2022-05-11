@@ -1,5 +1,6 @@
 .left-arrow-button, .right-arrow-button {
     width: 37px;
+    min-width: 37px;
     height: 37px;
     padding-top: 2px;
     border-radius: 50%;
@@ -8,7 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0.95;
 
     cursor: pointer;
 }
@@ -22,6 +22,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    
     cursor: pointer;
 }
 
@@ -31,9 +32,9 @@
 }
 
 .left-arrow-button::after {
-    background-image: url('../../img/icons/icon-left-arrow.png');
+    background-image: url('../../../img/icons/icon-left-arrow.png');
 }
 
 .right-arrow-button::after {
-    background-image: url('../../img/icons/icon-right-arrow.png');
+    background-image: url('../../../img/icons/icon-right-arrow.png');
 }

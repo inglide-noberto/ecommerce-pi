@@ -1,11 +1,12 @@
 @import url('./general.css');
 @import url('./partials/product-item.css');
+@import url('./partials/buttons/left-right-buttons.css');
 
 
 
 /*---------------- GLOBAL ----------------*/
 main {
-    padding: 120px;
+    padding-top: 120px;
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -119,7 +120,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: .5vw;
+    gap: 1vw;
 }
 
 .product-list .button {
@@ -146,9 +147,11 @@ main {
     background-color: var(--color-background-3);
     border-radius: 20px;
 
-    background-image: url("../img/products/Metal-gear-solid-v-the-phantom-pain-cover-art-from-konami.webp");
+    background-image: url("../img/icons/img-icon.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    background-size: 70%;
 }
 
 

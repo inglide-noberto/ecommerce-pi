@@ -60,28 +60,38 @@ body {
 
 .store-filters {
     width: 20%;
+    
+    text-transform: uppercase;
+    font-size: 22px;
 
     display: flex;
     flex-direction: column;
     gap: 30px;
+
 }
 
 .store-filters-inputs {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 40px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.store-filters-inputs h3 {
+    font-size: 18px;
 }
 
 .store-filter-rule {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 15px;
 }
 
 .store-options{
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 6px;
 }
 
 .store-options-values {
@@ -93,7 +103,7 @@ body {
 
 
 
-
+/*---------------- STORE GALLERY ----------------*/
 .store-gallery {
     width: 100%;
 

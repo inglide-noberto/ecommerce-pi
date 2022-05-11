@@ -28,7 +28,6 @@
     background-color: var(--color-background-3);
     
     object-fit: contain;
-    object-position: top;
 }
 
 .product-item-info {
