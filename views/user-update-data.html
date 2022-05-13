@@ -8,13 +8,14 @@
         
     </head>
 
-    <body >
+    <body>
+
     <section class="container secao-meus-dados">
         
-        <div class="itens">
+        <div class="menu">
             <h3>Minha Conta</h3>
             <h3>Meus Pedidos</h3>
-            <h3 class="item-meus-dados">Meus Dados</h3>
+            <h3 class="menu-meus-dados">Meus Dados</h3>
             <br>
         </div>
 
@@ -28,9 +29,10 @@
         <div class="dados-pessoas">
             <h2 id="subtitulo">DADOS PESSOAS</h2>
             <br>
+        </div>
             
             <form class="formulario-dados-pessoais" action="" method="POST">
-                
+            
                 <label for="nome">Nome do Destinário</label>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
                 <br>
@@ -39,13 +41,14 @@
                 <input type="email" name="email" id="email" placeholder="Digite seu email">
                 <br>
                 
-                
+                <fieldset>
                     <label for="cpf">CPF</label>
-                <input type="number" class="form-control cpf-mask" name="cpf" id="cpf" placeholder="Digite seu CPF" >
+                       <input type="number"   name="cpf" id="cpf"  placeholder="Digite seu CPF" >
 
-                <label for="data">Data de Nascimento</label>
-                <input type="date" name="data" id="data" placeholder="Digite sua data de nascimento" >
-                <br>
+                    <label for="data">Data de Nascimento<label>
+                       <input type="date" name="data" id="data" placeholder="Digite sua data de nascimento" >
+                          <br>
+                </fieldset>
                 
                 
                 <label for="telefone">Telefone</label>
@@ -58,8 +61,7 @@
                         <option value="3">Prefiro não informar</option>
                 </select>
                 <br><br>
-                </div>
-
+            
                 <div class="endereco"> 
                     <h2 id="subtitulo">ENDEREÇO</h2>
                     <br>
@@ -68,9 +70,8 @@
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
                 <br>
                 
-            
                 <label for="nome">Endereço</label>
-                <input type="text" name="nome" id="nome" placeholder="Digite seu endereço">
+                <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço">
                 <br>
                 
                 <label for="numero">Número</label>
@@ -147,10 +148,10 @@
                 </div>
 
                 <div class="botao">
-                <button class="button-submit" type="submit">SALVAR INFORMAÇÕES</button>
-            </div>
-        </form>
-        </div>
+                    <button type="submit">SALVAR INFORMAÇÕES</button>
+                </div>
+
+            </form>     
         </section>
     </body>
 </html>
