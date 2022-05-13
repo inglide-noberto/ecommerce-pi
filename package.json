@@ -20,6 +20,7 @@
   "description": "",
   "dependencies": {
     "ejs": "^3.1.7",
-    "node": "^17.7.2"
+    "node": "^17.7.2",
+    "nodemon": "^2.0.16"
   }
 }
