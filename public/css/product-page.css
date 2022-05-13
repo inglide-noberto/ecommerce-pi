@@ -36,6 +36,7 @@
 .product-infos-images {
     width: 45%;
     min-width: 45%;
+    height: 630px;
 
     display: flex;
     flex-direction: column;
@@ -89,8 +90,8 @@
 }
 
 .secondary-images-min {
-    width: 16%;
-    height: 100%;
+    width: 16%; 
+    height: 80%;
     background-color: var(--color-background-3);
     border-radius: 10px;
     cursor: pointer;
@@ -99,6 +100,13 @@
 .secondary-images img {
     width: 60%;
 }
+
+.secondary-images a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 
