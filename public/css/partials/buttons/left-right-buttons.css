@@ -13,6 +13,11 @@
     cursor: pointer;
 }
 
+.right-arrow-button {
+    background: var(--color-gradient-invert);
+}
+
+
 
 .left-arrow-button::after, .right-arrow-button::after {
     content: "";
@@ -27,7 +32,10 @@
 }
 
 
-.left-arrow-button:hover, .right-arrow-button:hover {
+.right-arrow-button:hover {
+    background: var(--color-gradient-hover-invert);
+}
+.left-arrow-button:hover {
     background: var(--color-gradient-hover);
 }
 
