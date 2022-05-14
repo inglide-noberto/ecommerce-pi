@@ -1,10 +1,10 @@
 @import url("./general.css"); 
 @import url("./buttons/button-submit.css");
 
-
-.secao-meus-dados{
-    display:flex ;
-    gap:50px;
+.container-section-my-data{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
 
 }
 
@@ -14,22 +14,41 @@
     flex-direction: column;
 }
 
-.menu h3 {
+.menu h3{
     height: 60px;
     padding: 0 0 0 60px;
-
     display: flex;
     align-items: center;
     background-color: var(--color-background-3);
+
 }
 
-.menu .menu-meus-dados {
+.icon-menu{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.user-icon{
+    width: 23px;
+    height: 23px;
+}
+
+.box-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.patient-icon{
+    width: 25px;
+    height: 20px;
+}
+
+.menu-my-data{
     background-color: var(--color-background-2);
-}
-
-fieldset {
-    border: 0;
-
+    display: flex;
+    align-items: center;
 }
 
 .meus-dados-inputs {
@@ -38,19 +57,57 @@ fieldset {
     flex-wrap: wrap;
 }
 
+.personal-data-form #cpf{
+    width: 50%;
+}
 
-.dados-pessoas #cpf {
-    width: 48%;
+.personal-data-form #telephone{
+    width: 50%;
+}
+
+.personal-data-form #date{
+    width: 40%;
+}
+
+.personal-data-form #sexo{
+    width: 35%;
+    background-color: #1f242d;
+
+}
+
+.personal-data-form #number{
+    width: 50%;
+}
+
+.personal-data-form #district{
+    width:50%;
     
 }
 
-.dados-pessoas #data {
-    width: 48%;
+.personal-data-form #city{
+    width: 50%;
+    
 }
 
+.personal-data-form #state{
+    width: 50%;
+    background-color: #1f242d;
+}
 
-.formulario-dados-pessoais {
+.personal-data-form #phone{
+    width: 50%;
+}
+
+.personal-data-form #cep{
+    width: 50%;
+}
+
+fieldset{
+    border: 0;
+}
+
+.group{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: center;
+    flex-wrap: nowrap;
 }

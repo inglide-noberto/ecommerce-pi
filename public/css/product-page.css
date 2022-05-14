@@ -14,7 +14,7 @@
 .product-content {
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 100px;
 }
 
 
@@ -25,27 +25,26 @@
 }
 
 
-/*------------------ PRODUCT DETAILS ------------------*/
+/*------------------ PRODUCT IFOS DETAILS ------------------*/
 .product-infos {
     display: flex;
-    gap: 10%;
+    gap: 5%;
 }
 
 
 /*------------------ PRODUCT IMAGES ------------------*/
 .product-infos-images {
-    width: 45%;
-    min-width: 45%;
-    height: 630px;
+    width: 50%;
+    min-width: 50%;
 
     display: flex;
     flex-direction: column;
-    gap: 3%;
+    gap: 1.1%;
 }
 
 .product-infos-images .principal-image {
     width: 100%;
-    height: 100%;
+    min-height: 530px;
     
     background-color: var(--color-background-3);
     border-radius: 20px;
@@ -54,20 +53,20 @@
 
 
 .secondary-images {
-    height: 22%;
+    min-height: 100px;
     position: relative;
 }
 
 .secondary-images .button {
-    width: 32px;
-    min-width: 32px;
-    height: 32px;
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
 
     position: absolute;
-    top: 28px;
+    top: 33px;
 }
 
-.left-arrow-button::after, .right-arrow-button::after {
+.secondary-images .left-arrow-button::after, .secondary-images .right-arrow-button::after {
     width: 16px;
     height: 16px;
 }
@@ -91,9 +90,9 @@
 
 .secondary-images-min {
     width: 16%; 
-    height: 80%;
+    height: 100%;
     background-color: var(--color-background-3);
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -115,13 +114,13 @@
 .product-info {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 .product-info-description {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
 .product-info-description h2 {
@@ -137,7 +136,7 @@
 .product-info-description div {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
 }
 
 .product-info-description a {
@@ -146,9 +145,16 @@
 }
 
 /*------- PRICE --------*/
+.product-info-price {
+    display: flex;
+    flex-direction: column;
+    gap: 3px
+}
+
 .product-info-price span{
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 200;
+    color: var(--color-text-opacity-70);
 }
 
 .product-info-price span:first-child{
@@ -156,27 +162,42 @@
 }
 
 .product-info-price h3{
-    font-size: 26px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.product-info-price span:last-child{
+    font-size: 16px;
 }
 
 /*------- SHIPPING --------*/
 .product-info-shipping {
     position: relative;
-    width: 40%;
+    max-width: 255px;
     
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+}
+
+.product-info-shipping input {
+    max-width: 255px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+
+    border: none;
+    background-color: var(--color-background-3);
 }
 
 .product-info-shipping img {
-    width: 18px;
-    opacity: 50%;
+    width: 17px;
+    opacity: 30%;
 }
 .product-info-shipping button{
     position: absolute;
     right: 15px;
-    top: 10px;
+    top: 15px;
 }
 
 /*------- ADRESS --------*/
@@ -186,32 +207,34 @@
 }
  
 .product-info-cep-price span:first-child {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: -2px;
 }
 
 .product-info-cep-price span:last-child {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 /*------- MODELS --------*/
 .product-info-model {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 .product-info-model button {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-background-3);
+    border-radius: 4px;
 }
 
 .product-info-model img {
-    width: 100%;
-    height: 100%;
-    
-    background-color: var(--color-background-1);
-    border-radius: 5px;
+    width: 70%;
 }
 
 
@@ -219,7 +242,10 @@
 
 /*------------------ SHOP BUTTON ------------------*/
 .product-info-button {
-    width: 250px;
+    width: 300px;
+    height: 60px;
+
+    font-size: 24px;
 }
 
 
