@@ -1,0 +1,10 @@
+@import url('./general.css');
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    gap: 5px;
+}
