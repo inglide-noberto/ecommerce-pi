@@ -1,0 +1,197 @@
+@import url(../css/general.css);
+@import url(../css/partials/buttons/button-submit.css);
+
+
+
+    /* cart menu  */
+.cart-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1165px;
+    height: 70px;
+    background-color: var(--color-background-3);
+}
+
+
+.cart-menu-navigation {
+    display: flex;
+    gap: 179px;
+}
+
+.subparagraph-my-cart {
+    margin: 50.45px 0 50px 0;
+}
+
+.cart-content {
+    display: flex;
+    gap: 16px;
+    width: 1165px;
+    border: solid 2px rgb(150, 114, 30);
+}
+
+.cart-content-juction {
+    width: 835px;
+}
+
+.cart-content-juction-specification-1 {
+    display: flex;
+    justify-content:space-between;
+    width: 831px;
+    margin-bottom: 10px;
+    border: solid 1px blue;
+}
+
+.specification-1-QUANTIDADE-ENTREGA-PRECO {
+    display: flex;
+    gap: 50px;
+    width: 350px;
+    border: solid 2px green;
+}
+
+.content-juction-specification-product {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    width: 831px;
+    border-top: solid 2px var(--color-background-3);
+    border-bottom: solid 2px var(--color-background-3);
+    padding: 10px;
+    border: solid 2px rgb(171, 15, 127);
+}
+
+.juction-specification-2-image-name-information{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 423px;
+    border: solid 2px rgb(150, 114, 30);
+}
+
+.especificanton-2-rectangle-img {
+    width: 100px;
+    height: 110.25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--color-background-3);
+    border: solid 2px rgb(150, 114, 30);
+    
+}
+
+.produtc-img {
+    width: 67.11px;
+    height: 50.14px;
+}
+
+
+.name-product {
+    font-size: 14px;
+}
+
+.content-juction-spacificantion-2 {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    /* width: 205px; */
+    /* gap: 51px; */
+    border: solid 2px rgb(4, 229, 233);
+}
+
+.the-amount, input[type=number] {
+    width: 90px;
+}
+
+.deadline {
+    width: 104px;
+    position: relative;
+    left: 15px;
+}
+
+.cart-contect-Oder-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 318px;
+    height: 420.96px;
+    background-color: var(--color-background-3);
+    border-radius: 20px;
+    border: solid 2px rgb(74, 32, 189);
+}
+
+.Oder-summary{
+    font-weight: 600;
+    margin: 34px 0 34px 0;
+}
+
+.Oder-summary-name-value {
+    display: flex;
+    justify-content: space-between;
+    width: 227px;
+    border: solid 2px rgb(74, 32, 189);
+    padding-bottom: 12px;
+}
+
+.Oder-summary-freight-value {
+    display: flex;
+    justify-content: space-between;
+    width: 227px;
+    padding-bottom: 17px;
+    border-bottom: solid 2px var(--color-background-pages);
+}
+
+.Oder-summary-total-value {
+    display: flex;
+    justify-content: space-between;
+    width: 227px;
+    padding-top: 18px;
+}
+
+.Oder-summary-fees {
+    display: flex;
+    justify-content: flex-end;
+    width: 227px;
+    padding-bottom: 18px;
+}
+
+.Oder-summary-link-pix {
+    width: 227px;
+    padding-bottom: 16.87px;
+    color: rgba(84, 3, 255,60%);
+    border-bottom: solid 2px var(--color-background-pages);
+}
+
+.button-submit {
+    width: 220px;
+    margin-top: 37px;
+}
+
+.Oder-summary-link-to-add {
+    margin-top: 19.4px;
+    color: rgba(84, 3, 255,60%);
+}
+
+.cart-freight {
+    width: 400px;
+    position: relative;
+    bottom: 223px;
+    z-index: 2;
+    border:solid 2px rgba(11, 242, 53, 0.6);
+
+}
+
+.cart-freigth-subparagrafo {
+    margin: 0 0 9px 0;
+}
+
+.cart-freight-calcular, input[type=text] {
+    width: 265px;
+    margin-bottom: 17px;
+}
+
+.cart-freight-deadline {
+    display: flex;
+    flex-direction: column;
+}
+

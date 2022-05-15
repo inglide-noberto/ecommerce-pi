@@ -76,7 +76,7 @@ a {
 
 /*--------- INPUTS  ---------*/
 input[type=text], input[type=email], input[type=number], input[type=date], input[type=tel], select {
-    width: 100%;
+    width: 100%px;
     height: 40px;
     padding: 0 10px;
     background: none;
