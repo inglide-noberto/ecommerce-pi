@@ -1,7 +1,7 @@
 .left-arrow-button, .right-arrow-button {
-    width: 37px;
-    min-width: 37px;
-    height: 37px;
+    width: 54px;
+    min-width: 54px;
+    height: 54px;
     padding-top: 2px;
     border-radius: 50%;
     background: var(--color-gradient);
@@ -21,8 +21,8 @@
 
 .left-arrow-button::after, .right-arrow-button::after {
     content: "";
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     
     background-size: 100%;
     background-repeat: no-repeat;
