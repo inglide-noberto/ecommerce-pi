@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/cart.css">
+    <title>Carrinho</title>
+</head>
+<body>
+    <main class="container">
+        <section class="cart">
+            <div class="cart-menu">
+                <nav class="cart-menu-navigation">
+                    <a href="#">CARRINHO</a>
+                    <a href="#">ENTREGA</a>
+                    <a href="#">PAGAMENTO</a>
+                </nav>
+            </div>
+            <h1 class="subparagraph-my-cart">MEU CARRINHO</h1>
+            <!-- começo div do conteudo  -->
+            <div class="cart-content">
+                <!-- começco divisão de junçao  -->
+                <div class="cart-content-juction">
+                    <span class="cart-content-juction-specification-1"> <h4>MEU CARRINHO</h4> <span class="specification-1-QUANTIDADE-ENTREGA-PRECO"> <h4>QUANTIDADE</h4> <h4>ENTREGA</h4> <h4>PREÇO</h4> </span></span>
+                    <div class="content-juction-specification-product"> 
+                        <div class="juction-specification-2-image-name-information">
+                            <div class="especificanton-2-rectangle-img">
+                            <img class="produtc-img" src="../public/img/icons/img-icon.png" alt="imagem do produto">                          
+                            </div>
+                                <span class="information-product-img">
+                                    <h2 class="sub1">Lorem Ipsum</h2>                                                      
+                                    <p class="name-product">                               
+                                    Lorem ipsum dolor sit int amet, consectetur
+                                    </p>
+                                </span>
+                        </div>
+                            <div class="content-juction-spacificantion-2">
+                                <form action="">
+                                    <input class="the-amount" type="number">
+                                </form>
+                                <h4 class="deadline">Receba até 09 de maio</h4>
+                                <h4>R$23,99</h4>
+                            </div>
+                    </div>                    
+                </div>
+                <!-- final divisão de junçao  -->
+                    <div class="cart-contect-Oder-summary">
+                        <h3 class="Oder-summary">RESUMO DO MEU PEDIDO</h3>
+                        <span class="Oder-summary-name-value"><p> 10 PRODUTO</p> <P> R$239,90 </P></span>
+                        <span class="Oder-summary-freight-value"><p> Frete </p> <P> R$4,99 </P></span>
+                        <span class="Oder-summary-total-value"><p> TOTAL </p> <p> R$244,98 </p></span>
+                        <span class="Oder-summary-fees"><p> Em até 6x sem juros </p></span>
+                        <a class="Oder-summary-link-pix" href="#">R$ 205,00  pagando com PIX</a>
+                        <button class="button-submit">continuar</button>
+                        <a class="Oder-summary-link-to-add" href="#">Adicionar mais produtos</a>
+                    </div>                
+            </div>
+            <!-- final div do conteudo  -->
+                <div class="cart-freight">
+                    <h2 class="cart-freigth-subparagrafo">Calcular Frete</h2>
+                    <form action="">
+                        <input class="cart-freight-calcular" type="text" name="fretes" placeholder="CEP">
+                    </form>
+                    <form class="cart-freight-deadline" action="">
+                        <div><input type="checkbox" id="junho" name="junho"> <label for="junho">Entrega até 04 de <strong> Junho - R$ 14,99 </strong> </label></div>
+                        <div><input type="checkbox" id="junho" name="junho"> <label for="junho">Entrega até 04 de <strong> Junho - R$ 14,99 </strong> </label></div>
+                    </form>
+                </div>
+        </section>
+    </main>
+</body>
+</html>
