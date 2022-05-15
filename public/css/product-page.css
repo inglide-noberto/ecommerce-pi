@@ -63,7 +63,7 @@
     height: 35px;
 
     position: absolute;
-    top: 33px;
+    top: 33px; 
 }
 
 .secondary-images .left-arrow-button::after, .secondary-images .right-arrow-button::after {
@@ -248,21 +248,15 @@
     font-size: 24px;
 }
 
-
-
-
-
 .product-details-blocks {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.product-details-blocks h3, .product-details-blocks p {
-    color: var(--color-text-opacity-70);
-}
-
 .product-details h3 {
+    font-size: 24px;
+    font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
