@@ -1,10 +1,6 @@
 @import url(./general.css);
 @import url(./partials/buttons/button-submit.css);
 
-.container {
-    border: solid 2px rgb(208, 156, 13);
-}
-
 .entrega {
  margin: 60px 0 40px 0;
 }
@@ -94,8 +90,12 @@ form {
     z-index: 2;
 }
 
-.information-state {
+.information-state-select {
     width: 190px;
+}
+
+option {
+    color: blueviolet;
 }
 
 .div-information-reference {
