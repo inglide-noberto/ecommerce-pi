@@ -1,0 +1,63 @@
+@import url(./general.css);
+@import url(./partials/buttons/button-submit.css);
+
+
+.payment-pix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagar-com-pix {
+    font-size: 24px;
+    margin-top: 75px;
+}
+
+.description-pix {
+    width: 500px;
+    margin-top: 26px;
+}
+
+.payment-of-QRcode {
+    display: flex;
+    align-items: center;
+    gap: 138px;
+    margin-top: 25px;
+}
+
+.img-QRcode {
+    width: 250px;
+    height: 250px;
+}
+
+.payment-of-QRcode-how-to-pay-QRcode {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.how-to-pay-QRcode {
+    width: 280px;
+}
+
+.line {
+    width: 668px;
+    margin: 36px 0 30px 0;
+    border-bottom: solid 2px rgb(115, 115, 119)
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.price {
+    color: #6B79F6;
+}
+
+.button-submit {
+    margin-top: 45px;
+}
+
+
