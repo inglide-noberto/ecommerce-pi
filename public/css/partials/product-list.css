@@ -1,7 +1,3 @@
-@import url('product-item.css');
-@import url('../general.css');
-@import url('buttons/left-right-buttons.css');
-
 /*---------------- SECTION SELECIONADOS ----------------*/
 .product-list {
     display: flex;
