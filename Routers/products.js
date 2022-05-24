@@ -3,6 +3,6 @@ const ProductsController = require('../controllers/ProductsController')
 
 const router = express.Router()
 
-router.get('/', ProductsController.indexView)
+router.get('/:id', ProductsController.indexView)
 
 module.exports = router

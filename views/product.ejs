@@ -25,8 +25,8 @@
                 <div class="product-infos-images">
         
                     <div class="principal-image">
-                        <img src="<%= image %>" alt="">
-                        <% console.log(image)%>
+                        <img src="<%= product.images[0] %>" alt="">
+
                         <div class="share-buttons">
                             <a href=""></a>
                             <a href=""></a>
@@ -37,25 +37,12 @@
                     <div class="secondary-images">
                         <div>
                             <a href="" class="left-arrow-button button"></a>
-
-                            <a href="" class="secondary-images-min">
-                                <img src="../public/img/icons/img-icon.png" alt="">
-                            </a>
-                            <a href="" class="secondary-images-min">
-                                <img src="../public/img/icons/img-icon.png" alt="">
-                            </a>
-                            <a href="" class="secondary-images-min">
-                                <img src="../public/img/icons/img-icon.png" alt="">
-                            </a>
-                            <a href="" class="secondary-images-min">
-                                <img src="../public/img/icons/img-icon.png" alt="">
-                            </a>
-                            <a href="" class="secondary-images-min">
-                                <img src="../public/img/icons/img-icon.png" alt="">
-                            </a>
-                            <a href="" class="secondary-images-min">
-                                <img src="../public/img/icons/img-icon.png" alt="">
-                            </a>
+                            <% let arrayImages = product.images
+                            for(  i = 1, i <= arrayImages.length, i++) {%>
+                                <a href="" class="secondary-images-min">
+                                    <img src="<%= arrayImages[i] %>" alt="">
+                                </a>
+                            <% } %>
 
                             <a href="" class="right-arrow-button button"></a>
 
@@ -66,16 +53,17 @@
         
                 <div class="product-info">
                     <div class="product-info-description">
-                        <h2>Lorem Ipsum Dolor Sit int amet</h2>
+                        <h2><%= product.title %> <%= product.id %> - <%= product.brand %></h2>
                         <div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis</p>
+                            <p><%= product.short_description %></p>
                             <a href="#product-details">Ver mais detalhes</a>
                         </div>
                     </div>
                     <div class="product-info-price">
-                        <span>R$ 354,99</span>
-                        <h3>R$ 239,99</h3>
-                        <span>6x de R$39,84 sem juros</span>
+                        <span>R$ <%= product.price %></span>
+                        <h3>R$ <%= product.promotional_price %></h3>
+                        
+                        <span>6x de R$<%=  (parseInt(product.promotional_price)/6).toFixed(2) %> sem juros</span>
                     </div>
         
                     <div class="product-info-shipping">
@@ -114,43 +102,25 @@
 
                 <div class="product-details-blocks">
                     <div class="product-details-block">
-                        <h3>Lorem ipsum dolor sit int amet</h3>
+                        <h3>Informações técnicas</h3>
                         <div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis.
-                            </p><br>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
-                            </p>
+                            <p>Título: <%= product.title %></p>
+                            <p>Marca: <%= product.brand %></p>
+                            <p>Ano lançamento: <%= product.year %></p>
+                            <% for(categorie of product.categories){ %>
+                                <p>Categoria:  <%= categorie %></p>
+                            <% } %>
                         </div>
                     </div>
 
                     <div class="product-details-block">
-                        <h3>Lorem ipsum dolor sit int amet</h3>
+                        <h3>Conheça mais</h3>
                         <div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis.
-                            </p><br>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
-                            </p>
+                            <p><%= product.short_description%></p><br>
+                            <p><%= product.full_description%></p>
                         </div>
                     </div>
 
-                    <div class="product-details-block">
-                        <h3>Lorem ipsum dolor sit int amet</h3>
-                        <p>Medidas do Produto Montado: <br>
-                            Altura: 95cm <br>
-                            Profundidade fechado: 90cm <br>
-                            Profundidade aberto: 150cm <br>
-                            Largura: 150cm <br>
-                            <br>
-                            IMPORTANTE: Não há necessidade de montagem, pois o mesmo já vai montado. <br>
-                            <br>
-                            Informações Extras: <br>
-                            Peso suportado: 110kg por pessoa <br>
-                            Quantidades de Lugares: acomoda até 2 pessoas <br>
-                            Garantia: 6 meses <br>
-                            Fabricante: Cama inBox <br>
-                            <br>
-                            *Entra facilmente em qualquer porta acima de 65cm de  largura</p>
-                    </div>
                 </div>
             </div>
 
