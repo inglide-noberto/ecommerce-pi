@@ -37,10 +37,9 @@
                     <div class="secondary-images">
                         <div>
                             <a href="" class="left-arrow-button button"></a>
-                            <% let arrayImages = product.images
-                            for(  i = 1, i <= arrayImages.length, i++) {%>
+                            <% for(image of product.images){ %>
                                 <a href="" class="secondary-images-min">
-                                    <img src="<%= arrayImages[i] %>" alt="">
+                                    <img src="<%= image %>" alt="">
                                 </a>
                             <% } %>
 
