@@ -1,0 +1,104 @@
+@import url(../css/general.css);
+@import url(../css/partials/buttons/button-submit.css);
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-1 {
+    display: flex;
+    gap: 41px;
+    width: 1175px;
+    /* border: solid 2px goldenrod; */
+}
+
+.options {
+ width: 370px;
+ /* border: solid 2px red; */
+}
+
+.option-my-account,.option-my_demand,.option-my_dados {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    gap: ;
+    width: 370px;
+    height: 70px;
+    background-color: var(--color-background-3);
+    /* border: solid 2px yellowgreen; */
+}
+
+.img_my_account,.img_my_demand,.img_my_dados {
+    width: 23px;
+    margin-left: 73px;
+}
+/* 
+.section-1-dados {
+    border: solid 2px blanchedalmond;
+} */
+
+.title-my_dados {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 44px;
+}
+
+.sub-title-info-access {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 26px;
+}
+
+.sub-title-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sub-title-email {
+    font-size: 18px;
+    margin-bottom: 26px;
+}
+
+.button-submit {
+    width: 130px;
+    height: 35px;
+}
+
+.section-1-adress {
+    position: relative;
+    top: 83px;
+    z-index: 2;
+    /* border: solid 2px brown; */
+}
+
+.sub-title-adress {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.adress-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.adress-road {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.adress-localization {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.adress-tel {
+    font-size: 18px;
+    margin-bottom: 26px;
+    margin-bottom: 54px;
+}
+
+
+
