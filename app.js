@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //-------------- ROUTES -----------------
 app.use('/', routersIndex)
-app.use('/products', routersProducts)
+app.use('/loja', routersProducts)
 
 
 

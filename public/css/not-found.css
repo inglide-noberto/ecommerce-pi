@@ -1,27 +1,32 @@
-@import url(./general.css);
-@import url(../css/partials/buttons/button-submit.css);
-
-
+@import url(./partials/buttons/button-submit.css);
 .sucess {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
     align-items: center;
-    margin-top: 90PX;
+    margin: 250px 0 -30px;
 }
 
 .sucess-img {
     width: 270px;
+    margin-bottom: 30px;
 }
 
 .completed-order {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+
+.completed-order h1{
+    font-weight: 600;
+    text-transform: uppercase;
 
 }
 
-p {
+.completed-order p {
     width: 447px;
     text-align: center;
+    font-weight: 400;
 }

@@ -1,11 +1,10 @@
-
+    
     <div class="product-list">
         <a href="" class="left-arrow-button button"></a>
 
-        <%- include('./product-item.ejs') %>
-        <%- include('./product-item.ejs') %>
-        <%- include('./product-item.ejs') %>
-        <%- include('./product-item.ejs') %>
+        <% productsData.map(product => { %>
+            <%- include('./product-item.ejs', {product}) %>
+        <% }) %>
 
         <a class="right-arrow-button button"></a>
     </div>  

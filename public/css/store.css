@@ -4,16 +4,13 @@
 
 
 
-body {
-    height: 300vh;
-
-    display: flex;
-    flex-direction: column;
-    gap: 70px;
-}
 
 /*---------------- STORE BANNER ----------------*/
 .store-banner-container {
+    position: relative;
+}
+
+.store-banner {
     position: relative;
 }
 
@@ -54,7 +51,10 @@ body {
 
 /*---------------- STORE FILTER ----------------*/
 .store-container {
+    margin-top: 100px;
+
     display: flex;
+    width: 100%;
     gap: 50px
 }
 
@@ -100,10 +100,19 @@ body {
     gap: 8px;
 }
 
+.store-options-values div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
 
 
 
 /*---------------- STORE GALLERY ----------------*/
+.store-gallery-products {
+    width: 100%;
+}
+
 .store-gallery {
     width: 100%;
 
@@ -113,4 +122,12 @@ body {
     gap: 50px;
 }
 
+.product-item {
+    max-width: 207.593px;
+    max-height: 333px;
+}
+
+/* .product-item .image {
+    max-height: 63%;
+} */
 

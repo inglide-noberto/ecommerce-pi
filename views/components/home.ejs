@@ -1,0 +1,94 @@
+<!-- ---------------------- HERO ----------------------- -->
+<section class="hero">
+    <div class="left-arrow-button"></div>
+    
+    <div class="hero-banner container">
+        <h1>Banner</h1>
+        <span>Lorem ipsum dolor sit int amet, consectetur</span>
+        <input type="button" value="Lorem Ipsum">
+    </div>
+    <div class="right-arrow-button"></div>
+</section>
+
+
+<!-- ---------------------- BAR ----------------------- -->
+<section class="bar">
+    <div class="bar-container container">
+        <div class="bar-item">
+            <img src="/img/icons/frete-icon-b.png" class="bar-item-image"/>
+            <div class="bar-item-text">
+                <h5>Frete Grátis</h5>
+                <span>Em compras acima de R$200</span>
+            </div>
+        </div>
+        <div class="bar-item">
+            <img src="/img/icons/credit-card-icon-b.png" class="bar-item-image"/>
+            <div class="bar-item-text">
+                <h5>Parcele Suas Compras</h5>
+                <span>No cartão de crédito</span>
+            </div>
+        </div>
+        <div class="bar-item">
+            <img src="/img/icons/insurance-b.png" class="bar-item-image"/>
+            <div class="bar-item-text">
+                <h5>Compra Garantida</h5>
+                <span>Site 100% seguro</span>
+            </div>
+        </div>
+        <div class="bar-item">
+            <img src="/img/icons/discount--icon-b.png" class="bar-item-image"/>
+            <div class="bar-item-text">
+                <h5>Desconto</h5>
+                <span>Pagando com boleto</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ---------------------- MAIN ----------------------- -->
+<main class="container">
+
+    
+<!-- ---------------------- PRODUCT LIST ----------------------- -->
+    <section class="section-products-list">
+            <h2 class="h2-sections">Selecionados Para Você</h2>
+            <%- include('../partials/product-list.ejs') %>
+    </section>
+
+
+<!-- ---------------------- BANNERS VERTICALS ----------------------- -->
+    <section class="banners-vertical">
+        <div class="banners-image-left"></div>
+        <div class="banners-image-center"></div>
+        <div class="banners-image-right"></div>
+    </section>
+
+
+<!-- ---------------------- PRODUCT GALLERY ----------------------- -->
+    <section class="section-gallery-products">
+        <h2 class="h2-sections">Destaques</h2>
+        <div class="gallery-products">
+
+            <% for (product of productsData) { console.log('-------------------------------------------', product); %>
+                <%- include('../partials/product-item.ejs', {product: product}); %>
+            <% }; %>
+
+        </div>
+    </section>
+
+
+
+<!-- ---------------------- BANNERS BANNERS HORIZONTALS ----------------------- -->
+    <section class="banners-horizontal">
+        <div class="banners-image-left"></div>
+        <div class="banners-image-right"></div>
+    </section>
+
+
+<!-- ---------------------- PRODUCT LIST ----------------------- -->
+    <section class="section-products-list">
+        <h2 class="h2-sections">Promoções imperdivéis</h2>
+        <%- include('../partials/product-list.ejs') %>
+    </section>
+</main>

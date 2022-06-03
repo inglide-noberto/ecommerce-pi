@@ -1,7 +1,6 @@
 
 .product-item {
-    width: 100%;
-    max-width: 23%;
+    width: 241.969px;
     height: 370px;
     border-radius: 20px;
 
@@ -43,7 +42,7 @@
     margin-top: 10px;
 }
 
-.product-item-info-text {
+.product-item-info-text { 
     display: flex;
     flex-direction: column;
     gap: 12px;
