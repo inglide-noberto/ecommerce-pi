@@ -1,0 +1,12 @@
+<div class="product-item">
+    <a href="../../loja/<%= product.slug%>" class="image">
+        <img  src="<%= product.images[0] %>" alt="">
+    </a>
+    <div class="product-item-info">
+        <div class="product-item-info-text">
+            <a href=""><span class="title"><%= product.id %>: <%= product.title %> - <%= product.brand %></span></a>
+            <a href=""><span class="price">R$ <%= product.price %></span></a>
+        </div>    
+        <a href="#"><img class="like-button" src="/img/icons/like-icon-b.png" alt=""></a>
+    </div>
+</div>

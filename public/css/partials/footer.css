@@ -1,5 +1,3 @@
-@import url('../general.css');
-
 
 
 /*-------------- GENERAL FOOTER --------------*/
@@ -7,7 +5,6 @@ footer {
     display: flex;
     flex-direction: column;
     position: relative;
-    
 }
 
 
@@ -38,10 +35,12 @@ footer {
 
 .newsletter-text h3 {
     font-size: 44px;
+    font-weight: 500;
 }
 
 .newsletter-text p {
     font-size: 18px;
+    text-align: start;
 }
 
 .newsletter-input{
@@ -59,6 +58,7 @@ input.newsletter-email {
     font-size: 16px;
     font-weight: 600;
     border: none;
+    text-transform: uppercase;
 }
 
 input.newsletter-email:focus {
@@ -95,8 +95,8 @@ input.newsletter-email:focus {
 /*-------------- INFOS AND LINKS --------------*/
 
 .footer-links {
-    padding: 150px 0 115px;
-    margin-top: 85px;
+    padding: 150px 0 60px;
+    margin-top: 250px;
     background-color: var(--color-background-3);
 }
 .footer-links-container {
@@ -106,7 +106,9 @@ input.newsletter-email:focus {
     position: relative;
 }
 
-.footer-description {
+.footer-description  {
+    all: initial;
+
     width: 23%;
     text-align: justify;
 

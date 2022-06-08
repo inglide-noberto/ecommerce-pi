@@ -1,0 +1,11 @@
+    
+    <div class="product-list">
+        <a href="" class="left-arrow-button button"></a>
+
+        <% for(let i=0; i < 4; i++) { 
+            let product = productsData[i]%>
+            <%- include('./product-item.ejs', {product}) %>
+        <% } %>
+
+        <a class="right-arrow-button button"></a>
+    </div>  

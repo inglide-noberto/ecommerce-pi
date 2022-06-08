@@ -1,0 +1,95 @@
+@import url(./general.css);
+@import url();
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-1 {
+    display: flex;
+    justify-content: flex-end;
+    width: 1175px;
+    border: solid 2px yellow;
+
+}
+
+
+.subtitle-demand {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 17px;
+}
+
+.demand {
+    display: flex;
+    width: 759px;
+    border: solid 2px burlywood;
+    margin-bottom: 10px;
+}
+
+.demand-iformation {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    left: 216px;
+}
+
+.subtitle3-demand,.subtitle-date,.subtitle-payment,.subtitlestatus {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.linha {
+    width: 759px;
+    border-bottom: solid 3px var(--color-background-3);
+    margin-bottom: 10px;
+}
+
+.section-1-demand-product-1 {
+    width: 759px;
+    border: solid 2px teal;
+}
+
+.section-1-demand-product-1 {
+    display: flex;
+
+}
+
+.div-img-product-1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rectangle-img-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 77px;
+    border-radius: 20px;
+    border: solid 2px gainsboro;
+    background-color: var(--color-background-3);
+}
+
+.subtitle-name-product {
+    width: 192px;
+    font-size: 14px;
+}
+
+.prduct-1-date-payment-delivered {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 41px;
+}
+
+.button-submit {
+    font-size: 14px;
+}
+
+.subtitel-date,.subtitle-payment2,.subtitle-delivered {
+    font-size: 14px;
+}

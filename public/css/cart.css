@@ -27,7 +27,7 @@
     display: flex;
     gap: 16px;
     width: 1165px;
-    border: solid 2px rgb(150, 114, 30);
+    /* border: solid 2px rgb(150, 114, 30); */
 }
 
 .cart-content-juction {
@@ -39,14 +39,14 @@
     justify-content:space-between;
     width: 831px;
     margin-bottom: 10px;
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
 }
 
 .specification-1-QUANTIDADE-ENTREGA-PRECO {
     display: flex;
     gap: 50px;
     width: 350px;
-    border: solid 2px green;
+    /* border: solid 2px green; */
 }
 
 .content-juction-specification-product {
@@ -57,7 +57,7 @@
     border-top: solid 2px var(--color-background-3);
     border-bottom: solid 2px var(--color-background-3);
     padding: 10px;
-    border: solid 2px rgb(171, 15, 127);
+    /* border: solid 2px rgb(171, 15, 127); */
 }
 
 .juction-specification-2-image-name-information{
@@ -65,7 +65,7 @@
     align-items: center;
     gap: 15px;
     width: 423px;
-    border: solid 2px rgb(150, 114, 30);
+    /* border: solid 2px rgb(150, 114, 30); */
 }
 
 .especificanton-2-rectangle-img {
@@ -76,7 +76,7 @@
     align-items: center;
     border-radius: 20px;
     background-color: var(--color-background-3);
-    border: solid 2px rgb(150, 114, 30);
+    /* border: solid 2px rgb(150, 114, 30); */
     
 }
 
@@ -96,11 +96,28 @@
     gap: 40px;
     /* width: 205px; */
     /* gap: 51px; */
-    border: solid 2px rgb(4, 229, 233);
+    /* border: solid 2px rgb(4, 229, 233); */
 }
 
-.the-amount, input[type=number] {
-    width: 90px;
+.juction-spacificantion-2-product-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+
+.button-qunatity {
+    font-size: 34px;
+    border: solid 1px yellowgreen;
+}
+
+.juction-spacificantion-2-product-quantity .the-amount input {
+    width: 34px;
+    height: 29px;
+    border: none;
+    margin: 0 5px 0 5px;
 }
 
 .deadline {
@@ -117,7 +134,7 @@
     height: 420.96px;
     background-color: var(--color-background-3);
     border-radius: 20px;
-    border: solid 2px rgb(74, 32, 189);
+    /* border: solid 2px rgb(74, 32, 189); */
 }
 
 .Oder-summary{
@@ -129,7 +146,7 @@
     display: flex;
     justify-content: space-between;
     width: 227px;
-    border: solid 2px rgb(74, 32, 189);
+    /* border: solid 2px rgb(74, 32, 189); */
     padding-bottom: 12px;
 }
 
@@ -177,7 +194,7 @@
     position: relative;
     bottom: 223px;
     z-index: 2;
-    border:solid 2px rgba(11, 242, 53, 0.6);
+    /* border:solid 2px rgba(11, 242, 53, 0.6); */
 
 }
 
@@ -185,7 +202,7 @@
     margin: 0 0 9px 0;
 }
 
-.cart-freight-calcular, input[type=text] {
+.cart-freight-calcular input[type=text] {
     width: 265px;
     margin-bottom: 17px;
 }
@@ -193,6 +210,10 @@
 .cart-freight-deadline {
     display: flex;
     flex-direction: column;
+}
+
+.checkbox-delivery {
+    border: solid 2px blue;
 }
 
 /* --------  */

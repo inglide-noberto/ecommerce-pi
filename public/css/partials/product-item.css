@@ -1,7 +1,6 @@
 
 .product-item {
-    width: 100%;
-    max-width: 23%;
+    width: 23.5%;
     height: 370px;
     border-radius: 20px;
 
@@ -34,7 +33,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px ;
+    margin: 10px 8%;
 }
 
 .product-item-info .like-button {
@@ -43,7 +42,7 @@
     margin-top: 10px;
 }
 
-.product-item-info-text {
+.product-item-info-text { 
     display: flex;
     flex-direction: column;
     gap: 12px;

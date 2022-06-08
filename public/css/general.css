@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +12,7 @@
     outline: none;
     border: none;
     color: var(--color-text);
-    font-weight: 300;
+    /*font-weight: 300;*/
 
     z-index: 2;
 }
@@ -20,8 +21,9 @@
 :root {
     --color-background-pages: #1F242D;
     --color-background-1: #030305; 
-    --color-background-2: rgba(0, 0, 0, 70%);
+    --color-background-2: rgba(0, 0, 0, 90%);
     --color-background-3: #111419;
+    --color-background-4: #030305a3;
     --color-gradient: linear-gradient(to right, #26C5F3, #B429F9);
     --color-gradient-invert: linear-gradient(to left, #26C5F3, #B429F9);
     --color-gradient-hover: linear-gradient(to right, #0095be, #8803ca);
@@ -38,7 +40,7 @@
     --color-icons: #fff;
 
     --color-shadow-normal: 0 0 30px rgb(4, 4, 13);
-    --color-shadow-color-1: 0 0 40px rgba(84, 3, 255,60%);
+    --color-shadow-color-1: 0 0 40px rgba(158, 3, 255, 0.6);
 }
 
 
@@ -54,7 +56,9 @@ body {
     max-width: 1110px;
 }
 
-
+.margin-header {
+    margin-top: 130px; 
+}
 
 /*--------- LINKS ---------*/
 a {
@@ -75,7 +79,7 @@ a {
 
 /*--------- INPUTS  ---------*/
 input[type=text], input[type=email], input[type=number], input[type=date], input[type=tel], select {
-    width: 100%px;
+    width: 100%;
     height: 40px;
     padding: 0 10px;
     background: none;
@@ -95,6 +99,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, input
 
 
 
+
 /*--------- UNDERLINE LINK - PAGE SELECT ---------*/
 .menu-bottom-links .page-select {
     text-shadow: 0 0 20px var(--color-text);
@@ -102,15 +107,14 @@ input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, input
 
 .page-select::after {
     content: "";
-    width: 70px;
+    width: 120%;
     height: 3px;
 
     background: var(--color-gradient);
 
-    position: absolute;
-    left: -13px;
-    bottom: -5px;
+    position: relative;
 }
+
 
 
 /*---------------- BUTTONS ----------------*/
@@ -127,9 +131,10 @@ button {
     height: 25px;
     background-color: var(--color-contrast-1);
     border-radius: 50%;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 0;
 
+    letter-spacing: -1px;
 }
 
 div .button-icon-material {

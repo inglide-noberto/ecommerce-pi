@@ -1,13 +1,9 @@
-@import url('./general.css');
-@import url('./partials/product-item.css');
-@import url('./partials/buttons/left-right-buttons.css');
-@import url('../css/partials/product-list.css');
 
 
 
 /*---------------- GLOBAL ----------------*/
 main {
-    padding-top: 120px;
+    padding-top: 65px;
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -18,7 +14,6 @@ main {
 .hero {
     width: 100%;
     height: 635px;
-    margin-top: 65px;
     padding: 0 7vw;
 
     background-image: url('../img/banners/fortnite-1920x1080-wallpaper-raven.jpg');
@@ -119,18 +114,20 @@ main {
 }
 
 
-.banners-vertical div {
+.banners-vertical a {
     width: 100%;
     height: 100%;
 
     background-color: var(--color-background-3);
     border-radius: 20px;
+}
 
-    background-image: url("../img/icons/img-icon.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-size: 70%;
+.banners-vertical a img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+    object-fit: cover;
 }
 
 
@@ -157,15 +154,18 @@ main {
 }
 
 
-.banners-horizontal div {
+.banners-horizontal a {
     width: 100%;
     height: 100%;
 
     background-color: var(--color-background-3);
     border-radius: 20px;
+}
 
-    background-image: url("../img/products/Metal-gear-solid-v-the-phantom-pain-cover-art-from-konami.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
+.banners-horizontal a img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+    object-fit: cover;
 }

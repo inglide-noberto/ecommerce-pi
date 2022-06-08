@@ -1,0 +1,129 @@
+<section class="margin-header">
+    <div class="store-banner">
+        <div class="store-banner-container container">
+            <h1>Lorem Ipsum</h1>
+        </div>
+        <img src="/img/banners/fortnite-1920x1080-wallpaper-raven.jpg" alt="">
+    </div>
+
+
+    <div class="store-container container ">
+        <div class="store-filters">
+            <h2>Loja</h2>
+
+            <form class="store-filters-inputs">
+                <div class="store-filter-rule">
+                    <h3>Categoria</h3>
+                    <div class="store-options">
+                    <div class="store-option">
+                        <input type="checkbox" name="Ação" id="acao" >
+                        <label for="Ação">Ação</label>
+                    </div>
+                    <div class="store-option">
+                        <input type="checkbox" name="aventura" id="aventura">
+                        <label for="aventura">Aventura</label>
+                    </div>
+                    <div class="store-option">
+                        <input type="checkbox" name="puzze" id="puzze">
+                        <label for="puzze">Puzze</label>
+                    </div>
+                    <div class="store-option">
+                        <input type="checkbox" name="primeira-pessoa" id="primeira-pessoa">
+                        <label for="primeira-pessoa">Primeira Pessoa</label>
+                    </div>
+                    <div class="store-option">
+                        <input type="checkbox" name="rpg" id="rpg">
+                        <label for="rpg">RPG</label>
+                    </div>
+                    <div class="store-option">
+                        <input type="checkbox" name="terceira-pessoa" id="terceira-pessoa">
+                        <label for="terceira-pessoa">Terceira Pessoa</label>
+                    </div>
+                    <div class="store-option">
+                        <input type="checkbox" name="terror" id="terror">
+                        <label for="terror">Terror</label>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="store-filter-rule">
+                    <h3>Lorem Ipsum</h3>
+                    <div class="store-options">
+                        <div class="store-option">
+                            <input type="checkbox" name="acao" id="acao">
+                            <label for="acao">Dolor Sit Amet</label>
+                        </div>
+                        <div class="store-option">
+                            <input type="checkbox" name="aventura" id="aventura">
+                            <label for="aventura">Dolor Sit Amet</label>
+                        </div>
+                        <div class="store-option">
+                            <input type="checkbox" name="puzze" id="puzze">
+                            <label for="puzze">Dolor Sit Amet</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-filter-rule">
+                    <h3>Lorem Ipsum</h3>
+                    <div class="store-options">
+                        <div class="store-option">
+                            <input type="checkbox" name="acao" id="acao">
+                            <label for="acao">Dolor Sit Amet</label>
+                        </div>
+                        <div class="store-option">
+                            <input type="checkbox" name="aventura" id="aventura">
+                            <label for="aventura">Dolor Sit Amet</label>
+                        </div>
+                        <div class="store-option">
+                            <input type="checkbox" name="puzze" id="puzze">
+                            <label for="puzze">Dolor Sit Amet</label>
+                        </div>
+                        <div class="store-option">
+                            <input type="checkbox" name="1" id="1">
+                            <label for="1">Dolor Sit Amet</label>
+                        </div>
+                        <div class="store-option">
+                            <input type="checkbox" name="2" id="2">
+                            <label for="2">Dolor Sit Amet</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-filter-rule">
+                    <h3>Lorem Ipsum</h3>
+                    <div class="store-options">
+                        <div class="store-options-values">
+                            <div>
+                                <label for="min-value">Min Value</label>
+                                <input type="text" name="min-value" id="" placeholder="Min Value">
+                            </div>
+                            <div>
+                                <label for="max-value">Max Value</label>
+                                <input type="text" name="max-value" id="" placeholder="Max Value">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="button-submit">Filtrar</button>
+            </form>
+        </div>
+
+
+
+        <form class="store-gallery">
+            <div class="store-gallery-products gallery-products">
+
+                <% for(product of productsData){ %>
+                    <%- include('../partials/product-item.ejs') %>
+                <% } %>
+                
+
+            </div>
+            <!-- <button type="button" class="button-submit">Ver mais</button> -->
+        </form>
+
+    </div>
+    
+</section>

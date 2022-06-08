@@ -1,4 +1,9 @@
-@import url("../general.css");
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+}
 
 
 /*----------------- MENU TOP ------------------*/
@@ -64,19 +69,39 @@
 
 /*--------- LINKS TO PAGES ---------*/
 .menu-bottom-links {
-    width: 60%;
+    width: 63%;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
+
+    text-transform: uppercase;
     font-size: 18px;
+    font-weight: 600;
+}
+
+.menu-bottom-links div {
+    padding-top: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-bottom-links div:hover::after {
+    content: "";
+    width: 120%;
+    height: 3px;
+
+    background: var(--color-gradient);
     position: relative;
 }
 
 
-
 /*----------------- MENU BOTTOM ------------------*/
+.menu-bottom-search {
+    position: relative;
+}
+
 /*--------- SEARCH FIELD ---------*/
 input.seach-field {
     width: 320px;
@@ -96,6 +121,19 @@ input.seach-field:focus {
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 }
+
+.menu-bottom-search img {
+    width: 17px;
+    opacity: 30%;
+}
+.menu-bottom-search button{
+    position: absolute;
+    right: 15px;
+    top: 8px;
+}
+
+
+
 
 
 

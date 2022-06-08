@@ -1,10 +1,8 @@
-@import url('./general.css');
+
 @import url('./partials/buttons/left-right-buttons.css');
 @import url('./partials/buttons/button-submit.css');
 @import url('./partials/product-list.css');
 @import url('./partials/product-item.css');
-
-
 
 
 .product-route {
@@ -25,7 +23,7 @@
 }
 
 
-/*------------------ PRODUCT IFOS DETAILS ------------------*/
+/*------------------ PRODUCT INFOS DETAILS ------------------*/
 .product-infos {
     display: flex;
     gap: 5%;
@@ -44,9 +42,19 @@
 
 .product-infos-images .principal-image {
     width: 100%;
-    min-height: 530px;
+
+    height: 530px;
     
     background-color: var(--color-background-3);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.product-infos-images .principal-image img {
+    width: 100%;
+    height: 530px;
+    object-fit: cover;
+
     border-radius: 20px;
     cursor: pointer;
 }
@@ -61,9 +69,13 @@
     width: 35px;
     min-width: 35px;
     height: 35px;
-
+    
     position: absolute;
     top: 33px; 
+}
+
+.secondary-images .no-more {
+    background: var(--color-text-opacity-15);
 }
 
 .secondary-images .left-arrow-button::after, .secondary-images .right-arrow-button::after {
@@ -84,12 +96,12 @@
 
 .secondary-images div {
     display: flex;
-    justify-content: space-between;
+    gap: 6px;
     height: 100%;
 }
 
 .secondary-images-min {
-    width: 16%; 
+    width: 88.78px; 
     height: 100%;
     background-color: var(--color-background-3);
     border-radius: 5px;
@@ -97,7 +109,10 @@
 }
 
 .secondary-images img {
-    width: 60%;
+    width: 100%;
+    min-height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .secondary-images a {
