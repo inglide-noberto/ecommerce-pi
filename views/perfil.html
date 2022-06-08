@@ -7,34 +7,75 @@
     <link rel="stylesheet" href="../public/css/perfil.css">
     <title>perfil</title>
 </head>
-<main class="conteiner">
-    <section class="section-1">
-        <div class="options">
-            <div class="option-my-account">
-                <img class="img_my_account" src="../public/img/icons/user-icon-b.png" alt="perfi"> <a href="#">Minha Conta</a>
-            </div>
-            <div class="option-my_demand">
-                <img class="img_my_demand" src="../public/img/icons/caixa-icon-b.png" alt="caixa de Pedidos"> <a href="#">Meus Pedidos</a>
-            </div>
-            <div class="option-my_dados">
-                <img class="img_my_dados" src="../public/img/icons/paciente-icon-b.png" alt="Dados pessoais"> <a href="#">Meus Dados</a>
-            </div>
+<main class="container">
+    <section class="user-page">
+        <div class="user-page-options">
+            <a href="#" class="user-page-option account option-select">
+                <div class="image">
+                    <img class="image-icon" src="../public/img/icons/user-icon-b.png" alt="perfi"> 
+                </div>
+                <span>Minha Conta</span>
+            </a>
+            <a href="#" class="user-page-option orders">
+                <div class="image">
+                    <img class="image-icon" src="../public/img/icons/caixa-icon-b.png" alt="caixa de Pedidos"> 
+                </div>
+                <span>Meus Pedidos</span>
+            </a>
+            <a href="#" class="user-page-option infos">
+                <div class="image">
+                    <img class="image-icon" src="../public/img/icons/paciente-icon-b.png" alt="Dados pessoais"> 
+                </div>
+                <span>Meus Dados</span>
+            </a>
         </div>
-            <div class="section-1-dados">
-                <h1 class="title-my_dados">Meus Dados</h1> 
-                <h2 class="sub-title-info-access">Informações de acesso</h2>
-                <h3 class="sub-title-name">Analyce Ferreira Dapont</h3>
-                <h3 class="sub-title-email">mail@mail.com.brt</h3>
-                <button class="button-submit">ALTERAR</button>
+
+        <div class="user-page-data">
+            <h1 class="user-page-data-title">Meus Dados</h1> 
+            <div class="user-page-data-blocks">
+                <div class="user-page-data-infos acess-infos">
+                    <h2 class="title">Informações de acesso</h2>
+                    <div>
+                        <span class="info">Analyce Ferreira Dapont</span>
+                        <span class="info">mail@mail.com.br</span>
+                    </div>
+                    <button class="button-submit">ALTERAR</button>
+                </div>
+                <div class="user-page-data-infos adress-infos">
+                    <h2 class="title">Endereço</h2>
+                    <div>
+                        <span class="info">Analyce Ferreira Dapont</span>
+                        <span class="info">Rua das Primaveras Setor Comercial 383</span>
+                        <span class="info">Sinop, MT, BR - 78550-234</span>
+                        <span class="info">Tel: (66) 98411-5450</span>
+                    </div>
+                    <button class="button-submit">ALTERAR</button>
+                </div>
             </div>
-            <div class="section-1-adress">
-                <h2 class="sub-title-adress">Endereço</h2>
-                <h2 class="adress-name">Analyce Ferreira Dapont</h2>
-                <h2 class="adress-road">Rua das Primaveras Setor Comercial 383</h2>
-                <h2 class="adress-localization">Sinop, MT, BR - 78550-234</h2>
-                <h2 class="adress-tel">Tel: (66) 9841-545</h2>
-                <button class="button-submit">ALTERAR</button>
+            <div class="orders-list">
+                <h3>Pedidos</h1>
+                <table class="orders-list-table">
+                    <tr class="table-titles">
+                        <th class="order" colspan="2">Pedido</th>
+                        <th>Data Pedido</th>
+                        <th>Pagamento</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr class="row">
+                        <td class="product-image"><img class="product-image" src="https://source.unsplash.com/950x1100/?game" alt="imagem do produto teste" class="image-product-order"></td>
+                        <td class="order-title-info">Produto teste e mais 5 itens</td>
+                        <td>10/01/2022</td>
+                        <td class="payment-row">Cartão de Crédito</td>
+                        <td>Entregue</td>
+                        <td><button class="button-submit">Ver Pedido</button></td>
+                    </tr>
+
+                </table>
             </div>
+
+
+
+        </div>
     </section>
 </main>
 </html>

@@ -31,10 +31,10 @@ const ProductsController = {
 
 
     productView: (req, res) => {
-        const { id } = req.params
+        const { slug } = req.params
         const productsData = data
         
-        let product = productsData.find(produto => produto.id == id)
+        let product = productsData.find(produto => produto.slug == slug)
 
         if (product) {
             res.render('layout', {'page':'product', product, productsData})
@@ -43,7 +43,6 @@ const ProductsController = {
             res.render('layout', {'page':'not-found'})
         }
     }
-
 }
 
 

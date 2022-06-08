@@ -23,6 +23,7 @@
     --color-background-1: #030305; 
     --color-background-2: rgba(0, 0, 0, 90%);
     --color-background-3: #111419;
+    --color-background-4: #030305a3;
     --color-gradient: linear-gradient(to right, #26C5F3, #B429F9);
     --color-gradient-invert: linear-gradient(to left, #26C5F3, #B429F9);
     --color-gradient-hover: linear-gradient(to right, #0095be, #8803ca);
