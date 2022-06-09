@@ -23,44 +23,49 @@
         </div>
 
         <div class="user-page-data">
-            <h1 class="user-page-data-title">Meus Dados</h1> 
+            <h1 class="user-page-data-title">Pedido #<%= order.id%></h1> 
 
             <div class="user-page-data-blocks">
                 <div class="user-page-data-infos acess-infos">
-                    <h2 class="title">Informações de Acesso</h2>
+                    <h2 class="title">Endereço de Entrega</h2>
                     <div>
                         <span class="info"> <%= user.name %> </span>
-                        <span class="info"> <%= user.email %> </span>
-                    </div>
-                    <button class="button-submit">ALTERAR</button>
-                </div>
-                <div class="user-page-data-infos adress-infos">
-                    <h2 class="title">Endereço Principal</h2>
-                    <div>
-                        <span class="info">Apelido: <%= user.addresses[0].title %></span>
                         <span class="info"><%= user.addresses[0].street %> - nº <%= user.addresses[0].number %></span>
                         <span class="info"><%= user.addresses[0].city %>, <%= user.addresses[0].state %> - <%= user.addresses[0].zip_code %></span>
                         <span class="info">Tel: (66) 98411-5450</span>
                     </div>
-                    <button class="button-submit">ALTERAR</button>
+                </div>
+                <div class="user-page-data-infos adress-infos">
+                    <h2 class="title">RESUMO DO PEDIDO</h2>
+                    <table>
+                        <tr style="height:30px">
+                            <%  let quantProducts = 0
+                                let products = []
+
+                                for(product of order.products) {
+                                    products.push(dataProducts.find( productOrder => productOrder.id == product))
+                                } 
+                
+                                quantProducts = products.length %>
+                                
+                            <td> <%= order.products.length %> </td>
+                            <td BORDER=5> <%= order.method_payment %> </td>
+                        </tr>
+                        <tr style="height:30px">
+                                
+                            <td> <%= order.products.length %> </td>
+                            <td> <%= order.method_payment %> </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
-            <div class="orders-list">
-                <h3>PEDIDOS</h1>
-                <table class="orders-list-table"  BORDER RULES=rows>
-                    <tr class="table-titles" style="height:35px">
-                        <th class="order" colspan="2">Pedido</th>
-                        <th>Data Pedido</th>
-                        <th style="width:20%">Pagamento</th>
-                        <th style="width:15%">Status</th>
-                    </tr>
-
-                    <% for(order of orders) { %>
-                        <%- include('../partials/order-line.ejs') -%>
-                    <% } %>
-                </table>
+            <div class="user-page-data-infos acess-infos">
+                <h2 class="title">Metodo de Entrega</h2>
+                <span class="info"> Intelipost - Jadlog - de 1 a 9 dias úteis </span>
             </div>
+
+            
 
         </div>
     </section>

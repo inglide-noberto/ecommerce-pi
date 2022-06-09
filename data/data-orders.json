@@ -10,7 +10,7 @@
         "price_payment": "valor pago",
         "method_payment": "Cartão de crédito",
         "form_payment": "parcelado em 3x",
-        "adress_delivery":"endereço de entrega",
+        "shipping_address":"1",
         "courier":"transportador",
         "delivery_time":"prazo de entrega",
         "delivery_price":"preço de entrega"
@@ -26,7 +26,7 @@
         "price_payment": "valor pago",
         "method_payment": "Cartão de Crédito",
         "form_payment": "2x",
-        "adress_delivery":"endereço de entrega",
+        "shipping_address":"1",
         "courier":"transportador",
         "delivery_time":"prazo de entrega",
         "delivery_price":"preço de entrega"
@@ -42,7 +42,7 @@
         "price_payment": "valor pago",
         "method_payment": "Boleto",
         "form_payment": "Avista",
-        "adress_delivery":"endereço de entrega",
+        "shipping_address":"1",
         "courier":"transportador",
         "delivery_time":"prazo de entrega",
         "delivery_price":"preço de entrega"
