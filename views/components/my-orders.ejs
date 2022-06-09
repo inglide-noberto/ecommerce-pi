@@ -1,0 +1,46 @@
+
+<main class="container margin-header-over">
+    <section class="user-page">
+        <div class="user-page-options">
+            <a href="../<%= user.slug %>" class="user-page-option account">
+                <div class="image">
+                    <img class="image-icon" src="/img/icons/user-icon-b.png" alt="perfi"> 
+                </div>
+                <span>Minha Conta</span>
+            </a>
+            <a href="../<%= user.slug %>/pedidos" class="user-page-option orders option-select">
+                <div class="image">
+                    <img class="image-icon" src="/img/icons/caixa-icon-b.png" alt="caixa de Pedidos"> 
+                </div>
+                <span>Meus Pedidos</span>
+            </a>
+            <a href="#" class="user-page-option infos">
+                <div class="image">
+                    <img class="image-icon" src="/img/icons/paciente-icon-b.png" alt="Dados pessoais"> 
+                </div>
+                <span>Meus Dados</span>
+            </a>
+        </div>
+
+        <div class="user-page-data">
+            <h1 class="user-page-data-title">Meus Pedidos</h1> 
+
+            <div class="orders-list">
+                <h3>PEDIDOS</h1>
+                <table class="orders-list-table"  BORDER RULES=rows>
+                    <tr class="table-titles" style="height:35px">
+                        <th class="order" colspan="2">Pedido</th>
+                        <th>Data Pedido</th>
+                        <th style="width:20%">Pagamento</th>
+                        <th style="width:15%">Status</th>
+                    </tr>
+
+                    <% for(order of orders) { %>
+                        <%- include('../partials/order-line.ejs') -%>
+                    <% } %>
+                </table>
+            </div>
+
+        </div>
+    </section>
+</main>

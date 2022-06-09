@@ -1,0 +1,72 @@
+
+<main class="container margin-header-over">
+    <section class="user-page">
+        <div class="user-page-options">
+            <a href="./<%= user.slug %>" class="user-page-option account option-select">
+                <div class="image">
+                    <img class="image-icon" src="/img/icons/user-icon-b.png" alt="perfi"> 
+                </div>
+                <span>Minha Conta</span>
+            </a>
+            <a href="./<%= user.slug %>/pedidos" class="user-page-option orders">
+                <div class="image">
+                    <img class="image-icon" src="/img/icons/caixa-icon-b.png" alt="caixa de Pedidos"> 
+                </div>
+                <span>Meus Pedidos</span>
+            </a>
+            <a href="#" class="user-page-option infos">
+                <div class="image">
+                    <img class="image-icon" src="/img/icons/paciente-icon-b.png" alt="Dados pessoais"> 
+                </div>
+                <span>Meus Dados</span>
+            </a>
+        </div>
+
+        <div class="user-page-data">
+            <h1 class="user-page-data-title">Pedido #<%= order.id%></h1> 
+
+            <div class="user-page-data-blocks">
+                <div class="user-page-data-infos acess-infos">
+                    <h2 class="title">Endereço de Entrega</h2>
+                    <div>
+                        <span class="info"> <%= user.name %> </span>
+                        <span class="info"><%= user.addresses[0].street %> - nº <%= user.addresses[0].number %></span>
+                        <span class="info"><%= user.addresses[0].city %>, <%= user.addresses[0].state %> - <%= user.addresses[0].zip_code %></span>
+                        <span class="info">Tel: (66) 98411-5450</span>
+                    </div>
+                </div>
+                <div class="user-page-data-infos adress-infos">
+                    <h2 class="title">RESUMO DO PEDIDO</h2>
+                    <table>
+                        <tr style="height:30px">
+                            <%  let quantProducts = 0
+                                let products = []
+
+                                for(product of order.products) {
+                                    products.push(dataProducts.find( productOrder => productOrder.id == product))
+                                } 
+                
+                                quantProducts = products.length %>
+                                
+                            <td> <%= order.products.length %> </td>
+                            <td BORDER=5> <%= order.method_payment %> </td>
+                        </tr>
+                        <tr style="height:30px">
+                                
+                            <td> <%= order.products.length %> </td>
+                            <td> <%= order.method_payment %> </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="user-page-data-infos acess-infos">
+                <h2 class="title">Metodo de Entrega</h2>
+                <span class="info"> Intelipost - Jadlog - de 1 a 9 dias úteis </span>
+            </div>
+
+            
+
+        </div>
+    </section>
+</main>

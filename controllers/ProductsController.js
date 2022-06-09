@@ -15,10 +15,8 @@ const ProductsController = {
         }
         else if (acao == "on"){
             const productsData = data.filter( product => product.principal_categorie == "Ação")
-            console.log(acao)
-            console.log(productsData)
-            res.render('layout', {'page':'store', productsData})
 
+            res.render('layout', {'page':'store', productsData})
         }
         else{
             const productsData = data
