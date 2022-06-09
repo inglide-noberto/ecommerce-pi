@@ -1,10 +1,244 @@
 @import url('./general.css');
+@import url('./partials/buttons/button-submit.css');
+@import url('.button-submit');
 
+.div-input input{
+    box-sizing: border-box;
+    position: relative;
+    width: 340px;
+    height: 40px;
+    
 
+}
 
-.container{
+.second-colum input {
+    
+    width: 340px;
+    height: 40px;
+
+}
+
+h1 {
+    margin-top: auto;
     display: flex;
     justify-content: center;
-    margin: 100px;
-    gap: 5px;
+    width: 340px;
+    height: 40px; 
 }
+
+.first-content form input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 340px;
+    height: 40px;
+    padding: 10px;
+    font-size: 14px;
+    margin: 0px;
+    margin-bottom: 20px;
+    flex-direction: column; 
+}
+
+/* .first-content form {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    box-sizing: inherit;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+
+} */
+
+
+.button-submit{
+    display:flex;
+    justify-content: center;
+    max-width: 340px;
+    height: 40px;
+    padding: 10px;
+ 
+ }
+
+.barra {
+    background: var(--color-gradient);
+    width: 2px;
+    
+}
+
+.form-login{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+  
+}
+
+.div {
+    width: 340px;
+    height: 40px;
+}
+
+.form-criar-conta{
+    display: flex;
+    justify-content: center;
+    /* display:block;  */
+    /* justify-content: space-between; */
+    width: 100%;
+   
+
+  
+}
+
+.second-colum form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 30px 0;
+    position: relative;
+    
+        
+}
+
+.second-colum input {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    border-radius: 10px;   
+    padding-left: 15px;
+    outline: none;
+    font-size: 14px;
+
+
+}
+
+.second-colum input:focus+.second-colum .form {
+    top: -10px;
+
+
+}
+
+.second-colum .form label {
+position: absolute;
+top:10px;
+left: 15px;
+color: gray;
+font-weight: 500;
+transition: all .3s ease;
+} 
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+.button-submit:hover {
+    background: var(--color-gradient-hover);
+}
+
+
+/*  */
+
+
+
+/* .first-content input {
+    width: 100%;
+    height: 80%;
+    margin: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    
+} */
+
+/* .first-content label {
+
+}*/
+
+/* .first-content h1 {
+    margin-top: auto;
+    
+}
+
+.second-colum h1 {
+    margin-top: auto;
+    
+}  */
+
+
+
+
+
+
+
+
+
+
+/* 
+.first-content form button{
+
+}*/ */
+
+
+/* .first-content form button, 
+.second-colum form button {
+    max-width:none;
+    direction:initial;
+    margin: 30px 0px;
+    width: 100%;
+    left: 30px;  */
+
+    /* margin: 30px 0;
+    padding: 0 10px;
+    border: 30px 0;
+    font: inherit;
+    vertical-align: inherit;
+    outline: none;
+    letter-spacing: inherit;
+    text-decoration: none;
+    cursor:pointer; */
+
+    
+/* }* */
+
+
+
+/* .first-content form input,
+.second-colum form input {
+    width: 340px;
+    height: 240px;
+
+
+} */
+
+
+/* .first-content form button, 
+.second-colum form button {
+    max-width:none;
+    display: center;
+    width: 100%;
+    
+} */
+
+/* .first-content form input,
+.second-colum form input {
+    width: 340px;
+    height: 40px;
+
+} */
+
+

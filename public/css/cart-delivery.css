@@ -1,5 +1,6 @@
-@import url(./general.css);
-@import url(./partials/buttons/button-submit.css);
+.cart-menu {
+    margin-top: 200px;
+}
 
 .entrega {
  margin: 60px 0 40px 0;
