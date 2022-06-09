@@ -1,7 +1,6 @@
-@import url(../css/general.css);
-@import url(../css/partials/buttons/button-submit.css);
-
-
+section {
+    margin-top: 200px;
+}
 
     /* cart menu  */
 .cart-menu {
@@ -103,7 +102,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
+    width: 90px;
     border: 1px solid var(--color-border);
     border-radius: 10px;
 }

@@ -7,6 +7,7 @@ const app = express()
 //-------------- IMPORT ROUTES -----------------
 const routersIndex = require(path.join(__dirname,'/Routers/index.js'))
 const routersProducts = require(path.join(__dirname,'/Routers/products.js'))
+const routerCart = require(path.join(__dirname, '/Routers/cartRoutes.js'))
 
 
 
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 //-------------- ROUTES -----------------
 app.use('/', routersIndex)
 app.use('/loja', routersProducts)
+app.use('/cart', routerCart),
 
 
 

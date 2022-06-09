@@ -1,5 +1,4 @@
-@import url(./general.css);
-@import url(./partials/buttons/button-submit.css);
+
 
 .conteiner {
     display: flex;
@@ -11,6 +10,7 @@
 .finalizar-pedido {
     position: relative;
     right: 473px;
+    margin-top: 50px;
     z-index: 2;
 }
 
