@@ -10,12 +10,18 @@ section {
     width: 1165px;
     height: 70px;
     background-color: var(--color-background-3);
+    /* border: solid 2px green; */
+}
+
+nav {
+    color: blueviolet;
 }
 
 
 .cart-menu-navigation {
     display: flex;
     gap: 179px;
+    /* border: solid 2px green; */
 }
 
 .subparagraph-my-cart {
@@ -112,11 +118,15 @@ section {
     border: solid 1px yellowgreen;
 }
 
-.juction-spacificantion-2-product-quantity .the-amount input {
-    width: 34px;
+/* .juction-spacificantion-2-product-quantity .the-amount input {
+    width: 10px;
     height: 29px;
     border: none;
     margin: 0 5px 0 5px;
+} */
+
+.the-amount {
+    width: 40px;
 }
 
 .deadline {
