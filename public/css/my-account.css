@@ -1,6 +1,3 @@
-@import url(../css/general.css);
-@import url(../css/partials/buttons/button-submit.css);
-
 
 
 .user-page {
@@ -10,14 +7,30 @@
 }
 
 .user-page .button-submit {
+    width: 150px;
+    height: 38px;
+
     border-radius: 10px;
     border: .12rem solid transparent;
     background: linear-gradient(to right, var(--color-background-2), var(--color-background-2)), var(--color-gradient); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
+    opacity: 90%;
 
     color: var(--color-text);
     font-size: 12px;
+    font-weight: 600;
+}
+
+.user-page .button-submit:hover {
+    border-radius: 10px;
+    border: .1rem solid transparent;
+    background: linear-gradient(to right, transparent, transparent), var(--color-gradient); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+    color: var(--color-background-2);
+    font-weight: 600;
 }
 
 .user-page-options {
@@ -34,14 +47,15 @@
 
     height: 70px;
     background-color: var(--color-background-3);
+    border-bottom: 1.5px solid var(--color-background-pages);
 }
 
 .user-page-option:hover {
     background-color: var(--color-background-4);
 }
 
-.user-page-option-select {
-    background-color: var(--color-background-1);
+.user-page .option-select {
+    background-color: var(--color-background-2);
 }
 
 .image-icon {
@@ -74,6 +88,8 @@
     display: flex;
     justify-content: space-between;
     gap: 15%;
+
+    margin-bottom: 30px;
 }
 .user-page-data-blocks .title {
     font-size: 22px;
@@ -90,9 +106,11 @@ div .info {
 }
 
 .user-page-data-infos {
+    width: 40%;
+
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 24px;
 }
 
 .user-page-data-infos div {
@@ -106,6 +124,10 @@ div .info {
 
 
 /************ Produtc table *************/
+.orders-list h3 {
+    margin-bottom: 15px;
+}
+
 .orders-list table {
     width: 100%;
 }
@@ -134,15 +156,12 @@ div .info {
 .orders-list .row {
     width: 100%;    
 
-    border-top: 1px solid #CCC;
+    border-top: 2px solid var(--color-background-5);
 
     font-size: 14px;
     text-align: center;
 }
 
-.orders-list .row td {
-    padding: 2% 1% 2% 0;
-}
 
 .orders-list .row .order-title-info {
     text-align: justify;

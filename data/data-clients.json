@@ -1,18 +1,78 @@
 [
     {
         "id":"1",
-        "name":"",
-        "email":"",
-        "phone":"",
-        "password":"",
-        "adress":""
+        "slug":"ana-ferreira",
+        "name":"Ana Ferreira",
+        "email":"mail@mail.com",
+        "phone":"66 9 9999-9999",
+        "password":"123456",
+        "addresses":[
+            {
+                "id": "1",
+                "title": "Casa",
+                "street": "Rua das ruas",
+                "number": "100",
+                "complement": "Apt 10",
+                "district": "Setor Comercial",
+                "zip_code": "78550-000",
+                "city": "Sinop", 
+                "state": "MT",
+                "country": "Brasil",
+                "shipping_contact_name": "Minha mãe",
+                "shipping_contact_tel": "(66) 9 9999-9999"
+            },
+            {
+                "id": "2",
+                "title": "Trabalho",
+                "street": "Avenida das avenidas",
+                "number": "10",
+                "complement": "1 andar",
+                "district": "Setor Comercial",
+                "zip_code": "78550-000",
+                "city": "Sinop", 
+                "state": "MT",
+                "country": "Brasil",
+                "shipping_contact_name": "Minha familia",
+                "shipping_contact_tel": "(66) 9 9999-9999"
+            }
+        ]
     },
     {
         "id":"2",
-        "name":"",
-        "email":"",
-        "phone":"",
-        "password":"",
-        "adress":""
+        "slug":"joao",
+        "name":"Joao Gomes",
+        "email":"mail@mail.com",
+        "phone":"66 9 9999-9999",
+        "password":"123456",
+        "addresses":[
+            {
+                "id": "1",
+                "title": "Casa",
+                "street": "Rua das ruas",
+                "number": "100",
+                "complement": "Apt 10",
+                "district": "Setor Comercial",
+                "zip_code": "78550-000",
+                "city": "Sinop", 
+                "state": "MT",
+                "country": "Brasil",
+                "shipping_contact_name": "Minha mãe",
+                "shipping_contact_tel": "(66) 9 9999-9999"
+            },
+            {
+                "id": "2",
+                "title": "Trabalho",
+                "street": "Avenida das avenidas",
+                "number": "10",
+                "complement": "1 andar",
+                "district": "Setor Comercial",
+                "zip_code": "78550-000",
+                "city": "Sinop", 
+                "state": "MT",
+                "country": "Brasil",
+                "shipping_contact_name": "Minha familia",
+                "shipping_contact_tel": "(66) 9 9999-9999"
+            }
+        ]
     }
 ]

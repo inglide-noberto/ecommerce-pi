@@ -24,6 +24,7 @@
     --color-background-2: rgba(0, 0, 0, 90%);
     --color-background-3: #111419;
     --color-background-4: #030305a3;
+    --color-background-5: rgba(17, 20, 25, 60%);
     --color-gradient: linear-gradient(to right, #26C5F3, #B429F9);
     --color-gradient-invert: linear-gradient(to left, #26C5F3, #B429F9);
     --color-gradient-hover: linear-gradient(to right, #0095be, #8803ca);
@@ -58,6 +59,10 @@ body {
 
 .margin-header {
     margin-top: 130px; 
+}
+
+.margin-header-over {
+    margin-top: 200px; 
 }
 
 /*--------- LINKS ---------*/
