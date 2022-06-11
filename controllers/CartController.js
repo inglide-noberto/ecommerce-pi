@@ -1,3 +1,5 @@
+const { redirect } = require("express/lib/response")
+
 const CartController = {
     index: (req,res)=>{
         return res.render('layout', {'page': 'cart'})
@@ -7,6 +9,9 @@ const CartController = {
     },
     payment: (req,res)=>{
         return res.render('layout', {'page': 'cart-payment'})
+    },
+    pedidoFinalizado:(req,res)=>{
+        return res.send("sucesso")
     }
 }
 
