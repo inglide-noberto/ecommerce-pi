@@ -37,6 +37,7 @@
 
     --color-text: #ebeeff;
     --color-text-opacity-70: rgba(235, 238, 255, 70%);
+    --color-text-opacity-45: rgba(235, 238, 255, 45%);
     --color-text-opacity-15: rgba(235, 238, 255, 15%);
     --color-icons: #fff;
 

@@ -1,0 +1,73 @@
+.user-page {
+    display: flex;
+    gap: 6%;
+    width: 100%;
+}
+
+.user-page-data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.user-informations-title {
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+
+
+.user-informations-block {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-informations-block form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-informations-block-div{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.user-informations-block-div-duo {
+    flex-direction: row;
+    gap: 26px;
+}
+
+.user-informations-block-div-duo :first-child{
+    width: 158%;
+}
+
+.user-informations-block-div-duo .duo40 {
+    width: 40%;
+}
+
+
+
+.user-informations-block .button-submit {
+    margin-top: 20px;
+    max-width: 180px;
+    align-self: center;
+}
+
+.user-informations-block-div select option {
+    background-color: var(--color-background-pages);
+
+}
+
+.user-informations-block input, .user-informations-block select{
+    border: 1px solid var(    --color-text-opacity-45);
+}

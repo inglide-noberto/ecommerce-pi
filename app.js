@@ -12,6 +12,7 @@ const routerCart = require(path.join(__dirname, '/Routers/cartRoutes.js'))
 
 
 
+
 //--------- CONFIG INPUT DATA READING -------------
 appRouter.use(express.urlencoded({ extended:false}))
 appRouter.use(express.json())
