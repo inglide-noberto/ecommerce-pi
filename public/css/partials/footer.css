@@ -146,6 +146,7 @@ input.newsletter-email:focus {
 
 .footer-collum h4 {
     color: var(--color-contrast-1);
+    text-transform: uppercase;
 }
 
 

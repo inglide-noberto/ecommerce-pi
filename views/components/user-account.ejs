@@ -13,7 +13,7 @@
                         <span class="info"> <%= user.name %> </span>
                         <span class="info"> <%= user.email %> </span>
                     </div>
-                    <button class="button-submit">ALTERAR</button>
+                    <a href="/user/<%= user.slug %>/conta"><button class="button-submit">ALTERAR</button></a>
                 </div>
                 <div class="user-page-data-infos adress-infos">
                     <h2 class="title">Endereço Principal</h2>
@@ -23,7 +23,7 @@
                         <span class="info"><%= user.addresses[0].city %>, <%= user.addresses[0].state %> - <%= user.addresses[0].zip_code %></span>
                         <span class="info">Tel: (66) 98411-5450</span>
                     </div>
-                    <button class="button-submit">ALTERAR</button>
+                    <a href="/user/<%= user.slug %>/conta"><button class="button-submit">ALTERAR</button></a>
                 </div>
             </div>
 
