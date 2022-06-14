@@ -1,6 +1,9 @@
-@import url('./general.css');
+/* @import url('./general.css');
 @import url('./partials/buttons/button-submit.css');
-@import url('.button-submit');
+@import url('.button-submit'); */
+
+@import url(./general.css);
+@import url(./partials/buttons/button-submit.css);
 
 .div-input input{
     box-sizing: border-box;
