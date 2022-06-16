@@ -1,0 +1,25 @@
+<%  let quantProducts = 0
+    let products = []
+
+    for(product of order.products) {
+        products.push(dataProducts.find( productOrder => productOrder.id == product))
+    } 
+    
+    quantProducts = products.length %>
+        <tr class="row" style="height:100px">
+            <td class="product-image"><img class="product-image" src="<%= products[0].images[0] %>" alt="imagem do produto teste" class="image-product-order"></td>
+            <td class="order-title-info"> <%= products[0].title %> 
+                <% if(quantProducts - 1 < 2 && quantProducts - 1 != 0) { %>
+                e mais <%= quantProducts - 1  %> item
+                <% } 
+                else if(quantProducts - 1 >= 2) { %>
+                    e mais <%= quantProducts - 1  %> itens
+                <% } %>
+            </td>
+            <td> <%= order.date_order %> </td>
+            <td> <%= order.method_payment %> </td>
+            <td> <%= order.status %> </td>
+            <td><a href="/user/<%=  user.slug %>/pedidos/<%= order.id %>" class="button-submit">Ver Pedido</a></td>
+        </tr>
+
+

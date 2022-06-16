@@ -1,0 +1,35 @@
+
+.user-page-options {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+}
+
+.user-page-option {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    height: 70px;
+    background-color: var(--color-background-3);
+    border-bottom: 1.5px solid var(--color-background-pages);
+}
+
+.user-page-option:hover {
+    background-color: var(--color-background-4);
+}
+
+.user-page .option-select {
+    background-color: var(--color-background-2);
+}
+
+.image-icon {
+    width: 23px;
+}
+
+.user-page-option .image {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+}

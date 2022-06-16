@@ -1,0 +1,154 @@
+
+
+.user-page {
+    display: flex;
+    gap: 6%;
+    width: 100%;
+}
+
+.user-page .button-submit {
+    width: 150px;
+    height: 38px;
+
+    border-radius: 10px;
+    border: .12rem solid transparent;
+    background: linear-gradient(to right, var(--color-background-2), var(--color-background-2)), var(--color-gradient); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    opacity: 90%;
+
+    color: var(--color-text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.user-page .button-submit:hover {
+    border-radius: 10px;
+    border: .1rem solid transparent;
+    background: linear-gradient(to right, transparent, transparent), var(--color-gradient); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+    color: var(--color-background-2);
+    font-weight: 600;
+}
+
+.user-page-options {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+}
+
+.user-page-option {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    height: 70px;
+    background-color: var(--color-background-3);
+    border-bottom: 1.5px solid var(--color-background-pages);
+}
+
+.user-page-option:hover {
+    background-color: var(--color-background-4);
+}
+
+.user-page .option-select {
+    background-color: var(--color-background-2);
+}
+
+.image-icon {
+    width: 23px;
+}
+
+.user-page-option .image {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+}
+
+
+
+
+.user-page-data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.user-page-data-title {
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+/************ Produtc table *************/
+.orders-list h3 {
+    margin-bottom: 15px;
+}
+
+.orders-list table {
+    width: 100%;
+}
+
+.orders-list table .button-submit {
+    font-size: 10.5px;
+    width: 100%;
+    height: 25px;
+    padding: 5px 7px;
+}
+
+
+.orders-list .product-image{
+    width: 70px;
+    height: 77px;
+    border-radius: 20px;
+
+    object-fit: cover;
+}
+
+
+
+.orders-list .table-titles .order {
+    text-align: start;
+}
+
+.orders-list .row {
+    width: 100%;    
+
+    border-top: 2px solid var(--color-background-5);
+
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.orders-list .row .order-title-info {
+    text-align: justify;
+    padding: 0 3%;
+}
+
+
+
+
+.payment-row {
+    width: 17%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

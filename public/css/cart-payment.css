@@ -1,5 +1,7 @@
-@import url(./general.css);
-@import url(./partials/buttons/button-submit.css);
+
+main {
+    padding-top: 50px;
+}
 
 .conteiner {
     display: flex;
@@ -8,13 +10,14 @@
 }
 
 /* ---- section 1 start ---  */
-.finalizar-pedido {
+.finalizar-pedido1 {
     position: relative;
     right: 473px;
+    margin-top: 50px;
     z-index: 2;
 }
 
-.Selecione-o-Frete {
+.selecione-o-frete {
   margin: 34px 0 30px 0;
 }
 

@@ -1,6 +1,7 @@
 
 .product-item {
     width: 23.5%;
+    min-width: 23.5%;
     height: 370px;
     border-radius: 20px;
 

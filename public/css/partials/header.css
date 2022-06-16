@@ -1,3 +1,53 @@
+@media screen and (max-width: 1080px) {
+    .menu-bottom-links {
+        visibility: hidden;
+        display: none;
+
+        position: absolute;
+        top: -200px;
+    }
+
+    .menu-top-container .menu-top-buttons {
+        width: 40%;
+
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .menu-bottom-container .hamburger-menu {
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .menu-top-acessibility-buttons {
+        visibility: hidden;
+        display: none;
+
+        position: absolute;
+        top: -200px;
+    }
+
+    .menu-top-container .menu-top-buttons {
+        min-width: none;
+        width: none;
+        justify-content: end;
+    }
+    
+    .menu-top-container  {
+        align-items: center;
+    }
+
+    .
+
+}
+
+
+
+
+
 header {
     position: fixed;
     width: 100%;

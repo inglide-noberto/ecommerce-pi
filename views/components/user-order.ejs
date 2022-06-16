@@ -1,0 +1,91 @@
+
+<main class="container margin-header-over">
+    <section class="user-page">
+        
+        <%- include('../partials/user-sidebar.ejs') -%>
+
+        <div class="user-page-data">
+            <h1 class="user-page-data-title">Pedido #<%= order.id%></h1> 
+
+            <div class="user-page-data-blocks">
+                <div class="user-page-data-infos acess-infos">
+                    <h2 class="title">Endereço de Entrega</h2>
+                    <div>
+                        <span class="info"> <%= user.name %> </span>
+                        <span class="info"><%= user.addresses[0].street %> - nº <%= user.addresses[0].number %></span>
+                        <span class="info"><%= user.addresses[0].city %>, <%= user.addresses[0].state %> - <%= user.addresses[0].zip_code %></span>
+                        <span class="info">Tel: (66) 98411-5450</span>
+                    </div>
+                </div>
+
+
+                <div class="order-resume">
+                    <h2 class="title">RESUMO DO PEDIDO</h2>
+                    <table>
+                        <tr style="height:25px">
+                            <%  let quantProducts = 0
+                                let products = []
+                                let totalValueproducts = 0
+                                console.log("+++++++++++++++++++++++++++++++++++++")
+
+                                for(productId of order.products) {
+                                    
+                                    productOrder = dataProducts.find( productOrder => productOrder.id == productId)
+                                    products.push(dataProducts.find( productOrder => productOrder.id == productId))
+                                    
+                                    
+                                    if (productOrder.promotional_price_status == true) {
+                                        totalValueproducts += parseFloat(productOrder.promotional_price)
+                                    } else {
+                                        totalValueproducts += parseFloat(productOrder.price)
+                                    }
+                                } 
+                
+                                quantProducts = products.length 
+                            %>
+
+                                
+                            <td> <%= quantProducts %> Produtos </td>
+                            <td class="text-end"> R$ <%= totalValueproducts.toFixed([2]).toString().replace('.', ',') %> </td>
+                        </tr>
+                        <tr style="height:25px">
+                                
+                            <td>Frete</td>
+                            <td class="text-end"> R$ <%= order.delivery_price %> </td>
+                        </tr>
+                    </table>
+                    <hr>
+                    <table>
+                        <tr style="height:25px" class="strong">    
+                            <td>TOTAL</td>
+                            <td class="text-end"> R$ <%= (parseFloat(order.delivery_price) + totalValueproducts).toFixed([2]).toString().replace('.', ',') %> </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="user-page-data-infos acess-infos user-page-data-blocks">
+                <h2 class="title">Metodo de Entrega</h2>
+                <span class="info"> Intelipost - Jadlog - de 1 a 9 dias úteis </span>
+            </div>
+
+            <div class="orders-list ">
+                <h2>Produtos</h2>
+                <table class="orders-list-table"  BORDER RULES=rows>
+                    <tr class="table-titles" style="height:35px">
+                        <th class="order" colspan="2">Produto</th>
+                        <th style="width:12%">Quantidade</th>
+                        <th style="width:15%">Valor</th>
+                        <th style="width:15%">Valor Total</th>
+                        <th style="width:13%"></th>
+                    </tr>
+
+                    <% for(product of order.products) { %>
+                        <%- include('../partials/product-line.ejs') -%>
+                    <% } %>
+                </table>
+            </div>
+
+        </div>
+    </section>
+</main>
