@@ -18,8 +18,32 @@
         font-size: 32px;
         font-weight: 300;
     }
+    .menu-bottom-container .menu-bottom-hamburger-menu {
+        visibility: visible;
+        display: inline;
+    
+        position: relative;
+        top: 0;
+    }
 
+    .menu-bottom-search {
+        width: 55%;
+    }
+    .menu-bottom-search input.seach-field {
+        width: 100%;
+    }
 }
+
+@media screen and (max-width: 850px) {
+    .menu-top-container .menu-top-buttons {
+        width: 52%;
+    }
+
+    .menu-bottom-search {
+        width: 70%;
+    }
+}
+
 
 @media screen and (max-width: 650px) {
     .menu-top-acessibility-buttons {
@@ -40,8 +64,10 @@
         align-items: center;
     }
 
-    .
-
+    .menu-bottom-search {
+        width: 70%;
+    }
+    
 }
 
 
@@ -160,17 +186,24 @@ input.seach-field {
     font-size: 16px;
 
     color: var(--color-text);
-    border-radius: 20px;
-}
+    font-weight: 400;
 
-/*--------- SEARCH FIELD ON FOCUS ---------*/
-input.seach-field:focus {
-    border: 1px solid transparent;
+    border-radius: 20px;
+    border: 2px solid transparent;
     border-radius: 20px;
     background: linear-gradient(to right, #090B0D, #090B0D), var(--color-gradient); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 }
+
+/*--------- SEARCH FIELD ON FOCUS ---------*/
+/* input.seach-field:focus {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background: linear-gradient(to right, #090B0D, #090B0D), var(--color-gradient); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+} */
 
 .menu-bottom-search img {
     width: 17px;
@@ -180,9 +213,19 @@ input.seach-field:focus {
     position: absolute;
     right: 15px;
     top: 8px;
+
+    cursor: pointer;
 }
 
 
+/*--------- HUMBURGER MENU ---------*/
+.menu-bottom-hamburger-menu {
+    visibility: hidden;
+    display: none;
+
+    position: absolute;
+    top: -200px;
+}
 
 
 

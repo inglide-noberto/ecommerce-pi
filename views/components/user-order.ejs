@@ -26,7 +26,6 @@
                             <%  let quantProducts = 0
                                 let products = []
                                 let totalValueproducts = 0
-                                console.log("+++++++++++++++++++++++++++++++++++++")
 
                                 for(productId of order.products) {
                                     
@@ -69,18 +68,20 @@
                 <span class="info"> Intelipost - Jadlog - de 1 a 9 dias úteis </span>
             </div>
 
-            <div class="orders-list ">
+
+            <!-- ----------------- Listing Order Products ------------------ -->
+            <div class="product-listing">
                 <h2>Produtos</h2>
-                <table class="orders-list-table"  BORDER RULES=rows>
+                <table class="product-listing-table"  BORDER RULES=rows>
                     <tr class="table-titles" style="height:35px">
                         <th class="order" colspan="2">Produto</th>
                         <th style="width:12%">Quantidade</th>
                         <th style="width:15%">Valor</th>
                         <th style="width:15%">Valor Total</th>
-                        <th style="width:13%"></th>
+                        <th style="width:13%" class="button"></th>
                     </tr>
 
-                    <% for(product of order.products) { %>
+                    <% for(productId of order.products) { %>
                         <%- include('../partials/product-line.ejs') -%>
                     <% } %>
                 </table>
