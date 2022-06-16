@@ -1,3 +1,36 @@
+@media screen and (max-width: 1080px) {
+    .footer-links-container .footer-newsletter {
+        gap: 5%;
+    }
+
+    .newsletter-text {
+        width: 60%;
+    }
+    
+    .footer-newsletter .newsletter-text p{
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .footer-links-container  .footer-newsletter {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 3% 5.5%;
+
+        gap: 24px;
+    }
+
+    .newsletter-text {
+        width: 100%;
+    }
+
+    .newsletter-input input.newsletter-email {
+        padding: 0 5.5%;
+    }
+}
+
+
 
 
 /*-------------- GENERAL FOOTER --------------*/
