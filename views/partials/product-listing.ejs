@@ -1,0 +1,16 @@
+<div class="product-listing">
+    <h2>Produtos</h2>
+    <table class="product-listing-table"  BORDER RULES=rows>
+        <tr class="table-titles" style="height:35px">
+            <th class="order" colspan="2">Produto</th>
+            <th style="width:12%">Quantidade</th>
+            <th style="width:15%">Valor</th>
+            <th style="width:15%">Valor Total</th>
+            <th style="width:13%" class="button"></th>
+        </tr>
+
+        <% for(product of order.products) { %>
+            <%- include('../partials/product-line.ejs') -%>
+        <% } %>
+    </table>
+</div>
