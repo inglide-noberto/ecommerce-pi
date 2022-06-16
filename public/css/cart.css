@@ -225,4 +225,12 @@ nav {
     border: solid 2px blue;
 }
 
-/* --------  */
+/* -------- RESPONSIVIDADE ---------------- */
+
+@media screen and (max-width: 850px){
+    .cart-content {
+        flex-direction: column;
+
+    }
+    
+}
