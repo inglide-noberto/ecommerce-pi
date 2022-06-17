@@ -245,9 +245,13 @@ nav {
 /* -------- RESPONSIVIDADE ---------------- */
 
 @media screen and (max-width: 850px){
-    .cart-content {
+   
+    .cart-content{
         flex-direction: column;
-
     }
-    
+    .cart-freight{
+        position: relative;
+        left: 500px;
+        bottom: 400px;
+    }
 }
