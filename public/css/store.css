@@ -82,16 +82,16 @@
     gap: 15px;
 }
 
-.store-options{
+.checkbox-options{
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .store-options-values {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .store-options-values div {
