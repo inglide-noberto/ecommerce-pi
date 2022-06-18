@@ -1,4 +1,4 @@
-const { redirect } = require("express/lib/response")
+const dataorders = require('../data/data-orders.json')
 
 const CartController = {
     index: (req,res)=>{
