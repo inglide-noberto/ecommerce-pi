@@ -9,7 +9,8 @@
     }
 
     .footer-newsletter .newsletter-button {
-        height: 38px;
+        height: 36px;
+        width: 136px;
         background: var(--color-background-3);
         top: 70%;
         left: 50%;
@@ -35,21 +36,24 @@
 
 @media screen and (max-width: 850px) {
     .footer-links-container  .footer-newsletter {
-        flex-wrap: wrap;
         height: 210px;
         padding: 22px 5.5% 10px;
+        
+        flex-wrap: wrap;
+        gap: 10px;
 
-        gap: 5px;
+        top: -250px;
     }
     
     .footer-newsletter .newsletter-text {
         width: 100%;
         margin: none;
         align-items: center;
+        gap: 0;
     }
 
     .footer-newsletter .newsletter-text h3{
-        font-size: 32px;
+        font-size: 34px;
         font-weight: 600;
     }
     .footer-newsletter .newsletter-text p{
@@ -58,11 +62,13 @@
     }
     
     .footer-newsletter input.newsletter-email {
-        height: 42px;
+        height: 38px;
+        font-size: 14px;
+
     }
 
     .footer-newsletter .newsletter-button {
-        top: 55%;
+        top: 48%;
     }
 
     .footer-newsletter .newsletter-button:hover {
