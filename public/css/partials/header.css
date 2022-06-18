@@ -191,19 +191,19 @@ input.seach-field {
     border-radius: 20px;
     border: 2px solid transparent;
     border-radius: 20px;
-    background: linear-gradient(to right, #090B0D, #090B0D), var(--color-gradient); 
+    background: linear-gradient(to right, #090B0D, #090B0D), var(--color-gradient-hover); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 }
 
 /*--------- SEARCH FIELD ON FOCUS ---------*/
-/* input.seach-field:focus {
-    border: 1px solid transparent;
+input.seach-field:focus {
+    border: 2px solid transparent;
     border-radius: 20px;
     background: linear-gradient(to right, #090B0D, #090B0D), var(--color-gradient); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
-} */
+}
 
 .menu-bottom-search img {
     width: 17px;
