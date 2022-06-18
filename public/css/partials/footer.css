@@ -1,4 +1,7 @@
 
+/******************* RESPONSIVENESS ********************/
+
+/*********************** 1125px ***********************/
 @media screen and (max-width:1125px) {
     .footer-newsletter .newsletter-input {
         height: 50%;
@@ -19,6 +22,7 @@
 }
 
 
+/*********************** 1080px ***********************/
 
 @media screen and (max-width: 1080px) {
     .footer-links-container .footer-newsletter {
@@ -33,6 +37,8 @@
         text-align: justify;
     }
 }
+
+/*********************** 850px ***********************/
 
 @media screen and (max-width: 850px) {
     .footer-links-container  .footer-newsletter {
@@ -76,9 +82,51 @@
     }
 }
 
-@media screen and (max-width: 650px) {
+/*********************** 690px ***********************/
+
+@media screen and (max-width: 690px) {
+    section.footer-links {
+        padding-top: 175px;
+    }
+
+    .footer-links-container .footer-newsletter {
+        top: -275px
+    }
+
+    .footer-links-container {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .footer-links-container .footer-description, .footer-links-container .footer-colluns-links {
+        width: 100%;
+    }
     
 }
+
+/*********************** 490px ***********************/
+@media screen and (max-width: 490px) {
+    .footer-links-container .footer-colluns-links {
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    div.footer-collum {
+        gap: 4px;
+    }
+    
+    .footer-colluns-links div.links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 18px;
+    }
+
+    .links .contact-info {
+        align-items: center;
+    }
+}
+
 
 
 
@@ -203,6 +251,11 @@ input.newsletter-email:focus {
 }
 
 .footer-collum {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.footer-collum .links{
     display: flex;
     flex-direction: column;
     gap: 8px;
