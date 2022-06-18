@@ -20,7 +20,6 @@ const ProductsController = {
         }
         else{
             const productsData = data
-            console.log(acao)
 
             res.render('layout', {'page':'store', productsData})      
         }

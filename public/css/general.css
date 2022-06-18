@@ -190,7 +190,7 @@ div .button-icon-material {
 /* Criar o checkbox customizado */
 .checkbox-option span {
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
     height: 17px;
     width: 17px;
