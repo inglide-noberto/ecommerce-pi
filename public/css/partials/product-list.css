@@ -6,7 +6,7 @@
     gap: .5vw;
 }
 
-.product-list .products {
+.product-list .products { 
     display: flex;
     justify-content:space-between;
     align-items: center;
