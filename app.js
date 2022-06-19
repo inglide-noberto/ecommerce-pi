@@ -9,6 +9,7 @@ const routersIndex = require(path.join(__dirname,'/Routers/index.js'))
 const routersProducts = require(path.join(__dirname,'/Routers/products.js'))
 const routersUser = require(path.join(__dirname,'/Routers/user.js'))
 const routerCart = require(path.join(__dirname, '/Routers/cartRoutes.js'))
+const routersEntry = require(path.join(__dirname, '/Routers/entry.js'))
 
 
 
@@ -28,7 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', routersIndex)
 app.use('/loja', routersProducts)
 app.use('/user', routersUser)
-app.use('/cart', routerCart),
+app.use('/cart', routerCart)
+app.use('/entrar', routersEntry)
 
 
 

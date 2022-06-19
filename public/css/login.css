@@ -169,15 +169,13 @@ transition: all .3s ease;
 } 
 
 
-body {
+/* body {
     display: flex;
     justify-content: center;
     align-items: center; 
     width: 100vw;
     height: 100vh;
-
-
-}
+} */
 
 .button-submit:hover {
     background: var(--color-gradient-hover);
@@ -221,11 +219,7 @@ body {
 /* 
 .first-content form button{
 
-<<<<<<< HEAD
 }*/
-=======
-}*/ 
->>>>>>> 3f5bcbdde1b62c2bb1ef51134e9f809c15563393
 
 
 /* .first-content form button, 
