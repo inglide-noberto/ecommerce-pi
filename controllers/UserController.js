@@ -45,9 +45,11 @@ const UserController = {
     update: (req, res) => {
         const { slug } = req.params
         const user = dataClients.find( user => user.slug == slug)
+
+        
         res.render('layout', {'page':'user-informations', user, rootDir})
     }
-} 
+}
 
 
 module.exports = UserController
