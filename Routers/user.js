@@ -10,4 +10,7 @@ router.get('/:slug/pedidos/:id', ProfileController.indexOrder)
 router.get('/:slug/conta', ProfileController.update)
 router.post('/:slug/conta', ProfileController.update)
 
+router.get('/entrar', ProfileController.indexEntry)
+router.post('/entrar', ProfileController.indexEntry)
+
 module.exports = router
