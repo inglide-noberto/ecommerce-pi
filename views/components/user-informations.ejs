@@ -5,10 +5,10 @@
         <div class="user-page-data">
             <h1 class="user-informations-title">Meus Dados</h1> 
 
-            <div class="user-informations-block">
+            <div class="user-informations-block background-block">
                 <h2>Dados Pessoais</h2>
 
-                <form action="post">
+                <form method="post" action="http://localhost:3000/user/<%= user.slug%>/conta">
                     <div class="user-informations-block-div">
                         <label for="user-name">Nome Completo</label>
                         <input type="text" name="name" id="name" value="<%= user.name%>">
@@ -24,7 +24,7 @@
                         </div>
                         <div class="user-informations-block-div">
                             <label for="birth-date">Data Nascimento</label>
-                            <input type="date" name="birth-date" id="birth-date" value="">
+                            <input type="date" name="birthDate" id="birth-date" value="">
                         </div>
                     </div>
                     <div class="user-informations-block-div user-informations-block-div-duo">
@@ -43,16 +43,21 @@
                            </select>
                         </div>
                     </div>
+                    
                     <button class="button-submit" type="submit">Salvar</button>
+                    
+                    <% if (message.type == "account" && message.content != "") { %>
+                        <span class="in-line-message"> <%= message.content %> </span>
+                    <% } %>
                 </form>
                 
                 
             </div>
 
-            <div class="user-informations-block">
+            <div class="user-informations-block background-block">
                 <h2>Endereço</h2>
 
-                <form action="">
+                <form method="post" action="http://localhost:3000/user/<%= user.slug%>/conta/endereco">
                     <div class="user-informations-block-div">
                         <label for="">Nome do Desitnatário</label>
                         <input type="text" name="" id="">
@@ -99,7 +104,12 @@
                             <input type="text" name="" id="">
                         </div>
                     </div>
+
                     <button class="button-submit" type="submit">Salvar</button>
+
+                    <% if (message.type == "shipping" && message != "") { %>
+                        <span class="in-line-message"> <%= message.content %> </span>
+                    <% } %>
 
                 </form>
                 

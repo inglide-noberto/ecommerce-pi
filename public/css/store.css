@@ -1,3 +1,54 @@
+/*---------------- RESPONSIVE AJUSTS ----------------*/
+@media screen and (max-width: 680px) {
+    /******* CONTENT PAGE *******/
+    main .store-container {
+        margin-top: 40px;
+    }
+
+    
+    /******* FILTERS SIDEBAR *******/
+    .store-filters {
+        visibility: hidden;
+        position: absolute;
+        z-index: 0;
+    }
+
+    
+    /******* BANNER *******/
+    section.store-banner img {
+        height: 260px;
+    }
+
+    section.store-banner::after {
+        height: 260px;
+    }
+
+    section.store-banner h1 {
+        max-width: 60%;
+        font-size: 48px;
+
+        top: 75px;
+    }
+}
+
+
+@media screen and (min-width: 680px) {
+    .store-menu-responsive {
+        visibility: hidden;
+        position: absolute;
+        z-index: 0;
+        left: -170px;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 /*---------------- STORE BANNER ----------------*/
 .store-banner-container {
@@ -43,17 +94,54 @@
 
 
 
+
+/*---------------- STORE MENU RESPONSIVE ----------------*/
+.store-menu-responsive {
+    height: 80px;
+    margin-top: 40px;
+    background-color: var(--color-background-3);
+}
+
+.store-menu-responsive-container {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store-menu-responsive-container button {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    width: auto;
+
+    cursor: pointer;
+}
+
+.store-menu-responsive-container span {
+    font-size: 16px;
+    width: 100%;
+}
+
+
+
+
+
 /*---------------- STORE FILTER ----------------*/
 .store-container {
     margin-top: 100px;
 
     display: flex;
     width: 100%;
-    gap: 50px
+    gap: 5%;
 }
 
 .store-filters {
     width: 20%;
+    min-width: 185px;
     
     text-transform: uppercase;
     font-size: 22px;
@@ -82,16 +170,16 @@
     gap: 15px;
 }
 
-.store-options{
+.checkbox-options{
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .store-options-values {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .store-options-values div {
@@ -103,25 +191,7 @@
 
 
 /*---------------- STORE GALLERY ----------------*/
-.store-gallery-products {
-    width: 100%;
-}
-
 .store-gallery {
     width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
 }
-
-.product-item {
-    max-width: 207.593px;
-    max-height: 333px;
-}
-
-/* .product-item .image {
-    max-height: 63%;
-} */
 

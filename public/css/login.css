@@ -2,8 +2,7 @@
 @import url('./partials/buttons/button-submit.css');
 @import url('.button-submit'); */
 
-@import url(./general.css);
-@import url(./partials/buttons/button-submit.css);
+
 
 .div-input input{
     box-sizing: border-box;
@@ -54,14 +53,30 @@ h1 {
         flex-wrap: wrap-reverse;
         height: auto;
         padding: 3% 5.5%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
         
         gap: 24px;
     }
 
+    .first-content{
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+
         
     .second-colum {
-        margin-bottom: 10%;
+        margin: 10%;
+        display: flex;
+        /*   */
+        flex-direction: column;
     }
+
+
     .newsletter-text {
         width: 100%;
     }
@@ -69,7 +84,21 @@ h1 {
     .newsletter-input input.newsletter-container form-login {
         padding: 0 5.5%;
     }
+
+    .barra {
+
+        visibility: hidden;
+        position: absolute;
+        /* z-index: 1; */
+
+    }
+
+   
+        
 }
+
+
+
  
 
 /* .first-content form {
@@ -99,7 +128,10 @@ h1 {
  
  }
 
+
+
 .barra {
+
     background: var(--color-gradient);
     width: 2px;
     
@@ -144,7 +176,7 @@ h1 {
 .second-colum input {
     position: relative;
     top: 5px;
-    left: 10px;
+    left: 0px;
     border-radius: 10px;   
     padding-left: 15px;
     outline: none;
@@ -169,19 +201,19 @@ transition: all .3s ease;
 } 
 
 
-body {
+/* body {
     display: flex;
     justify-content: center;
     align-items: center; 
     width: 100vw;
     height: 100vh;
-
-
-}
+} */
 
 .button-submit:hover {
     background: var(--color-gradient-hover);
 }
+
+
 /*  */
 
 
@@ -221,11 +253,7 @@ body {
 /* 
 .first-content form button{
 
-<<<<<<< HEAD
 }*/
-=======
-}*/ 
->>>>>>> 3f5bcbdde1b62c2bb1ef51134e9f809c15563393
 
 
 /* .first-content form button, 
