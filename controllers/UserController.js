@@ -2,6 +2,7 @@ const dataOrders = require('../data/data-orders.json')
 const dataClients = require('../data/data-clients.json')
 const dataProducts = require('../data/data-products.json')
 const rootDir = require("../utils/rootDir")
+const { NOMEM } = require('dns')
 
 
 
@@ -30,7 +31,7 @@ const UserController = {
 
         res.render('layout', {'page':'user-orders', orders, user, dataProducts, rootDir})
     },
-
+ 
 
     indexOrder: (req, res) => {        
         const { slug, id } = req.params
@@ -42,12 +43,41 @@ const UserController = {
     },
     
 
-    update: (req, res) => {
+    indexUser: (req, res) => {
         const { slug } = req.params
         const user = dataClients.find( user => user.slug == slug)
-
+        const message = {
+            type: "", 
+            content: ""
+        }
         
-        res.render('layout', {'page':'user-informations', user, rootDir})
+        res.render('layout', {'page':'user-informations', user, rootDir, message})
+    },
+
+    updateUser: (req, res) => {
+        const { slug } = req.params
+        const reqInfos = req.body
+        const user = dataClients.find( user => user.slug == slug)
+        const message = {
+            type: "account", 
+            content: "Alterações salvas com sucesso!"
+        }
+
+        res.render('layout', {'page':'user-informations', user, rootDir, message})
+        
+    },
+
+    updateShipping: (req, res) => {
+        const { slug } = req.params
+        const reqInfos = req.body
+        const user = dataClients.find( user => user.slug == slug)
+        const message = {
+            type: "shipping", 
+            content: "Alterações salvas com sucesso!"
+        }
+
+        res.render('layout', {'page':'user-informations', user, rootDir, message})
+        
     }
 }
 
