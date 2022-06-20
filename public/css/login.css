@@ -39,9 +39,16 @@ h1 {
     padding: 10px;
     font-size: 14px;
     margin: 0px;
-    margin-bottom: 20px;
     flex-direction: column; 
 }
+
+.first-content form div {
+    margin-top: 30px;
+}
+
+
+
+
 .container {
     
         display: flex;
@@ -175,7 +182,7 @@ h1 {
 
 .second-colum input {
     position: relative;
-    top: 5px;
+    top: 5px; 
     left: 0px;
     border-radius: 10px;   
     padding-left: 15px;
