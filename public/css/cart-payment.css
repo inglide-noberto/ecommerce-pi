@@ -104,7 +104,7 @@ strong {
     margin: 20px 0 20px 0;
 }
 
-a:hover {
+.hovers a:hover {
     color: #8803ca;
 }
 
@@ -176,7 +176,7 @@ a:hover {
     margin-bottom: 35px;
 }
 
-form {
+.form-payment form {
     display: flex;
     flex-direction: column;
     align-items: center;
