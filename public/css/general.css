@@ -250,3 +250,18 @@ div .button-icon-material {
     display: block;
   }
 
+
+
+
+
+/*---------------- IN LINE MESSAGE ----------------*/
+  .in-line-message {
+    margin-top: 15px;
+    width: 100%;
+    padding: 4px 0;
+    font-size: 14px;
+    text-align: center;
+    
+    background-color: var(--color-contrast-1);
+    border-radius: 4px;
+  }
