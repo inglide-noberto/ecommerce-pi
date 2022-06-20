@@ -16,8 +16,7 @@
                     e mais <%= quantProducts - 1  %> itens
                 <% } %>
             </td>
-            <td> <%= order.date_order %> </td>
-            <td> <%= order.method_payment %> </td>
+            <td class="order-td-hidden"> <%= order.date_order %> </td>
             <td> <%= order.status %> </td>
             <td><a href="/user/<%=  user.slug %>/pedidos/<%= order.id %>" class="button-submit">Ver Pedido</a></td>
         </tr>

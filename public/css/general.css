@@ -73,6 +73,14 @@ body {
     margin-top: 200px; 
 }
 
+.background-block {
+    padding: 30px 26px;
+    border-radius: 20px;
+    background-color: var(--color-background-5);
+}
+
+
+
 /*--------- LINKS ---------*/
 a {
     color: var(--color-text);

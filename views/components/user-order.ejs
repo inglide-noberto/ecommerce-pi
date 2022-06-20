@@ -8,7 +8,7 @@
             <h1 class="user-page-data-title">Pedido #<%= order.id%></h1> 
 
             <div class="user-page-data-blocks">
-                <div class="user-page-data-infos acess-infos">
+                <div class="user-page-data-infos shipping-address">
                     <h2 class="title">Endereço de Entrega</h2>
                     <div>
                         <span class="info"> <%= user.name %> </span>
@@ -60,32 +60,18 @@
                             <td class="text-end"> R$ <%= (parseFloat(order.delivery_price) + totalValueproducts).toFixed([2]).toString().replace('.', ',') %> </td>
                         </tr>
                     </table>
-                </div>
+                </div> 
             </div>
 
-            <div class="user-page-data-infos acess-infos user-page-data-blocks">
+            <div class="background-block user-page-data-infos shipping-infos user-page-data-blocks">
                 <h2 class="title">Metodo de Entrega</h2>
                 <span class="info"> Intelipost - Jadlog - de 1 a 9 dias úteis </span>
             </div>
 
 
             <!-- ----------------- Listing Order Products ------------------ -->
-            <div class="product-listing">
-                <h2>Produtos</h2>
-                <table class="product-listing-table"  BORDER RULES=rows>
-                    <tr class="table-titles" style="height:35px">
-                        <th class="order" colspan="2">Produto</th>
-                        <th style="width:12%">Quantidade</th>
-                        <th style="width:15%">Valor</th>
-                        <th style="width:15%">Valor Total</th>
-                        <th style="width:13%" class="button"></th>
-                    </tr>
-
-                    <% for(productId of order.products) { %>
-                        <%- include('../partials/product-line.ejs') -%>
-                    <% } %>
-                </table>
-            </div>
+            <%- include('../partials/product-listing.ejs') -%>
+            
 
         </div>
     </section>
