@@ -182,8 +182,6 @@ body {
 .button-submit:hover {
     background: var(--color-gradient-hover);
 }
-
-
 /*  */
 
 
@@ -223,7 +221,11 @@ body {
 /* 
 .first-content form button{
 
+<<<<<<< HEAD
+}*/
+=======
 }*/ 
+>>>>>>> 3f5bcbdde1b62c2bb1ef51134e9f809c15563393
 
 
 /* .first-content form button, 

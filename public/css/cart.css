@@ -242,4 +242,61 @@ nav {
     border: solid 2px blue;
 }
 
-/* --------  */
+/* -------- RESPONSIVIDADE ---------------- */
+
+@media screen and (max-width: 850px){
+   
+    .cart-content{
+        flex-direction: column;
+    }
+    .cart-freight{
+        position: relative;
+        left: 500px;
+        bottom: 400px;
+    }
+
+    .cart-menu {
+        width: 100%;
+    }
+
+    .especificanton-2-rectangle-img {
+        position: relative;
+        right: 92px;
+    }
+
+    .juction-specification-2-image-name-information {
+        display: flex;
+        flex-direction: column;
+        align-items: none;
+    }
+
+    .button-remover {
+        position: relative;
+        right: 200px;
+    }
+
+    .specification-1-QUANTIDADE-ENTREGA-PRECO {
+        position: relative;
+        right: 200px;
+    }
+
+    .content-juction-spacificantion-2 {
+        position: relative;
+        right: 200px;
+    }
+
+}
+
+@media screen and (max-width: 810px) {
+    .cart-menu-navigation {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        
+    }
+
+    .cart-freight {
+       position: relative;
+       left: 350px;
+    }
+}
