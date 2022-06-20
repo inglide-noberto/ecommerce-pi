@@ -17,7 +17,6 @@
     /******* BANNER *******/
     section.store-banner img {
         height: 260px;
-        object-position: bottom;
     }
 
     section.store-banner::after {

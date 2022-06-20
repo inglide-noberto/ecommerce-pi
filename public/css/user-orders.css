@@ -1,4 +1,18 @@
 
+/************ RESPONSIVE ADJUSTMENTS *************/
+@media screen and (max-width: 1070px) {
+    section.user-page{
+        flex-direction: column;
+    }
+
+    div.user-page-data {
+        margin-top: 70px;
+    } 
+}
+
+
+
+
 .user-page {
     display: flex;
     gap: 6%;
@@ -17,7 +31,6 @@
     font-weight: 600;
     text-transform: uppercase;
 }
-
 
 
 

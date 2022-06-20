@@ -73,6 +73,14 @@ body {
     margin-top: 200px; 
 }
 
+.background-block {
+    padding: 30px 26px;
+    border-radius: 20px;
+    background-color: var(--color-background-5);
+}
+
+
+
 /*--------- LINKS ---------*/
 a {
     color: var(--color-text);
@@ -242,3 +250,18 @@ div .button-icon-material {
     display: block;
   }
 
+
+
+
+
+/*---------------- IN LINE MESSAGE ----------------*/
+  .in-line-message {
+    margin-top: 15px;
+    width: 100%;
+    padding: 4px 0;
+    font-size: 14px;
+    text-align: center;
+    
+    background-color: var(--color-contrast-1);
+    border-radius: 4px;
+  }

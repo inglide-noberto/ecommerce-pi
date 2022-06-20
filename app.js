@@ -4,6 +4,8 @@ const express = require('express')
 const path = require('path')
 const appRouter = express.Router()
 const app = express()
+const bodyParser = require('body-parser');
+ 
 //-------------- IMPORT ROUTES -----------------
 const routersIndex = require(path.join(__dirname,'/Routers/index.js'))
 const routersProducts = require(path.join(__dirname,'/Routers/products.js'))
@@ -15,8 +17,10 @@ const routersEntry = require(path.join(__dirname, '/Routers/entry.js'))
 
 
 //--------- CONFIG INPUT DATA READING -------------
-appRouter.use(express.urlencoded({ extended:false}))
-appRouter.use(express.json())
+app.use(express.json())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended:false}))
+
 
 //---------- INITIALS CONFIG FOR EJS ----------
 app.set('view engine', 'ejs')

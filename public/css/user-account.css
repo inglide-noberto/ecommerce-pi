@@ -1,4 +1,24 @@
 
+/************ RESPONSIVE ADJUSTMENTS *************/
+@media screen and (max-width: 1070px) {
+    section.user-page{
+        flex-direction: column;
+    }
+
+    div.user-page-data {
+        margin-top: 70px;
+    }
+
+
+    
+}
+
+
+
+
+
+
+
 /************* PAGE CONFIGURATION *************/
 .user-page {
     display: flex;
@@ -11,6 +31,7 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    position: relative;
 }
 
 
@@ -19,18 +40,20 @@
 
 /************* USER INFOMATIONS *************/
 .user-page-data-title {
+    margin-bottom: -20px;
     font-size: 28px;
     font-weight: 600;
     text-transform: uppercase;
 }
 
+
 .user-page-data-blocks {
     display: flex;
     justify-content: space-between;
     gap: 15%;
-
-    margin-bottom: 30px;
 }
+
+
 .user-page-data-blocks .title {
     font-size: 22px;
     font-weight: 600;
