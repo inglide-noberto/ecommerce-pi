@@ -251,3 +251,16 @@ form {
 }
 /* ---- section 2 end ---  */
 
+@media screen and (max-width: 1181px) {
+    .payment-option-delivery {
+        width: 200px;
+        height: 150px;
+        border: solid 2px aquamarine;
+    }
+    
+    .cart-pament-freight {
+       border: solid 3px blue;
+       /* display: flex;
+       flex-direction: column; */
+    }
+}

@@ -138,3 +138,12 @@ option {
     font-weight: 600;
     color: rgba(84, 3, 255,60%);
 }
+
+/* -------- RESPONSIVIDADE ---------------- */ 
+
+@media screen and (max-width: 914px) {
+    .information {
+        position: relative;
+        right: 200px;
+    }
+}
