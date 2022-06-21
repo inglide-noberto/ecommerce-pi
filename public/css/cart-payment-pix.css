@@ -1,6 +1,3 @@
-@import url(./general.css);
-@import url(./partials/buttons/button-submit.css);
-
 
 .payment-pix {
     display: flex;

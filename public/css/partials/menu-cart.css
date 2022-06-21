@@ -1,0 +1,24 @@
+/* cart menu  */
+.menu-cart-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 1165px;
+    height: 70px;
+    background-color: var(--color-background-3);
+    /* border: solid 2px green; */
+}
+
+.cart-menu-navigation {
+    display: flex;
+    gap: 179px;
+    /* border: solid 2px green; */
+}
+
+
+
+.cart-menu-navigation a:hover {
+    color: var(--color-contrast-1
+    );
+}
