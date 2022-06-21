@@ -38,10 +38,17 @@ h1 {
     height: 40px;
     padding: 10px;
     font-size: 14px;
-    margin: 0px;
-    margin-bottom: 20px;
     flex-direction: column; 
+    
+
+    
 }
+
+.first-content form div {
+    
+    margin-top: 30px;
+}
+
 .container {
     
         display: flex;
@@ -101,22 +108,15 @@ h1 {
 
  
 
-/* .first-content form {
+.first-content form {
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    border-radius: 10px;
-    box-sizing: inherit;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 20px;
-    margin: 10px;
-    margin-bottom: 20px;
     flex-direction: column;
-
-} */
+    gap: 8px
+}
 
 
 .button-submit{
@@ -169,18 +169,19 @@ h1 {
     width: 100%;
     margin: 30px 0;
     position: relative;
+    gap: 30px;
     
         
 }
 
 .second-colum input {
-    position: relative;
-    top: 5px;
-    left: 0px;
+   
     border-radius: 10px;   
     padding-left: 15px;
     outline: none;
     font-size: 14px;
+    width: 100%;
+    margin-top: 30px ;
 
 
 }
