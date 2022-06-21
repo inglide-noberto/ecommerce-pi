@@ -1,7 +1,7 @@
 <main class="conteiner container margin-header">
     <%- include('../partials/menu-cart')%>
     <h1 class="finalizar-pedido1">Finalizar pedido</h1>
-    <section class="cart-payment">
+    <section class="cart-payment">  
 
         <h2 class="selecione-o-frete">Selecione o Frete</h2>
 
@@ -14,8 +14,8 @@
                 </p>
             </div>
             <div class="payment-option-delivery"><p class="option-delivery-delivery-date">Até <strong>04 de Junho - R$ 14,99</strong></p></div>
-            <div class="payment-option-delivery"><p class="option-delivery-delivery-date">Até <strong>04 de Junho - R$ 14,99</p></div>
-            <div class="payment-option-delivery"><p class="option-delivery-delivery-date">Até <strong>04 de Junho - R$ 14,99</p> </div>
+            <div class="payment-option-delivery"><p class="option-delivery-delivery-date">Até <strong>04 de Junho - R$ 14,99</strong></p></div>
+            <div class="payment-option-delivery"><p class="option-delivery-delivery-date">Até <strong>04 de Junho - R$ 14,99</strong></p> </div>
         </div>
 
         <div class="payment-address-order_summary">
@@ -50,9 +50,11 @@
         <div class="cato-pix-menu-cato-pix">
             <a class="hovers" href="#">CARTÃO</a> <a href="#">PIX</a>
         </div>
-        <h2 class="Dados-do-Cartao">Dados do Cartão</h2>
-        <div class="div-form">
-            <form class="form-payment" action="/cart/payment" method="post">
+        
+        
+        <form class="form-payment" action="/cart/payment" method="post">
+            <h2 class="Dados-do-Cartao">Dados do Cartão</h2>
+            <div class="labels-e-inputs">
                 <div class="labels">
                     <label for="cep">CPF</label>
                     <label for="cartaoNumero">Número do cartão</label>
@@ -64,6 +66,7 @@
                     <input class="cpf" type="text" id="cpf" name="cpf">
                     <input class="cartaoNumero" type="text" id="cartaoNumero" name="cartaoNumero">
                     <input class="nome" type="text" id="nome" name="nome">
+                    
                     <div>
                         <input class="validade" type="text" id="validade" name="validade">
                         <div>
@@ -73,22 +76,20 @@
                     </div> 
                     <input class="pacelas" type="text" id="pacelas" name="pacelas">  
                 </div>
-
-                <div class="linha"></div>
-        
-                <button class="button-submit" type="submit">finalizar pedido</button>
-            </form>
-            
-        </div>
-        <div class="form-total-proce">
-            <span class="abstract-total"><h3>Total</h3> <h3>R$244,98</h3></span>
-            <span class="abstract-juros-pix"> 
-                <div class="abstract-juros-pix-rigth ">
-                    <a class="hovers" href="#">Em até 6x sem juros</a>
-                    <br>
-                    <a class="hovers" href="#">R$ 205,00  pagando com PIX</a>
+            </div>
+    
+            <div class="form-total-proce">
+                <span class="total">Total</span>
+                <div class="juros-pix ">
+                        <span class="strong">R$244,98</span>
+                        <span class="hovers">Em até 6x sem juros</span>
+                        <span class="hovers">R$ 205,00 pagando com PIX</span>
                 </div>
-            </span>
-        </div>
+            </div>
+
+            <button class="button-submit" type="submit">finalizar pedido</button>
+        </form>
+        
+    
     </section>
 </main>
