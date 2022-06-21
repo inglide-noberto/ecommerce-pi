@@ -1,4 +1,9 @@
 /* cart menu  */
+
+.cart-menu {
+    width: 100%;
+}
+
 .menu-cart-conteiner {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +17,9 @@
 
 .cart-menu-navigation {
     display: flex;
-    gap: 179px;
+    gap: 20%;
+    justify-content: center;
+    width: 100%;
     /* border: solid 2px green; */
 }
 
@@ -21,4 +28,10 @@
 .cart-menu-navigation a:hover {
     color: var(--color-contrast-1
     );
+}
+
+@media screen and (max-width: 900px) {
+    .cart-menu-navigation {
+        gap: 8%;
+    }
 }
