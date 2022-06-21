@@ -12,7 +12,11 @@
         <title><%= page %></title>
     <% } %>
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- Link Material Symbols for icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <!-- Link to partials CSS -->
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/<%=page%>.css">
     <link rel="stylesheet" href="/css/not-found.css">
@@ -21,6 +25,7 @@
     <link rel="stylesheet" href="/css/partials/product-item.css">
     <link rel="stylesheet" href="/css/partials/product-list.css">
     <link rel="stylesheet" href="/css/partials/product-listing.css">
+    <link rel="stylesheet" href="/css/partials/menu-cart.css">
     <link rel="stylesheet" href="/css/partials/order-list.css">
     <link rel="stylesheet" href="/css/partials/user-sidebar.css">
     <link rel="stylesheet" href="/css/partials/button/button-submit.css">
@@ -36,11 +41,34 @@
     <%- include('./partials/footer.ejs') %>
     
 </body>
-<script src="../scripts/smooth-scroll.js"></script>
+<script src="/scripts/smooth-scroll.js"></script>
+
+
+<!-- Scrip for loop reload page  -->
 <!-- <script>
     window.setInterval('refresh()', 3000);
     function refresh() {
         window .location.reload();
     }
 </script> -->
+
+
+<!-- Swiper JS (for banners and products carousel) -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 </html>

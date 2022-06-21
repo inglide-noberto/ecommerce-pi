@@ -1,3 +1,17 @@
+/*---------------- RESPONSIVE ADJUSTMENTS ----------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -146,11 +160,18 @@ main {
 
 /*---------------- SECTION HORIZONTAL BANNERS ----------------*/
 .banners-horizontal {
+    max-width: 543px;
     width: 100%;
-    height: 290px;
+    min-width: 310px;
+    
+    max-height: 290px;
+    height: 24vw;
+    min-height: 171px;
 
     display: flex;
     gap: 2%;
+
+    flex-wrap: wrap;
 }
 
 
