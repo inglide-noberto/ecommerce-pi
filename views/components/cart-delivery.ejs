@@ -2,81 +2,67 @@
     <main class="conteiner container  margin-header">
         <%- include('../partials/menu-cart')%>
         <h1 class="entrega">ENTREGA</h1>
-       <div class="information">
+       <section class="information">
             <form action="/cart/inforEntrega" method="post">
-                <div class="">
-                    <label for="cep">CEP</label>
-                    <input class="information-cep" type="text" id="cep" name="cep" placeholder="Ex.: 00000-000" required>
-                </div>
-                <div class="div-information-name">
-                    <label for="name">Nome do Destinatário</label>
-                    <input class="information-name" type="text" id="name" name="name" placeholder="Digite seu nome" required>
-                </div>
-                <div class="div-information-address">
-                    <label for="endereco">Endereço</label>
-                    <input class="information-addreass" type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
-                </div>
-                <div class="div-information-number">
-                    <label for="numero">Numero</label>
-                    <input class="information-number" type="number" id="numero" name="numero" placeholder="Numero" required>
-                </div>
-                <div class="div-information-complement">
-                    <label for="Complemento">Complemento</label>
-                    <input class="information-complement" type="text" id="Complemento" name="Complemento" placeholder="ex.: Casa A" required>
-                </div>
-                <div class="div-information-district">
-                    <label for="bairro">Bairro</label>
-                    <input class="information-district" type="text" id="bairro" name="bairro" placeholder="Digite seu bairro" required>
-                </div>
-                <div class="div-information-city">
-                    <label for="cidade">Cidade</label>
-                    <input class="information-city" type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
-                </div>
-                <div class="div-information-state">
-                    <label for="estado">Estado</label>
-                    <select class="information-state-select" id="estado" name="estado">
-                        <option value="">Selecione</option>
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espirito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                    </select>
-                    <!-- <input class="information-state" type="text" id="estado" name="estado" placeholder="Digote seu estado" required> -->
-                </div>
-                <div class="div-information-reference">
-                    <label for="referencia">Ponto de referência</label>
-                    <input class="information-reference" type="text" id="referencia" name="referencia" placeholder="Digete sua referência" required>
-                </div>
-                <div class="div-information-telefhone">
-                    <label for="telefone">Telefone celular</label>
-                    <input class="information-telefhone" type="tel" id="telefone" name="telefone" placeholder="Ex.: (00) 0000-0000" required>
+                <div class="div-labels-inputs">
+                    <div class="div-labels2">
+                        <label for="cep">CEP</label>
+                        <label for="name">Nome do Destinatário</label>
+                        <label for="endereco">Endereço</label>
+                        <label for="numero">Numero</label>
+                        <label for="Complemento">Complemento</label>
+                        <label for="bairro">Bairro</label>
+                        <label for="cidade">Cidade</label>
+                        <label for="estado">Estado</label>
+                        <label for="referencia">Ponto de referência</label>
+                        <label for="telefone">Telefone celular</label>
+                    </div>
+                    <div class="div-inputs2">
+                        <input class="information-cep" type="text" id="cep" name="cep" placeholder="Ex.: 00000-000" required>
+                        <input class="information-name" type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                        <input class="information-addreass" type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+                        <input class="information-number" type="number" id="numero" name="numero" placeholder="Numero" required>
+                        <input class="information-complement" type="text" id="Complemento" name="Complemento" placeholder="ex.: Casa A" required>
+                        <input class="information-district" type="text" id="bairro" name="bairro" placeholder="Digite seu bairro" required>
+                        <input class="information-city" type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
+                        <select class="information-state-select" id="estado" name="estado">
+                            <option value="">Selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espirito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                        <input class="information-reference" type="text" id="referencia" name="referencia" placeholder="Digete sua referência" required>
+                        <input class="information-telefhone" type="tel" id="telefone" name="telefone" placeholder="Ex.: (00) 0000-0000" required>
+                    </div>
                 </div>
                 <!-- <div class="linha"></div> -->
-                <button class="button-submit">Continuar</button>                
+                <button class="button-submit">Continuar</button> 
+                <a class="voltar" href="#">Voltar</a>                
             </form>
-            <a class="voltar" href="#">Voltar</a>
-       </div>
+           
+        </section>
     </main>
