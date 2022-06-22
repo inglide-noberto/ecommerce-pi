@@ -43,6 +43,7 @@ section {
     align-items: center;
     gap: 45px;
     width: 831px;
+    max-width: 100%;
     border-top: solid 2px var(--color-background-3);
     border-bottom: solid 2px var(--color-background-3);
     padding: 10px;
@@ -112,6 +113,7 @@ section {
 
 .button-remover {
     width: 80px;
+    max-width: 100%;
     height: 25px;
     background: var(--color-background-3);
     border-radius: 20px;
@@ -226,7 +228,7 @@ section {
 
 /* -------- RESPONSIVIDADE ---------------- */
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 1218px){
    
     .cart-content{
         flex-direction: column;
@@ -245,7 +247,7 @@ section {
 
     .juction-specification-2-image-name-information {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: none;
     }
 
@@ -266,6 +268,7 @@ section {
 
 }
 
+
 @media screen and (max-width: 810px) {
     .cart-menu-navigation {
         display: flex;
@@ -277,5 +280,14 @@ section {
     .cart-freight {
        position: relative;
        left: 350px;
+    }
+}
+
+
+@media screen and (max-width: 648px) {
+    .cart-freight {
+        position: relative;
+        left: 0;
+        top: 30px;
     }
 }
