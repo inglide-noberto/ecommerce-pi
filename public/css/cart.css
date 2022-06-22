@@ -28,6 +28,7 @@ section {
     justify-content:space-between;
     width: 831px;
     margin-bottom: 10px;
+    border-bottom: solid 2px var(--color-background-3);
     /* border: solid 1px blue; */
 }
 
@@ -44,7 +45,7 @@ section {
     gap: 45px;
     width: 831px;
     max-width: 100%;
-    border-top: solid 2px var(--color-background-3);
+    /* border-top: solid 2px var(--color-background-3); */
     border-bottom: solid 2px var(--color-background-3);
     padding: 10px;
     /* border: solid 2px rgb(171, 15, 127); */
@@ -87,6 +88,16 @@ section {
     /* width: 205px; */
     /* gap: 51px; */
     /* border: solid 2px rgb(4, 229, 233); */
+}
+
+.div-quantidade h4 {
+    /* position: relative;
+    bottom: 67px; */
+}
+
+.subpa-preco {
+    /* position: relative;
+    bottom: 78px; */
 }
 
 .juction-spacificantion-2-product-quantity {
@@ -256,10 +267,10 @@ section {
         right: 200px;
     }
 
-    .specification-1-QUANTIDADE-ENTREGA-PRECO {
+    /* .specification-1-QUANTIDADE-ENTREGA-PRECO {
         position: relative;
         right: 200px;
-    }
+    } */
 
     .content-juction-spacificantion-2 {
         position: relative;
@@ -285,9 +296,9 @@ section {
 
 
 @media screen and (max-width: 648px) {
-    .cart-freight {
-        position: relative;
-        left: 0;
-        top: 30px;
+    .content-juction-specification-product {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
