@@ -1,9 +1,15 @@
+<!-- ------------------inicio do main-------------------------- -->
+
 <main class="conteiner container margin-header">
     <%- include('../partials/menu-cart')%>
-    <h1 class="finalizar-pedido1">Finalizar pedido</h1>
+        <h1 class="finalizar-pedido1" >Finalizar pedido</h1>
+
+<!-- ------------------inicio da section - cart-payment ---------------------------->
     <section class="cart-payment">  
 
         <h2 class="selecione-o-frete">Selecione o Frete</h2>
+        
+<!-- --------------------------inicio da div de selecionar data de entrega------------>
 
         <div class="cart-pament-freight">
             <div class="payment-option-delivery">
@@ -17,8 +23,14 @@
             <div class="payment-option-delivery"><p class="option-delivery-delivery-date">Até <strong>04 de Junho - R$ 14,99</strong></p></div>
             <div class="payment-option-delivery"><p class="option-delivery-delivery-date">Até <strong>04 de Junho - R$ 14,99</strong></p> </div>
         </div>
+<!-- --------------------------fim da div de selecionar data de entrega---------------------------------------- -->
+
+<!-- --------------------------inicio da div de Endereço da Entrega e resumo de pedido---------------------------------------- -->
 
         <div class="payment-address-order_summary">
+
+<!-- --------------------------inicio da div de Endereço da Entrega---------------------------------------- -->
+
             <div class="address-order_summary-address">
                 <h2 class="address-delivery-address">Endereço da Entrega</h2>
                 <div class="address-complete">
@@ -29,10 +41,15 @@
                     <p class="adress-complete-paragraph">CEP 78550244</p>
                 </div>
             </div>
+
+<!-- --------------------------fim da div de Endereço da Entrega---------------------------------------- -->
+
+<!-- --------------------------inicio da div resumo do pedido---------------------------------------- -->
+
             <div class="address-order_summary-abstract">
                 <div class="resumo-pedido">
-                    <div><h3>RESUMO DO PEDIDO</h3></div>
-                    <div><a class="voltar" href="#">voltar</a></div>
+                    <h4 class="subp-resumo-pedido">RESUMO DO PEDIDO</h4>
+                    <a class="voltar" href="#">voltar</a>
                 </div>
                 <div class="produtos-precos">
                     <div class="produto-frete">
@@ -45,7 +62,7 @@
                     </div>
                 </div>
                 <div class="total-preco">
-                    <div>
+                    <div class="subp-total">
                         <h3>TOTAL</h3> 
                     </div>
                     <div class="preco-produro-juros-pix">
@@ -55,10 +72,15 @@
                     </div>
                 </div>
             </div>
+
+<!-- --------------------------fim da div resumo do pedido---------------------------------------- -->
+
         </div>
 
+<!-- --------------------------fim da div de Endereço da Entrega e resumo do pedido---------------------------------------- -->
+
     </section>
-    
+    <!-- ------------------fim da section - cart-payment -------------------------- -->
     <section class="payment-dice">
         <div class="menu-cartao-pix">
             <a class="menu-cartao" href="#">CARTÃO</a> <a class="menu-pix" href="#">PIX</a>
@@ -106,3 +128,4 @@
     
        </section>
 </main>
+<!-- ------------------fim do main-------------------------- -->
