@@ -58,27 +58,47 @@ const UserController = {
         const { slug } = req.params
         const reqInfos = req.body
         const user = dataClients.find( user => user.slug == slug)
-        const message = {
+        let message = {
             type: "account", 
             content: "Alterações salvas com sucesso!"
         }
 
+        console.log(reqInfos)
+
+        if(user.name == reqInfos.name || user.email == reqInfos.email) {
+            message.content = "Algo deu errado"
+        } else {
+            message.content = user.name
+        }
+
+
         res.render('layout', {'page':'user-informations', user, rootDir, message})
-        
+
     },
+
+
+
 
     updateShipping: (req, res) => {
         const { slug } = req.params
         const reqInfos = req.body
         const user = dataClients.find( user => user.slug == slug)
-        const message = {
+        let message = {
             type: "shipping", 
             content: "Alterações salvas com sucesso!"
         }
 
+
         res.render('layout', {'page':'user-informations', user, rootDir, message})
         
     }
+
+
+
+
+
+
+
 }
 
 
