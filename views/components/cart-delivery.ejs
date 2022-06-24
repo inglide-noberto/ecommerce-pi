@@ -3,10 +3,10 @@
         <%- include('../partials/menu-cart')%>
         <h1 class="entrega">ENTREGA</h1>
        <section class="information">
-            <form action="/cart/inforEntrega" method="post">
+            <form class="form-delivery" action="/cart/inforEntrega" method="post">
                 <div class="div-labels-inputs">
                     <div class="div-labels2">
-                        <label for="cep">CEP</label>
+                        <label for="cep">CPF</label>
                         <label for="name">Nome do Destinatário</label>
                         <label for="endereco">Endereço</label>
                         <label for="numero">Numero</label>
@@ -18,7 +18,7 @@
                         <label for="telefone">Telefone celular</label>
                     </div>
                     <div class="div-inputs2">
-                        <input class="information-cep" type="text" id="cep" name="cep" placeholder="Ex.: 00000-000" required>
+                        <input class="information-cpf" type="text" id="cpf" name="cep" placeholder="Ex.: 00000-000" required>
                         <input class="information-name" type="text" id="name" name="name" placeholder="Digite seu nome" required>
                         <input class="information-addreass" type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
                         <input class="information-number" type="number" id="numero" name="numero" placeholder="Numero" required>
