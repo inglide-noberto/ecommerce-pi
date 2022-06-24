@@ -305,14 +305,14 @@ strong {
  
 }
 
-@media screen and (max-width: 682px) {
-
+@media screen and (max-width: 738px) {
+    
     .cart-pament-freight {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
     }
 
     .payment-option-delivery {
@@ -330,11 +330,17 @@ strong {
         flex-direction: column;
         justify-content: center;
         height: 325px;
-        width: 90%;
+        width: 70%;
    }
 
    .menu-cartao-pix {
     display: flex;
     gap: 100px;
+    height: 40px;
    }
+
+   .button-submit {
+    margin-right: 100px;
+   }
+
 }

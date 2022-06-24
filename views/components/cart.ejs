@@ -1,19 +1,18 @@
 <!-- nunca vai de primeira :(  -->
  <!-- kkkkk  -->
  <main class="container margin-header">
-    <section class="cart">
+    <section class="page-cart">
         <%- include('../partials/menu-cart')%>
         <h1 class="subparagraph-my-cart">MEU CARRINHO</h1>
         <!-- começo div do conteudo  -->
         <div class="cart-content">
-            <!-- começo divisão de junçao  -->
-            <div class="cart-content-juction">
-                <div class="cart-content-juction-specification-1">
-                    <h4>MEU CARRINHO</h4> <div class="specification-1-QUANTIDADE-ENTREGA-PRECO">
-                        <!-- <h4>QUANTIDADE</h4>
-                        <h4>PREÇO</h4> -->
-                    </div>
+            <div class="cart-content-juction-specification-1">
+                    <h4>MEU CARRINHO</h4>
                 </div>
+            <!-- começo divisão de junçao  -->
+            
+            <div class="cart-content-juction">
+                
                 <div class="content-juction-specification-product">
                     <div class="juction-specification-2-image-name-information">
                         <div class="especificanton-2-rectangle-img">
@@ -26,7 +25,7 @@
                             </p>
                         </span>
                     </div>
-                    <div class="content-juction-spacificantion-2">
+                    <!-- <div class="content-juction-spacificantion-2"> -->
                         <div class="div-quantidade">
                             <h4>QUANTIDADE</h4>
                             <form action="" method="">
@@ -42,18 +41,17 @@
                         <div class="div-preco">
                             <h4 class="subpa-preco">PREÇO</h4>
                             <h4>R$23,99</h4>
-                        </div>
+                        <!-- </div> -->
                     </div>
-                    <button class="button-remover">REMOVER</button>
-                </div>
-            </div>
-            <!-- final divisão de junçao  -->
-            <div class="cart-contect-Oder-summary">
+                    <div><button class="button-remover">REMOVER</button></div>
+                </div> 
+
+                <div class="cart-contect-Oder-summary">
                 <h3 class="Oder-summary">RESUMO DO MEU PEDIDO</h3>
-                <span cl ass="Oder-summary-name-value">
+                <div class="Oder_summary_name_value">
                     <p> 10 PRODUTO</p>
                     <P> R$239,90 </P>
-                </span>
+                </div>
                 <span class="Oder-summary-freight-value">
                     <p> Frete </p>
                     <P> R$4,99 </P>
@@ -69,6 +67,10 @@
                 <button class="button-submit">continuar</button>
                 <a class="Oder-summary-link-to-add" href="#">Adicionar mais produtos</a>
             </div>
+            
+            </div>
+            <!-- final divisão de junçao  -->
+            
         </div>
         <!-- final div do conteudo  -->
         <div class="cart-freight">

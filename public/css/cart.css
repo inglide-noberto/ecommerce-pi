@@ -1,6 +1,13 @@
 
-section {
+main {
+    /* border: solid 10px tomato; */
+    width: 1170px;
+}
+
+.page-cart {
     margin-top: 200px;
+    width: 100%;
+    /* border: solid 8px chartreuse; */
 }
 
 .subparagraph-my-cart {
@@ -9,48 +16,38 @@ section {
 
 .cart-content {
     display: flex;
+    flex-direction: column;
     gap: 16px;
-    width: 1165px;
+    width: 100%;
+    /* border: solid 10px yellow; */
     /* border: solid 2px rgb(150, 114, 30); */
 }
 
 .cart-content-juction {
-    width: 835px;
+    display: flex;
+    width: 100%;
+    /* border: solid 7px blueviolet */
 }
 
-.cart-content-juction-specification-1 {
-    display: flex;
-    justify-content:space-between;
-    width: 831px;
-    margin-bottom: 10px;
-    border-bottom: solid 2px var(--color-background-3);
-    /* border: solid 1px blue; */
-}
-
-.specification-1-QUANTIDADE-ENTREGA-PRECO {
-    display: flex;
-    gap: 50px;
-    width: 350px;
-    /* border: solid 2px green; */
-}
 
 .content-juction-specification-product {
     display: flex;
+    width: 80%;
+    height: 150px;
     align-items: center;
-    gap: 45px;
-    width: 831px;
-    max-width: 100%;
-    /* border-top: solid 2px var(--color-background-3); */
+    border-top: solid 2px var(--color-background-3);
     border-bottom: solid 2px var(--color-background-3);
-    padding: 10px;
-    /* border: solid 2px rgb(171, 15, 127); */
+    /* border: solid 10px yellow; */
 }
 
 .juction-specification-2-image-name-information{
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 423px;
+    width: 50%;
+    height: 150px;
+    /* border: solid 10px khaki; */
     /* border: solid 2px rgb(150, 114, 30); */
 }
 
@@ -80,20 +77,31 @@ section {
     display: flex;
     align-items: center;
     gap: 50px;
-    /* width: 205px; */
-    /* gap: 51px; */
-    /* border: solid 2px rgb(4, 229, 233); */
+    /* border: solid 5px indianred; */
 }
 
-.div-quantidade h4 {
-    /* position: relative;
-    bottom: 67px; */
+.div-quantidade {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    gap: 15px;
+    width: 150px;
+    height: 100px;
+    /* border: solid 4px gold; */
 }
 
-.subpa-preco {
-    /* position: relative;
-    bottom: 78px; */
+.div-preco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 150px;
+    height: 100px;
+    /* border: solid 4px honeydew; */
 }
+
 
 .juction-spacificantion-2-product-quantity {
     display: flex;
@@ -124,6 +132,7 @@ section {
     background: var(--color-background-3);
     border-radius: 20px;
     border: solid 1px white;
+    margin-right: 20px;
 }
 
 .button-remover:focus {
@@ -147,6 +156,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* width: 32%; */
     width: 318px;
     height: 420.96px;
     background-color: var(--color-background-3);
@@ -159,18 +169,17 @@ section {
     margin: 34px 0 34px 0;
 }
 
-.Oder-summary-name-value {
+.Oder_summary_name_value {
     display: flex;
     justify-content: space-between;
-    width: 227px;
-    /* border: solid 2px rgb(74, 32, 189); */
-    padding-bottom: 12px;
+    width: 80%;
+    /* border: solid 5px yellowgreen; */
 }
 
 .Oder-summary-freight-value {
     display: flex;
     justify-content: space-between;
-    width: 227px;
+    width: 80%;
     padding-bottom: 17px;
     border-bottom: solid 2px var(--color-background-pages);
 }
@@ -207,9 +216,8 @@ section {
 
 .cart-freight {
     width: 400px;
-    position: relative;
-    bottom: 223px;
-    z-index: 2;
+    margin-top: 30px;
+    
     /* border:solid 2px rgba(11, 242, 53, 0.6); */
 
 }
@@ -234,66 +242,48 @@ section {
 
 /* -------- RESPONSIVIDADE ---------------- */
 
-@media screen and (max-width: 1218px){
-   
-    .cart-content{
+@media screen and (max-width: 861px) {
+    .cart-content-juction {
+        display: flex;
         flex-direction: column;
-    }
-    .cart-freight{
-        position: relative;
-        left: 500px;
-        bottom: 400px;
+        align-items: center;
+        gap: 30px;
+        /* border: solid 10px honeydew; */
     }
 
+    }
 
-    .especificanton-2-rectangle-img {
-        position: relative;
-        right: 92px;
+    .content-juction-specification-product {
+        width: 100%;
     }
 
     .juction-specification-2-image-name-information {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: none;
-    }
-
-    .button-remover {
-        position: relative;
-        right: 200px;
-    }
-
-    /* .specification-1-QUANTIDADE-ENTREGA-PRECO {
-        position: relative;
-        right: 200px;
-    } */
-
-    .content-juction-spacificantion-2 {
-        position: relative;
-        right: 200px;
-    }
-
+        width: 60%;
 }
 
-
-@media screen and (max-width: 810px) {
-    .cart-menu-navigation {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        
-    }
-
-    .cart-freight {
-       position: relative;
-       left: 350px;
-    }
-}
-
-
-@media screen and (max-width: 648px) {
+@media screen and (max-width: 651px) {
     .content-juction-specification-product {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 500px;
+    }
+
+    .cart-contect-Oder-summary {
+        width: 70%;
+    }
+
+    .juction-specification-2-image-name-information {
+        width: 100%;
+    }
+
+    .div-quantidade {
+        margin-left: 40px;
+    }
+
+    .button-remover {
+        margin-left: 20px;
     }
 }
