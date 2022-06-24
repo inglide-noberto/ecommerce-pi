@@ -8,9 +8,8 @@
 
 .product-list .products { 
     display: inline-grid;
-    grid-template-columns:repeat(3, 200px);
+    grid-template-columns:repeat(4,244px);
 
-    gap: 1.2vw;
 }
 
 .product-list .product-item {
