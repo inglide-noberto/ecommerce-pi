@@ -28,12 +28,6 @@ FICHA TÉCNICA - Hard Skills
 # NodeJS
 - NPM
 - Sistema de módulo
-
-# Javascript 
-- Manipulação de variavés e Arrays
-- Funções e Laços de Repetição
-- Callback
-- Json
 - Express
   - MVC
     - Controllers
@@ -52,8 +46,15 @@ FICHA TÉCNICA - Hard Skills
     - Error 404
     - Path e FS
     - Multer
- - Middlewares
- - Session e Cookies
+  - Middlewares
+  - Session e Cookies
+
+# Javascript 
+- Manipulação de variavés e Arrays
+- Funções e Laços de Repetição
+- Callback
+- Json
+
 
 # Banco de Dados
   - Manipulação de dados e Consulta
