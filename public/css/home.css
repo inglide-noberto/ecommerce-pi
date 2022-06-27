@@ -1,5 +1,44 @@
 /*---------------- RESPONSIVE ADJUSTMENTS ----------------*/
+@media screen and (max-width: 1470px) {
+    
+    
+}
 
+
+
+@media screen and (max-width: 815px) {
+    div.bar-item {
+        width: 38vw;
+    }
+
+    div.bar-container {
+        /* height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 5vw;
+    }
+    section.bar {
+        height: 100%;
+        padding: 10px 0;
+    }
+
+
+}
+
+@media screen and (max-width: 750px) {
+    section.banners-horizontal {
+        flex-wrap: wrap;
+        max-height: none;
+        height: 100%;
+        gap: 20px;
+    } 
+    section.banners-horizontal a {
+        height: 45vw;
+    }
+}
 
 
 
@@ -160,7 +199,7 @@ main {
 
 /*---------------- SECTION HORIZONTAL BANNERS ----------------*/
 .banners-horizontal {
-    max-width: 543px;
+    /* max-width: 543px; */
     width: 100%;
     min-width: 310px;
     
@@ -171,7 +210,6 @@ main {
     display: flex;
     gap: 2%;
 
-    flex-wrap: wrap;
 }
 
 

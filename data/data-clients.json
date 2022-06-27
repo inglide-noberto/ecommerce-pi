@@ -9,7 +9,7 @@
         "birth-date":"2022-01-02",
         "gender":"feminino",
         "password":"123456",
-        "addresses":[
+        "adresses":[
             {
                 "id": "1",
                 "title": "Casa",
