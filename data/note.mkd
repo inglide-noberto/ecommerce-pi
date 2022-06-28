@@ -6,8 +6,9 @@ Tabelas a serem criadas:
 - Tipo de endereço (correspondencia, entrega, residencial, trabalho nome dado pelo cliente)
 
 
-- Produto
-- Tipo Produto (virtual, fisico)
+* Produto
+* Tipo Produto (virtual, fisico)
+* Categoria
 
 
 - Pedido

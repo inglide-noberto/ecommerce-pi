@@ -1,6 +1,8 @@
 /*---------------- RESPONSIVE ADJUSTMENTS ----------------*/
 @media screen and (max-width: 1470px) {
-    
+    .hero-banner.container {
+        margin: 0 2vw;
+    }
     
 }
 
@@ -25,7 +27,6 @@
         padding: 10px 0;
     }
 
-
 }
 
 @media screen and (max-width: 750px) {
@@ -37,6 +38,23 @@
     } 
     section.banners-horizontal a {
         height: 45vw;
+    }
+}
+
+@media screen and (max-width: 680px) { 
+    div.bar-item-text h5 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    div.bar-item-text span {
+        font-size: 10px;
+        font-weight: 200;
+    }
+
+    div.bar-item img {
+        width: 40px;
+        height: 30px;
     }
 }
 
@@ -52,11 +70,9 @@
 
 
 
-
-
 /*---------------- GLOBAL ----------------*/
 main {
-    padding-top: 65px;
+    padding-top: 65px; 
     display: flex;
     flex-direction: column;
     gap: 100px;

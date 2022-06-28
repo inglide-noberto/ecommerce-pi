@@ -16,7 +16,7 @@
                 "street": "Rua das ruas",
                 "number": "100",
                 "complement": "Apt 10",
-                "district": "Setor Comercial",
+                "district": "Bairro",
                 "zip_code": "78550-000",
                 "city": "Sinop", 
                 "state": "MT",
@@ -62,7 +62,7 @@
                 "country": "Brasil",
                 "shipping_contact_name": "Minha mãe",
                 "shipping_contact_tel": "(66) 9 9999-9999"
-            },
+            }, 
             {
                 "id": "2",
                 "title": "Trabalho",
