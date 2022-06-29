@@ -15,12 +15,12 @@
         "full_description": "",
         "tags":["promocional", "new", "recommended"],
         "status": "active",
-        "weight": "peso",
-        "format": "formato(quadrado, cilindrico)",
-        "length": "comprimento",
-        "height": "altura",
-        "width": "largura",
-        "diameter": "diametro"
+        "weight": "1",
+        "format": "1",
+        "length": "27",
+        "height": "8",
+        "width": "10",
+        "diameter": "0"
     },
     {
         "id": "2",
