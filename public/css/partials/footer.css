@@ -51,6 +51,7 @@ footer {
 input.newsletter-email {
     background-color: var(--color-text-opacity-70);
     height: 80px;
+    width: 100%;
     padding: 0 10%;
     border-radius: 50px;
 
