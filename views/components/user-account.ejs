@@ -1,67 +1,37 @@
 
 <main class="container margin-header-over">
     <section class="user-page">
-        <div class="user-page-options">
-            <a href="./<%= user.slug %>" class="user-page-option account option-select">
-                <div class="image">
-                    <img class="image-icon" src="/img/icons/user-icon-b.png" alt="perfi"> 
-                </div>
-                <span>Minha Conta</span>
-            </a>
-            <a href="./<%= user.slug %>/pedidos" class="user-page-option orders">
-                <div class="image">
-                    <img class="image-icon" src="/img/icons/caixa-icon-b.png" alt="caixa de Pedidos"> 
-                </div>
-                <span>Meus Pedidos</span>
-            </a>
-            <a href="#" class="user-page-option infos">
-                <div class="image">
-                    <img class="image-icon" src="/img/icons/paciente-icon-b.png" alt="Dados pessoais"> 
-                </div>
-                <span>Meus Dados</span>
-            </a>
-        </div>
+        <%- include('../partials/user-sidebar.ejs') -%>
 
         <div class="user-page-data">
             <h1 class="user-page-data-title">Meus Dados</h1> 
 
-            <div class="user-page-data-blocks">
+            <div class="user-page-data-blocks background-block
+            ">
                 <div class="user-page-data-infos acess-infos">
                     <h2 class="title">Informações de Acesso</h2>
                     <div>
                         <span class="info"> <%= user.name %> </span>
                         <span class="info"> <%= user.email %> </span>
                     </div>
-                    <button class="button-submit">ALTERAR</button>
+                    <a href="/user/<%= user.slug %>/conta"><button class="button-submit">ALTERAR</button></a>
                 </div>
                 <div class="user-page-data-infos adress-infos">
                     <h2 class="title">Endereço Principal</h2>
                     <div>
-                        <span class="info">Apelido: <%= user.addresses[0].title %></span>
-                        <span class="info"><%= user.addresses[0].street %> - nº <%= user.addresses[0].number %></span>
-                        <span class="info"><%= user.addresses[0].city %>, <%= user.addresses[0].state %> - <%= user.addresses[0].zip_code %></span>
+                        <span class="info">Apelido: <%= user.adresses[0].title %></span>
+                        <span class="info"><%= user.adresses[0].street %> - nº <%= user.adresses[0].number %></span>
+                        <span class="info"><%= user.adresses[0].city %>, <%= user.adresses[0].state %> - <%= user.adresses[0].zip_code %></span>
                         <span class="info">Tel: (66) 98411-5450</span>
                     </div>
-                    <button class="button-submit">ALTERAR</button>
+                    <a href="/user/<%= user.slug %>/conta"><button class="button-submit">ALTERAR</button></a>
                 </div>
             </div>
 
-            <div class="orders-list">
-                <h3>PEDIDOS</h1>
-                <table class="orders-list-table"  BORDER RULES=rows>
-                    <tr class="table-titles" style="height:35px">
-                        <th class="order" colspan="2">Pedido</th>
-                        <th>Data Pedido</th>
-                        <th style="width:20%">Pagamento</th>
-                        <th style="width:15%">Status</th>
-                    </tr>
-
-                    <% for(order of orders) { %>
-                        <%- include('../partials/order-line.ejs') -%>
-                    <% } %>
-                </table>
+            <div class="background-block
+            ">
+                <%- include('../partials/order-list.ejs') -%>  
             </div>
-
         </div>
     </section>
 </main>

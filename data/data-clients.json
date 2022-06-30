@@ -5,15 +5,18 @@
         "name":"Ana Ferreira",
         "email":"mail@mail.com",
         "phone":"66 9 9999-9999",
+        "cpf":"999.999.999-99",
+        "birth-date":"2022-01-02",
+        "gender":"feminino",
         "password":"123456",
-        "addresses":[
+        "adresses":[
             {
                 "id": "1",
                 "title": "Casa",
                 "street": "Rua das ruas",
                 "number": "100",
                 "complement": "Apt 10",
-                "district": "Setor Comercial",
+                "district": "Bairro",
                 "zip_code": "78550-000",
                 "city": "Sinop", 
                 "state": "MT",
@@ -44,6 +47,7 @@
         "email":"mail@mail.com",
         "phone":"66 9 9999-9999",
         "password":"123456",
+        "birth-date":"",
         "addresses":[
             {
                 "id": "1",
@@ -58,7 +62,7 @@
                 "country": "Brasil",
                 "shipping_contact_name": "Minha mãe",
                 "shipping_contact_tel": "(66) 9 9999-9999"
-            },
+            }, 
             {
                 "id": "2",
                 "title": "Trabalho",

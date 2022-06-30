@@ -1,27 +1,13 @@
-section {
+
+main {
+    /* border: solid 10px tomato; */
+    width: 1170px;
+}
+
+.page-cart {
     margin-top: 200px;
-}
-
-    /* cart menu  */
-.cart-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1165px;
-    height: 70px;
-    background-color: var(--color-background-3);
-    /* border: solid 2px green; */
-}
-
-nav {
-    color: blueviolet;
-}
-
-
-.cart-menu-navigation {
-    display: flex;
-    gap: 179px;
-    /* border: solid 2px green; */
+    width: 100%;
+    /* border: solid 8px chartreuse; */
 }
 
 .subparagraph-my-cart {
@@ -30,46 +16,38 @@ nav {
 
 .cart-content {
     display: flex;
+    flex-direction: column;
     gap: 16px;
-    width: 1165px;
+    width: 100%;
+    /* border: solid 10px yellow; */
     /* border: solid 2px rgb(150, 114, 30); */
 }
 
 .cart-content-juction {
-    width: 835px;
+    display: flex;
+    width: 100%;
+    /* border: solid 7px blueviolet */
 }
 
-.cart-content-juction-specification-1 {
-    display: flex;
-    justify-content:space-between;
-    width: 831px;
-    margin-bottom: 10px;
-    /* border: solid 1px blue; */
-}
-
-.specification-1-QUANTIDADE-ENTREGA-PRECO {
-    display: flex;
-    gap: 50px;
-    width: 350px;
-    /* border: solid 2px green; */
-}
 
 .content-juction-specification-product {
     display: flex;
+    width: 80%;
+    height: 150px;
     align-items: center;
-    gap: 45px;
-    width: 831px;
     border-top: solid 2px var(--color-background-3);
     border-bottom: solid 2px var(--color-background-3);
-    padding: 10px;
-    /* border: solid 2px rgb(171, 15, 127); */
+    /* border: solid 10px yellow; */
 }
 
 .juction-specification-2-image-name-information{
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 423px;
+    width: 50%;
+    height: 150px;
+    /* border: solid 10px khaki; */
     /* border: solid 2px rgb(150, 114, 30); */
 }
 
@@ -98,11 +76,32 @@ nav {
 .content-juction-spacificantion-2 {
     display: flex;
     align-items: center;
-    gap: 40px;
-    /* width: 205px; */
-    /* gap: 51px; */
-    /* border: solid 2px rgb(4, 229, 233); */
+    gap: 50px;
+    /* border: solid 5px indianred; */
 }
+
+.div-quantidade {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    gap: 15px;
+    width: 150px;
+    height: 100px;
+    /* border: solid 4px gold; */
+}
+
+.div-preco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 150px;
+    height: 100px;
+    /* border: solid 4px honeydew; */
+}
+
 
 .juction-spacificantion-2-product-quantity {
     display: flex;
@@ -111,6 +110,7 @@ nav {
     width: 90px;
     border: 1px solid var(--color-border);
     border-radius: 10px;
+    margin-left: 12px;
 }
 
 .button-qunatity {
@@ -124,6 +124,23 @@ nav {
     border: none;
     margin: 0 5px 0 5px;
 } */
+
+.button-remover {
+    width: 80px;
+    max-width: 100%;
+    height: 25px;
+    background: var(--color-background-3);
+    border-radius: 20px;
+    border: solid 1px white;
+    margin-right: 20px;
+}
+
+.button-remover:focus {
+    border: .13rem solid transparent;
+    background: linear-gradient(to right, var(--color-background-pages), var(--color-background-pages)), var(--color-gradient); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
 
 .the-amount {
     width: 40px;
@@ -139,6 +156,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* width: 32%; */
     width: 318px;
     height: 420.96px;
     background-color: var(--color-background-3);
@@ -151,18 +169,17 @@ nav {
     margin: 34px 0 34px 0;
 }
 
-.Oder-summary-name-value {
+.Oder_summary_name_value {
     display: flex;
     justify-content: space-between;
-    width: 227px;
-    /* border: solid 2px rgb(74, 32, 189); */
-    padding-bottom: 12px;
+    width: 80%;
+    /* border: solid 5px yellowgreen; */
 }
 
 .Oder-summary-freight-value {
     display: flex;
     justify-content: space-between;
-    width: 227px;
+    width: 80%;
     padding-bottom: 17px;
     border-bottom: solid 2px var(--color-background-pages);
 }
@@ -190,7 +207,6 @@ nav {
 
 .button-submit {
     width: 220px;
-    margin-top: 37px;
 }
 
 .Oder-summary-link-to-add {
@@ -200,9 +216,8 @@ nav {
 
 .cart-freight {
     width: 400px;
-    position: relative;
-    bottom: 223px;
-    z-index: 2;
+    margin-top: 30px;
+    
     /* border:solid 2px rgba(11, 242, 53, 0.6); */
 
 }
@@ -225,4 +240,50 @@ nav {
     border: solid 2px blue;
 }
 
-/* --------  */
+/* -------- RESPONSIVIDADE ---------------- */
+
+@media screen and (max-width: 861px) {
+    .cart-content-juction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        /* border: solid 10px honeydew; */
+    }
+
+    }
+
+    .content-juction-specification-product {
+        width: 100%;
+    }
+
+    .juction-specification-2-image-name-information {
+        width: 60%;
+}
+
+@media screen and (max-width: 651px) {
+    .content-juction-specification-product {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 500px;
+    }
+
+    .cart-contect-Oder-summary {
+        width: 70%;
+    }
+
+    .juction-specification-2-image-name-information {
+        width: 100%;
+    }
+
+    .div-quantidade {
+        margin-left: 40px;
+    }
+
+    .button-remover {
+        margin-left: 20px;
+    }
+}

@@ -1,5 +1,8 @@
 const { url } = require('inspector')
 const data = require('../data/data-products.json')
+const ApiNodeCorreios = require('node-correios')
+
+const correios = new ApiNodeCorreios()
 
 
 const ProductsController = {
@@ -20,7 +23,6 @@ const ProductsController = {
         }
         else{
             const productsData = data
-            console.log(acao)
 
             res.render('layout', {'page':'store', productsData})      
         }
@@ -40,6 +42,44 @@ const ProductsController = {
         else {
             res.render('layout', {'page':'not-found'})
         }
+    },
+
+    shipping: (req, res) => {
+        const { slug } = req.params
+        const productsData = data
+
+        let product = productsData.find(produto => produto.slug == slug)
+
+        const nCdServico = 40010,
+              sCepOrigem = "78550-244",
+              sCepDestino = req.body.cepDestino,
+              nVlPeso = product.weight,
+              nCdFormato = product.format,
+              nVlComprimento = product.length,
+              nVlAltura = product.height,
+              nVlLargura = product.width,
+              nVlDiametro = product.diameter
+
+        
+        correios.calcPrecoPrazo({
+            nCdServico,
+            sCepOrigem,
+            sCepDestino,
+            nVlPeso,
+            nCdFormato,
+            nVlComprimento,
+            nVlAltura,
+            nVlLargura,
+            nVlDiametro, 
+        }).then(result => {
+    
+            return res.json(result)
+    
+        }).catch(error => {
+    
+            return res.json(error)
+    
+        });
     }
 }
 

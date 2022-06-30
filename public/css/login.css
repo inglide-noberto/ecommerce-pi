@@ -1,6 +1,4 @@
-@import url('./general.css');
-@import url('./partials/buttons/button-submit.css');
-@import url('.button-submit');
+
 
 .div-input input{
     box-sizing: border-box;
@@ -10,6 +8,7 @@
     
 
 }
+
 
 .second-colum input {
     
@@ -35,27 +34,85 @@ h1 {
     height: 40px;
     padding: 10px;
     font-size: 14px;
-    margin: 0px;
-    margin-bottom: 20px;
     flex-direction: column; 
+    
+
+    
 }
 
-/* .first-content form {
+.first-content form div {
+    
+    margin-top: 30px;
+}
+
+.container {
+    
+        display: flex;
+        
+}
+
+@media screen and (max-width: 820px){
+    .container   {
+        flex-wrap: wrap-reverse;
+        height: auto;
+        padding: 3% 5.5%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        
+        gap: 24px;
+    }
+
+    .first-content{
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+        
+    .second-colum {
+        margin: 10%;
+        display: flex;
+        /*   */
+        flex-direction: column;
+    }
+
+
+    .newsletter-text {
+        width: 100%;
+    }
+    
+    .newsletter-input input.newsletter-container form-login {
+        padding: 0 5.5%;
+    }
+
+    .barra {
+
+        visibility: hidden;
+        position: absolute;
+        /* z-index: 1; */
+
+    }
+
+   
+        
+}
+
+
+
+ 
+
+.first-content form {
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    border-radius: 10px;
-    box-sizing: inherit;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 20px;
-    margin: 10px;
-    margin-bottom: 20px;
     flex-direction: column;
-
-} */
+    gap: 30px
+}
 
 
 .button-submit{
@@ -67,7 +124,10 @@ h1 {
  
  }
 
+
+
 .barra {
+
     background: var(--color-gradient);
     width: 2px;
     
@@ -105,18 +165,19 @@ h1 {
     width: 100%;
     margin: 30px 0;
     position: relative;
+    gap: 30px;
     
         
 }
 
 .second-colum input {
-    position: relative;
-    top: 5px;
-    left: 10px;
+   
     border-radius: 10px;   
     padding-left: 15px;
     outline: none;
     font-size: 14px;
+    width: 100%;
+    margin-top: 30px ;
 
 
 }
@@ -137,15 +198,13 @@ transition: all .3s ease;
 } 
 
 
-body {
+/* body {
     display: flex;
     justify-content: center;
     align-items: center; 
     width: 100vw;
     height: 100vh;
-
-
-}
+} */
 
 .button-submit:hover {
     background: var(--color-gradient-hover);
@@ -191,7 +250,7 @@ body {
 /* 
 .first-content form button{
 
-}*/ */
+}*/
 
 
 /* .first-content form button, 
@@ -240,5 +299,3 @@ body {
     height: 40px;
 
 } */
-
-

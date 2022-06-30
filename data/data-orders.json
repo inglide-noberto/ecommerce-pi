@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": "0001",
         "id_user": "1",
         "status": "Enviado",
         "date_order":"30/01/2022",
@@ -16,7 +16,7 @@
         "delivery_price":"14,90"
     },
     {
-        "id": "2",
+        "id": "0002",
         "id_user": "2",
         "status": "Confirmando Pagamento",
         "date_order":"10/02/2022",
@@ -32,11 +32,27 @@
         "delivery_price":"10,90"
     },
     {
-        "id": "3",
+        "id": "0003",
         "id_user": "1",
         "status": "Entregue",
         "date_order":"01/02/2022",
-        "products": ["3", "8"],
+        "products": ["5", "1"],
+        "price": "preço da compra",
+        "descouint": "desconto",
+        "price_payment": "valor pago",
+        "method_payment": "Boleto",
+        "form_payment": "Avista",
+        "shipping_address":"1",
+        "courier":"transportador",
+        "delivery_time":"prazo de entrega",
+        "delivery_price":"4,90"
+    },
+    {
+        "id": "0004",
+        "id_user": "2",
+        "status": "Em transito",
+        "date_order":"01/02/2022",
+        "products": ["7", "5", "1"],
         "price": "preço da compra",
         "descouint": "desconto",
         "price_payment": "valor pago",

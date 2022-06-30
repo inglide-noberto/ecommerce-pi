@@ -37,6 +37,7 @@
 
     --color-text: #ebeeff;
     --color-text-opacity-70: rgba(235, 238, 255, 70%);
+    --color-text-opacity-45: rgba(235, 238, 255, 45%);
     --color-text-opacity-15: rgba(235, 238, 255, 15%);
     --color-icons: #fff;
 
@@ -57,6 +58,13 @@ body {
     max-width: 1110px;
 }
 
+@media screen and (max-width: 1150px) {
+    .container {
+        max-width: 95%;
+
+    }
+}
+
 .margin-header {
     margin-top: 130px; 
 }
@@ -64,6 +72,14 @@ body {
 .margin-header-over {
     margin-top: 200px; 
 }
+
+.background-block {
+    padding: 30px 26px;
+    border-radius: 20px;
+    background-color: var(--color-background-5);
+}
+
+
 
 /*--------- LINKS ---------*/
 a {
@@ -96,7 +112,7 @@ input[type=text], input[type=email], input[type=number], input[type=date], input
 }
 
 input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, input[type=date]:focus, input[type=tel]:focus, select:focus  {
-    border: .13rem solid transparent;
+    border: 1px solid transparent;
     background: linear-gradient(to right, var(--color-background-pages), var(--color-background-pages)), var(--color-gradient); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
@@ -161,3 +177,91 @@ div .button-icon-material {
 
 
 
+/*---------------- CHECKBOX ----------------*/
+.checkbox-option {
+    padding-left: 25px;
+
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Esconder o checkbox padrão */
+.checkbox-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Criar o checkbox customizado */
+.checkbox-option span {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 17px;
+    width: 17px;
+
+    border-radius: 3px;
+    border: 2px solid transparent;
+    background: linear-gradient(to right, var(--color-background-pages), var(--color-background-pages)), var(--color-gradient-hover); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+}
+
+/* Realça a borda ao passar o mouse */
+.checkbox-option:hover input ~ span {
+    background: linear-gradient(to right, var(--color-background-pages), var(--color-background-pages)), var(--color-gradient); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+}
+
+/* Realça a borda quando selecionado */
+/* .checkbox-option input:checked ~ .checkmark {
+    background: linear-gradient(to right, var(--color-background-pages), var(--color-background-pages)), var(--color-gradient); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+} */
+
+
+/* Criar o ícone de check, escondido quando não estiver selecionado */
+.checkbox-option span:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 3px;
+    top: -1px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    opacity: 100%;
+  }
+  
+  /* Exibir o ícone quando selecionado */
+  .checkbox-option input:checked ~ span:after {
+    display: block;
+  }
+
+
+
+
+
+/*---------------- IN LINE MESSAGE ----------------*/
+  .in-line-message {
+    margin-top: 15px;
+    width: 100%;
+    padding: 4px 0;
+    font-size: 14px;
+    text-align: center;
+    
+    background-color: var(--color-contrast-1);
+    border-radius: 4px;
+  }

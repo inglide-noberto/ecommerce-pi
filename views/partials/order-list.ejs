@@ -1,0 +1,15 @@
+<div class="orders-list">
+    <h3>PEDIDOS</h1>
+    <table class="orders-list-table"  BORDER RULES=rows>
+        <tr class="table-titles" style="height:35px">
+            <th class="order" colspan="2">Pedido</th>
+            <th class="order-th-hidden" style="width:19%">Data Pedido</th>
+            <th style="width:15%">Status</th>
+            <th style="width:12%" class="button"></th>
+        </tr>
+
+        <% for(order of orders) { %>
+            <%- include('../partials/order-line.ejs') -%>
+        <% } %>
+    </table>
+</div>

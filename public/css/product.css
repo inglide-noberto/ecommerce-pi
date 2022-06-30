@@ -1,14 +1,72 @@
+/*------------------ RESPONSIVE ADJUSTMENTS ------------------*/
+/* @media screen and (max-width: 900px) {
+    .product-content .product-infos {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 70%;
+        min-width: 555px;
+        align-self: center;
+    }
+    
+} */
 
-@import url('./partials/buttons/left-right-buttons.css');
-@import url('./partials/buttons/button-submit.css');
-@import url('./partials/product-list.css');
-@import url('./partials/product-item.css');
 
+@media screen and (max-width: 900px) {
+    .product-content .product-info {
+        width: 37%;
+    }
 
-.product-route {
-    padding: 50px 0;
+    div.product-infos-images {
+        min-width: 60%;
+    }
+    div.product-infos-images .principal-image {
+        min-width: auto;
+        height: auto;
+    }
 }
 
+
+@media screen and (max-width: 700px) {
+    .product-content .product-infos {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        width: 100%;
+        min-width: auto;
+        
+    }
+    
+    .product-infos .product-infos-images {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .product-content .product-info {
+        width: 100%;
+    }
+
+    .product-info-description p {
+        font-size: 16px;
+    }
+
+    .product-info .button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*------------------ GENERAL ------------------*/
 .product-content {
     display: flex;
     flex-direction: column;
@@ -18,6 +76,7 @@
 
 /*------------------ PRODUCT ROUTE ------------------*/
 .product-route {
+    padding: 50px 0;
     text-transform: uppercase;
     font-size: 12px;
 }
@@ -33,17 +92,18 @@
 /*------------------ PRODUCT IMAGES ------------------*/
 .product-infos-images {
     width: 50%;
-    min-width: 50%;
+    min-width: 555px;
+
 
     display: flex;
     flex-direction: column;
-    gap: 1.1%;
+    gap: 7px; 
 }
 
 .product-infos-images .principal-image {
     width: 100%;
-
-    height: 530px;
+    height: 100%;
+    max-height: 533px;
     
     background-color: var(--color-background-3);
     border-radius: 20px;
@@ -52,7 +112,10 @@
 
 .product-infos-images .principal-image img {
     width: 100%;
-    height: 530px;
+    
+    height: 100%;
+    max-height: 533px;
+
     object-fit: cover;
 
     border-radius: 20px;
@@ -197,9 +260,9 @@
 
 .product-info-shipping input {
     max-width: 255px;
-    height: 50px;
+    height: 50px; 
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
 
     border: none;
     background-color: var(--color-background-3);
@@ -209,13 +272,13 @@
     width: 17px;
     opacity: 30%;
 }
-.product-info-shipping button{
+.product-info-shipping a, .product-info-shipping button{
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 25px;
+    top: 16px;
 }
 
-/*------- ADRESS --------*/
+/*------- SHIPPING VALUE --------*/
 .product-info-cep-price {
     display: flex;
     flex-direction: column;

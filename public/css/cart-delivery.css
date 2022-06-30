@@ -1,122 +1,119 @@
-.cart-menu {
+.menu-cart-conteiner {
     margin-top: 200px;
+}
+
+main {
+    max-width: 100%;
+    /* border: solid 10px red; */
 }
 
 .entrega {
  margin: 60px 0 40px 0;
-}
+} 
 
 .information {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 150px;
-    width:1110px;
+    /* justify-content: center; */
+    max-width: 100%;
+    /* border: solid 10px olive; */
 }
 
-form {
+.form-delivery {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
+    gap: 30px;
+    /* gap: 12px; */
+    width: 100%;
+    max-width: 100%;
+    /* border: solid 10px blue; */
 }
 
-.information-cep {
-    width: 190px;
+.div-labels-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    /* border: solid 2px greenyellow; */
 }
 
-.div-information-name {
-    position: relative;
-    right: 132px;
-    z-index: 2;
+.div-inputs2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    max-width: 100%;
+    /* border: solid 6px mediumslateblue; */
 }
+
+
+.div-labels2 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 100%;
+}
+
+.information-cpf {
+    width: 50%;
+    max-width: 100%;
+}
+
 
 .information-name {
-    width: 480px;
-}
-
-.div-information-address {
-    position: relative;
-    right: 40px;
-    z-index: 2;
+    width: 90%;
+    max-width: 100%;
 }
 
 .information-addreass {
-    width: 480px;
-}
-
-.div-information-number {
-    position: relative;
-    right: 27px;
-    z-index: 2;
+    width: 90%;
+    max-width: 100%;
 }
 
 .information-number {
-    width: 130px;
+    width: 30%;
+    max-width: 100%;
 }
 
-.div-information-complement {
-    position: relative;
-    right: 76px;
-    z-index: 2;
-}
 
 .information-complement {
-    width: 480px;
+    width: 90%;
+    max-width: 100%;
 }
 
-.div-information-district {
-    position: relative;
-    right: 13px;
-    z-index: 2;
-}
 
 .information-district{
-    width: 270px;
+    width: 50%;
+    max-width: 100%;
 }
 
-.div-information-city {
-    position: relative;
-    right: 23px;
-    z-index: 2;
-}
 
 .information-city {
-    width: 480px;
-}
-
-.div-information-state {
-    position: relative;
-    right: 20px;
-    z-index: 2;
+    width: 90%;
+    max-width: 100%;
 }
 
 .information-state-select {
-    width: 190px;
+    width: 40%;
+    max-width: 100%;
 }
 
 option {
     color: blueviolet;
 }
 
-.div-information-reference {
-    position: relative;
-    right: 114px;
-    z-index: 2;
-}
 
 .information-reference {
-    width: 480px;
+    width: 90%;
+    max-width: 100%;
 }
 
-.div-information-telefhone {
-    position: relative;
-    right: 87px;
-    z-index: 2;
-}
 
 .information-telefhone {
-    width: 270px;
+    width: 50%;
+    max-width: 100%;
 }
 
 /* .linha {
@@ -127,14 +124,29 @@ option {
 } */
 
 .button-submit {
-    margin: 92px 0 19px 0;
-    position: relative;
-    left: 33px;
+    width: 100%;
+    max-width: 280px;
+    height: 40px;
+
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    color: var(--color-background-1);
+    background: var(--color-gradient);
+
+    cursor: pointer;
 }
 
 .voltar {
-    position: relative;
-    left: -175px;
-    font-weight: 600;
     color: rgba(84, 3, 255,60%);
 }
+
+/* -------- RESPONSIVIDADE ---------------- */ 
+
+/* @media screen and (max-width: 914px) {
+   input {
+    width: 100px;
+   }
+} */

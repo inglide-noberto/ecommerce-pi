@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "title": "Produto Teste",
+        "title": "Produto Teste mais texto aqui de teste",
         "slug": "produto-teste",
         "price": "123,99",
         "promotional_price_status": "true",
@@ -10,10 +10,17 @@
         "year": "2022",
         "principal_categorie": "Ação",
         "categories": ["Aventura, terror"],
-        "images": ["https://source.unsplash.com/950x1100/?game","https://source.unsplash.com/950x1100/?island","https://source.unsplash.com/950x1100/?abstract"],
+        "images": ["https://source.unsplash.com/1000x1080/?game","https://source.unsplash.com/1000x1080/?island","https://source.unsplash.com/1000x1080/?abstract"],
         "short_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis",
-        "full_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-        "tags":["promocional", "new", "recommended"]
+        "full_description": "",
+        "tags":["promocional", "new", "recommended"],
+        "status": "active",
+        "weight": "1",
+        "format": "1",
+        "length": "27",
+        "height": "8",
+        "width": "10",
+        "diameter": "0"
     },
     {
         "id": "2",
@@ -26,10 +33,11 @@
         "year": "2022",
         "principal_categorie": "Aventura",
         "categories": ["Terror"],
-        "images": ["https://source.unsplash.com/950x1100/?game","https://source.unsplash.com/950x1100/?island","https://source.unsplash.com/950x1100/?abstract"],
+        "images": ["https://source.unsplash.com/1000x1080/?game","https://source.unsplash.com/1000x1080/?island","https://source.unsplash.com/1000x1080/?abstract"],
         "short_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis",
         "full_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-        "tags":["promocional", "new", "recommended"]
+        "tags":["promocional", "new", "recommended"],
+        "status": "active"
     },
     {
         "id": "3",
@@ -42,10 +50,11 @@
         "year": "2022",
         "principal_categorie": "Aventura",
         "categories": ["Ação"],
-        "images": ["https://source.unsplash.com/950x1100/?game","https://source.unsplash.com/950x1100/?island","https://source.unsplash.com/950x1100/?abstract"],
+        "images": ["https://source.unsplash.com/1000x1080/?game","https://source.unsplash.com/1000x1080/?island","https://source.unsplash.com/1000x1080/?abstract"],
         "short_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis",
         "full_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-        "tags":["promocional", "new", "recommended"]
+        "tags":["promocional", "new", "recommended"],
+        "status": "active"
     },
     {
         "id": "4",
@@ -58,10 +67,11 @@
         "year": "2022",
         "principal_categorie": "Ação",
         "categories": ["Aventura"],
-        "images": ["https://source.unsplash.com/950x1100/?game","https://source.unsplash.com/950x1100/?island","https://source.unsplash.com/950x1100/?abstract"],
+        "images": ["https://source.unsplash.com/1000x1080/?game","https://source.unsplash.com/1000x1080/?island","https://source.unsplash.com/1000x1080/?abstract"],
         "short_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis",
         "full_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-        "tags":["promocional", "new", "recommended"]
+        "tags":["promocional", "new", "recommended"],
+        "status": "active"
     },
     {
         "id": "5",
@@ -74,10 +84,11 @@
         "year": "2022",
         "principal_categorie": "Ação",
         "categories": ["Aventura"],
-        "images": ["https://source.unsplash.com/950x1100/?game","https://source.unsplash.com/950x1100/?island","https://source.unsplash.com/950x1100/?abstract"],
+        "images": ["https://source.unsplash.com/1000x1080/?game","https://source.unsplash.com/1000x1080/?island","https://source.unsplash.com/1000x1080/?abstract"],
         "short_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis",
         "full_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-        "tags":["promocional", "new", "recommended"]
+        "tags":["promocional", "new", "recommended"],
+        "status": "active"
     },
     {
         "id": "6",
@@ -90,10 +101,11 @@
         "year": "2022",
         "principal_categorie": "Ação",
         "categories": ["Aventura"],
-        "images": ["https://source.unsplash.com/950x1100/?game","https://source.unsplash.com/950x1100/?island","https://source.unsplash.com/950x1100/?abstract"],
+        "images": ["https://source.unsplash.com/1000x1080/?game","https://source.unsplash.com/1000x1080/?island","https://source.unsplash.com/1000x1080/?abstract"],
         "short_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis",
         "full_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-        "tags":["promocional", "new", "recommended"]
+        "tags":["promocional", "new", "recommended"],
+        "status": "active"
     },
     {
         "id": "7",
@@ -103,28 +115,13 @@
         "promotional_price_status": "true",
         "promotional_price": "29,99",
         "brand": "Brand",
-        "year": "2022",
+        "year": "2022", 
         "principal_categorie": "Ação",
         "categories": ["Aventura"],
-        "images": ["https://source.unsplash.com/950x1100/?game","https://source.unsplash.com/950x1100/?island","https://source.unsplash.com/950x1100/?abstract"],
+        "images": ["https://source.unsplash.com/1000x1080/?game","https://source.unsplash.com/1000x1080/?island","https://source.unsplash.com/1000x1080/?abstract"],
         "short_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis",
         "full_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-        "tags":["promocional", "new", "recommended"]
-    },
-    {
-        "id": "8",
-        "title": "Produto Deu Certo 8",
-        "slug": "produto-deu-certo-8",
-        "price": "123,99",
-        "promotional_price_status": "true",
-        "promotional_price": "9,99",
-        "brand": "Brand",
-        "year": "2022",
-        "principal_categorie": "Ação",
-        "categories": ["Aventura"],
-        "images": ["https://source.unsplash.com/950x1100/?game","https://source.unsplash.com/950x1100/?island","https://source.unsplash.com/950x1100/?abstract"],
-        "short_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis",
-        "full_description": "Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes. Sed ut perspiciatis.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-        "tags":["promocional", "new", "recommended"]
+        "tags":["promocional", "new", "recommended"],
+        "status": "active"
     }
 ]

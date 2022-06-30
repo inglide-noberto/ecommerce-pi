@@ -1,0 +1,16 @@
+[{
+    "corporate_name": "razao social",
+    "commercial_name": "nome fantasia",
+    "cnpj": "",
+    "slogan": "",
+    "address": {
+        "street": "Rua das ruas",
+        "number": "100",
+        "complement": "Apt 10",
+        "district": "Setor Comercial",
+        "zip_code": "78552-400",
+        "city": "Sinop", 
+        "state": "MT",
+        "country": "Brasil"
+    }
+}]

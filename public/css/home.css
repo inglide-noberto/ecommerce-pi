@@ -1,9 +1,118 @@
+/*---------------- RESPONSIVE ADJUSTMENTS ----------------*/
+@media screen and (max-width: 1470px) {
+    .hero {
+        width: 100%;
+        height: 635px;
+        padding: 0 7vw;
+    
+        background-image: url('../img/banners/fortnite-1920x1080-wallpaper-raven.jpg');
+    
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-banner.container {
+        margin: 0 2vw;
+    }
+
+
+    div.hero-banner h1 {
+        max-width: 55%;
+    }
+    
+    div.hero-banner span {
+        max-width: 55%;
+    }
+    
+    div.hero-banner input {
+        max-width: 55%;
+    } 
+    
+}
+
+@media screen and (max-width: 1115px) {
+
+    div.hero-banner h1 {
+        max-width: 65%;
+    }
+    
+    div.hero-banner span {
+        max-width: 65%;
+    }
+    
+    div.hero-banner input {
+        max-width: 65%;
+    } 
+    
+}
+
+
+
+@media screen and (max-width: 815px) {
+    div.bar-item {
+        width: 38vw;
+    }
+
+    div.bar-container {
+        /* height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 5vw;
+    }
+    section.bar {
+        height: 100%;
+        padding: 10px 0;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    section.banners-horizontal {
+        flex-wrap: wrap;
+        max-height: none;
+        height: 100%;
+        gap: 20px;
+    } 
+    section.banners-horizontal a {
+        height: 45vw;
+    }
+}
+
+@media screen and (max-width: 680px) { 
+    div.bar-item-text h5 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    div.bar-item-text span {
+        font-size: 10px;
+        font-weight: 200;
+    }
+
+    div.bar-item img {
+        width: 40px;
+        height: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
 /*---------------- GLOBAL ----------------*/
 main {
-    padding-top: 65px;
+    padding-top: 65px; 
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -146,11 +255,17 @@ main {
 
 /*---------------- SECTION HORIZONTAL BANNERS ----------------*/
 .banners-horizontal {
+    /* max-width: 543px; */
     width: 100%;
-    height: 290px;
+    min-width: 310px;
+    
+    max-height: 290px;
+    height: 24vw;
+    min-height: 171px;
 
     display: flex;
     gap: 2%;
+
 }
 
 

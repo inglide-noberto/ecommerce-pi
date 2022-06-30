@@ -1,3 +1,16 @@
+@media screen and (max-width: 1080px) {
+    .left-arrow-button, .right-arrow-button {
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        padding-top: 2px;
+    }
+}
+
+
+
+
+
 .left-arrow-button, .right-arrow-button {
     width: 54px;
     min-width: 54px;

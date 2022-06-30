@@ -1,0 +1,21 @@
+Tabelas a serem criadas:
+
+- Usuário
+- Tipo usuário (cliente, adm)
+- Endereço
+- Tipo de endereço (correspondencia, entrega, residencial, trabalho nome dado pelo cliente)
+
+
+* Produto
+* Tipo Produto (virtual, fisico)
+* Categoria
+
+
+- Pedido
+- Status pedido
+- Metodo de pagamento
+- Transportadora
+- Tipo envio
+
+
+

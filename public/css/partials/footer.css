@@ -1,4 +1,169 @@
 
+/******************* RESPONSIVENESS ********************/
+
+/*********************** 1125px ***********************/
+@media screen and (max-width:1125px) {
+    .footer-newsletter .newsletter-input {
+        height: 50%;
+    }
+
+    .footer-newsletter input.newsletter-email {
+        height: 50px;
+    }
+
+    .footer-newsletter .newsletter-button {
+        height: 36px;
+        width: 136px;
+        background: var(--color-background-3);
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+
+/*********************** 1080px ***********************/
+
+@media screen and (max-width: 1080px) {
+    .footer-links-container .footer-newsletter {
+        gap: 5%;
+    }
+
+    .newsletter-text {
+        width: 60%;
+    }
+    
+    .footer-newsletter .newsletter-text p{
+        text-align: justify;
+    }
+}
+
+/*********************** 850px ***********************/
+
+@media screen and (max-width: 850px) {
+    .footer-links-container  .footer-newsletter {
+        height: 210px;
+        padding: 22px 5.5% 10px;
+        
+        flex-wrap: wrap;
+        gap: 10px;
+
+        top: -250px;
+    }
+    
+    .footer-newsletter .newsletter-text {
+        width: 100%;
+        margin: none;
+        align-items: center;
+        gap: 0;
+    }
+
+    .footer-newsletter .newsletter-text h3{
+        font-size: 34px;
+        font-weight: 600;
+    }
+    .footer-newsletter .newsletter-text p{
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    .footer-newsletter input.newsletter-email {
+        height: 38px;
+        font-size: 14px;
+
+    }
+
+    .footer-newsletter .newsletter-button {
+        top: 48%;
+    }
+
+    .footer-newsletter .newsletter-button:hover {
+        background: var(--color-background-4); 
+    }
+}
+
+/*********************** 690px ***********************/
+
+@media screen and (max-width: 690px) {
+    section.footer-links {
+        padding-top: 175px;
+    }
+
+    .footer-links-container .footer-newsletter {
+        top: -275px
+    }
+
+    .footer-links-container {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .footer-links-container .footer-description, .footer-links-container .footer-colluns-links {
+        width: 100%;
+    }
+    
+}
+
+/*********************** 490px ***********************/
+@media screen and (max-width: 490px) {
+    .footer-links-container div.footer-description, .footer-links-container div.footer-colluns-links{
+        width: 75%;
+        align-self: center;
+    }
+
+    .footer-links-container .footer-colluns-links {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    div.footer-collum {
+        gap: 4px;
+        align-items: center;
+    }
+    
+    .footer-colluns-links div.links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 18px;
+        justify-content: center;    
+        align-items: center;
+
+    }
+
+    .footer-colluns-links div.links a{
+        flex-direction: row;
+        justify-content: center;   
+        
+        font-size: 14px;
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+
+    .footer-colluns-links div.links .button-icon-material{
+        text-decoration: none;
+
+    }
+
+    .links .contact-info {
+        align-items: center;
+    }
+
+    .footer-copyright-container h5 {
+        text-align: center;
+    }
+    
+    section.footer-copyright {
+        height: 85px;
+    }
+}
+
+
+
+
+
+
+
 
 /*-------------- GENERAL FOOTER --------------*/
 footer {
@@ -19,7 +184,7 @@ footer {
 
     display: flex;
     align-items: center;
-    gap: 10%;
+    gap: 4%;
 
     position: absolute;
     top: -230px;
@@ -28,6 +193,7 @@ footer {
 }
 
 .newsletter-text {
+    width: 73%;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -44,15 +210,15 @@ footer {
 }
 
 .newsletter-input{
-    width: 100%;
+    width: 130%;
     position: relative;
 }
 
 input.newsletter-email {
     background-color: var(--color-text-opacity-70);
-    height: 80px;
     width: 100%;
-    padding: 0 10%;
+    height: 80px;
+    padding: 0 5%;
     border-radius: 50px;
 
     color: var(--color-background-1);
@@ -65,9 +231,6 @@ input.newsletter-email {
 input.newsletter-email:focus {
     background: none;
     background-color: var(--color-text-opacity-70);
-    height: 80px;
-    padding: 0 10%;
-    border-radius: 50px;
 }
 
 .newsletter-button {
@@ -123,6 +286,11 @@ input.newsletter-email:focus {
     flex-direction: column;
     gap: 8px;
 }
+.footer-collum .links{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
 .contact-info {
     display: flex;
@@ -146,6 +314,7 @@ input.newsletter-email:focus {
 
 .footer-collum h4 {
     color: var(--color-contrast-1);
+    text-transform: uppercase;
 }
 
 

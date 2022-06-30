@@ -1,0 +1,20 @@
+<div class="user-page-options">
+    <a href="/user/<%=  user.slug %>" class="user-page-option account option-select">
+        <div class="image">
+            <img class="image-icon" src="/img/icons/user-icon-b.png" alt="perfi"> 
+        </div>
+        <span>Minha Conta</span>
+    </a>
+    <a href="/user/<%= user.slug %>/pedidos" class="user-page-option orders">
+        <div class="image">
+            <img class="image-icon" src="/img/icons/caixa-icon-b.png" alt="caixa de Pedidos"> 
+        </div>
+        <span>Meus Pedidos</span>
+    </a>
+    <a href="/user/<%= user.slug %>/conta" class="user-page-option infos">
+        <div class="image">
+            <img class="image-icon" src="/img/icons/paciente-icon-b.png" alt="Dados pessoais"> 
+        </div>
+        <span>Meus Dados</span>
+    </a>
+</div>
