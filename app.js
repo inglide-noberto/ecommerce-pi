@@ -25,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended:false}))
 //---------- INITIALS CONFIG FOR EJS ----------
 app.set('view engine', 'ejs')
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'script')))
 
 
 

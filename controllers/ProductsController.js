@@ -44,21 +44,34 @@ const ProductsController = {
         }
     },
 
-    shipping: (req, res) => {
+    getShipping: (req, res) => {
+
         const { slug } = req.params
         const productsData = data
+        const { search } = req.body
 
         let product = productsData.find(produto => produto.slug == slug)
 
         const nCdServico = 40010,
               sCepOrigem = "78550-244",
-              sCepDestino = req.body.cepDestino,
+              sCepDestino = search,
               nVlPeso = product.weight,
               nCdFormato = product.format,
               nVlComprimento = product.length,
               nVlAltura = product.height,
               nVlLargura = product.width,
               nVlDiametro = product.diameter
+
+        console.log("-----------",
+            nCdServico,
+            sCepOrigem,
+            sCepDestino,
+            nVlPeso,
+            nCdFormato,
+            nVlComprimento,
+            nVlAltura,
+            nVlLargura,
+            nVlDiametro )
 
         
         correios.calcPrecoPrazo({
@@ -73,11 +86,11 @@ const ProductsController = {
             nVlDiametro, 
         }).then(result => {
     
-            return res.json(result)
+            return res.send(result)
     
         }).catch(error => {
     
-            return res.json(error)
+            return res.send(error)
     
         });
     }

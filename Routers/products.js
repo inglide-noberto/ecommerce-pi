@@ -5,6 +5,6 @@ const router = express.Router()
 
 router.get('/:slug', ProductsController.productView)
 router.get('/', ProductsController.storeView)
-router.post('/', ProductsController.shipping)
+router.post('/:slug/cep', ProductsController.getShipping)
 
 module.exports = router
