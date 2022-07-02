@@ -1,13 +1,17 @@
 
-<div class="product-list">
-    <a href="" class="left-arrow-button button"></a>
+<div class="product-list glider-contain">
     
-    <div class="products">
-    <% for(let i=0; i < 4; i++) { 
-        let product = productsData[i]%>
-        <%- include('./product-item.ejs', {product}) %>
-    <% } %>
+    <div class="glider">
+        
+    <% for(product of productsData) { %>
+        <div class="products ">
+            <%- include('./product-item.ejs', {product}) -%>
+        </div>
+        <% } %>
+        
     </div>
-
-    <a class="right-arrow-button button"></a>
+    
+    
+    <button class="left-arrow-button button glider-prev"></button>
+    <button class="right-arrow-button button glider-next"></button>
 </div>  

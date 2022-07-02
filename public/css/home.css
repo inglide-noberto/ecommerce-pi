@@ -1,46 +1,48 @@
 /*---------------- RESPONSIVE ADJUSTMENTS ----------------*/
 @media screen and (max-width: 1470px) {
     .hero {
-        width: 100%;
-        height: 635px;
-        padding: 0 7vw;
-    
-        background-image: url('../img/banners/fortnite-1920x1080-wallpaper-raven.jpg');
-    
         display: flex;
         align-items: center;
     }
 
-    .hero-banner.container {
+    .hero-banner-infos .container {
         margin: 0 2vw;
     }
 
 
-    div.hero-banner h1 {
+    div.hero-banner-infos h1 {
         max-width: 55%;
     }
     
-    div.hero-banner span {
+    div.hero-banner-infos span {
         max-width: 55%;
     }
     
-    div.hero-banner input {
+    div.hero-banne-infosr input {
         max-width: 55%;
-    } 
-    
+    }  
 }
+
+
+@media screen and (max-width: 1052px) {
+    section.banners-vertical{
+        height: 39.8vw;
+    }
+}
+
+
 
 @media screen and (max-width: 1115px) {
 
-    div.hero-banner h1 {
+    div.hero-banner-infos h1 {
         max-width: 65%;
     }
     
-    div.hero-banner span {
+    div.hero-banner-infos span {
         max-width: 65%;
     }
     
-    div.hero-banner input {
+    div.hero-banner-infos input {
         max-width: 65%;
     } 
     
@@ -78,6 +80,11 @@
     } 
     section.banners-horizontal a {
         height: 45vw;
+    }
+
+    section.banners-vertical {
+        flex-wrap: wrap;
+        height: 100%;
     }
 }
 
@@ -123,9 +130,6 @@ main {
 .hero {
     width: 100%;
     height: 635px;
-    padding: 0 7vw;
-
-    background-image: url('../img/banners/fortnite-1920x1080-wallpaper-raven.jpg');
 
     display: flex;
     align-items: center;
@@ -138,21 +142,31 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 25px;
+
+    position: relative;
 }
 
-.hero-banner h1 {
+.hero-banner-infos {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.hero-banner-infos h1 {
     max-width: 40%;
     font-size: 64px;
     text-transform: uppercase;
 }
 
-.hero-banner span {
+.hero-banner-infos span {
     max-width: 40%;
     font-size: 36px;
     text-transform: uppercase;
 }
 
-.hero-banner input {
+.hero-banner-infos button {
     max-width: 40%;
     width: 300px;
     height: 62px;
@@ -166,8 +180,15 @@ main {
     cursor: pointer;
 } 
 
-.hero-banner input:hover {
+.hero-banner-infos button:hover {
     background: var(--color-gradient-hover);
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
 }
 
 
@@ -217,6 +238,7 @@ main {
 .banners-vertical {
     width: 100%;
     height: 420px;
+
 
     display: flex;
     gap: 2%;

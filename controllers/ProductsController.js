@@ -62,18 +62,7 @@ const ProductsController = {
               nVlLargura = product.width,
               nVlDiametro = product.diameter
 
-        console.log("-----------",
-            nCdServico,
-            sCepOrigem,
-            sCepDestino,
-            nVlPeso,
-            nCdFormato,
-            nVlComprimento,
-            nVlAltura,
-            nVlLargura,
-            nVlDiametro )
-
-        
+                
         correios.calcPrecoPrazo({
             nCdServico,
             sCepOrigem,

@@ -6,7 +6,28 @@
 }
 
 
+@media screen and (max-width: 750px) {
+    div.product-item {
+        width: 42vw;
+    }
+    div.gallery-products {
+        grid-gap: 2%;
+        row-gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(42vw, 1fr));
+    }
+    .product-item a.image img {
+        padding: 25px;
+        border-radius: 10px;
 
+    }
+
+}
+
+.test-product {
+    width: 220px;
+    height: 350px;
+    background-color: aqua;
+}
 
 .product-item {
     width: 212px;
@@ -25,7 +46,7 @@
 
 .product-item .image img {
     width: 100%;
-    height: 243px;
+    height: 100%;
     padding: 20px;
     border-radius: 20px 20px 0 0;
     background-color: var(--color-background-3);
