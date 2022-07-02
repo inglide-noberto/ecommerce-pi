@@ -1,5 +1,14 @@
 /*---------------- RESPONSIVE ADJUSTMENTS ----------------*/
+@media screen and (max-height:850px) {
+    /****** HERO ******/
+    section.hero {
+        height: 70vh;
+    }
+}
+
+
 @media screen and (max-width: 1470px) {
+    /****** HERO ******/
     .hero {
         display: flex;
         align-items: center;
@@ -8,7 +17,6 @@
     .hero-banner-infos .container {
         margin: 0 2vw;
     }
-
 
     div.hero-banner-infos h1 {
         max-width: 55%;
@@ -25,6 +33,7 @@
 
 
 @media screen and (max-width: 1052px) {
+    /****** BANNERS VERTICALS ******/
     section.banners-vertical{
         height: 39.8vw;
     }
@@ -33,26 +42,83 @@
 
 
 @media screen and (max-width: 1115px) {
-
+    /****** HERO ******/
     div.hero-banner-infos h1 {
         max-width: 65%;
+        font-size: 42px;
     }
     
     div.hero-banner-infos span {
-        max-width: 65%;
+        max-width: 45%;
+        font-size: 26px;
     }
     
-    div.hero-banner-infos input {
-        max-width: 65%;
+    div.hero-banner-infos button {
+        max-width: 24%;
+        min-width: 192px;
+        height: 52px;
+        font-size: 18px;
+        font-weight: 700;
     } 
-    
+
+
+    /****** TITLES OF PRODUCT LIST (PRODUCT CAROUSEL) ******/
+    h2.h2-sections {
+        font-size: 32px;
+    }   
+}
+
+
+
+@media screen and (max-width: 1260px) {
+    /****** HERO ******/
+    section.hero {
+        height: 46vw;
+        min-height: 360px;
+    }
+
+    .hero-banner-infos {
+        margin: 0 8vw;
+    }
+
+
+    /****** BUTTONS RIGHT AND LEFT ******/
+    button.left-arrow-button, button.right-arrow-button {
+        width: 40px;
+        min-width: auto;
+        height: 40px;
+        min-height: auto;
+    }
+
+    button.left-arrow-button::after, button.right-arrow-button::after {
+        width: 18px;
+        min-width: auto;
+        height: 18px;
+        min-height: auto;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+    button.left-arrow-button, button.right-arrow-button {
+        visibility: hidden;
+    }
 }
 
 
 
 @media screen and (max-width: 815px) {
-    div.bar-item {
-        width: 38vw;
+    /****** HERO ******/
+    div.hero-banner-infos span {
+        max-width: 55%;
+        font-size: 26px;
+    }
+
+
+    /****** BAR ******/
+    section.bar {
+        height: 100%;
+        padding: 10px 0;
     }
 
     div.bar-container {
@@ -64,31 +130,14 @@
         gap: 20px;
         padding: 0 5vw;
     }
-    section.bar {
-        height: 100%;
-        padding: 10px 0;
-    }
 
+    div.bar-item {
+        width: 38vw;
+    }
 }
 
 @media screen and (max-width: 750px) {
-    section.banners-horizontal {
-        flex-wrap: wrap;
-        max-height: none;
-        height: 100%;
-        gap: 20px;
-    } 
-    section.banners-horizontal a {
-        height: 45vw;
-    }
-
-    section.banners-vertical {
-        flex-wrap: wrap;
-        height: 100%;
-    }
-}
-
-@media screen and (max-width: 680px) { 
+    /****** BAR ******/
     div.bar-item-text h5 {
         font-size: 14px;
         font-weight: 600;
@@ -103,6 +152,29 @@
         width: 40px;
         height: 30px;
     }
+
+
+    /****** BANNERS HORIZONTALS ******/
+    section.banners-horizontal {
+        flex-wrap: wrap;
+        max-height: none;
+        height: 100%;
+        gap: 20px;
+    } 
+    section.banners-horizontal a {
+        height: 45vw;
+    }
+
+
+    /****** BANNERS VERTICALS ******/
+    section.banners-vertical {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 680px) { 
+
 }
 
 
