@@ -46,6 +46,9 @@
         max-width: 65%;
     } 
     
+    section.hero {
+        height: 50vw;
+    }
 }
 
 
@@ -61,11 +64,11 @@
         justify-content: space-between;
         align-items: center; */
         flex-wrap: wrap;
-        gap: 20px;
+        column-gap: 20px;
         padding: 0 5vw;
     }
     section.bar {
-        height: 100%;
+        height: 120px;
         padding: 10px 0;
     }
 
@@ -127,6 +130,16 @@ main {
 
 
 /*---------------- HERO(BANNER) ----------------*/
+.swiper-pagination-bullet {
+    height: 11px;
+    width: 11px;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--color-background-3);
+    box-shadow:  0 0 1em var(--color-shadow-color-1);
+}
+
 .hero {
     width: 100%;
     height: 635px;

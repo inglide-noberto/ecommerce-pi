@@ -70,13 +70,26 @@
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-    autoplay: {
-      delay: 3000,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    // },
     navigation: {
       nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      prevEl: ".swiper-button-prev"
     },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      750: {
+        arrows: false,
+        navigation: {
+          hiddenClass: 'swiper-button-hidden'
+        }
+      }
+    }
   });
 </script>
 
