@@ -17,11 +17,11 @@
     gap: .5vw;
 } */
 
-/* .product-list .products { 
-    display: inline-grid;
-    grid-template-columns:repeat(4,244px);
-
-} */
+.product-list .products { 
+    display: flex;
+    justify-content: center;
+    margin: 0 5px;
+}
 /* 
 .product-list .product-item {
     max-width: 100%;
@@ -37,7 +37,17 @@
     font-weight: 600;
 }
 
-.glider.draggable {
+@media screen and (max-width: 750px) {
+    div.carousel {
+        width: 100%;
+
+    }
+}
+.carousel {
+    width: 90%;
+}
+
+/* .glider.draggable {
     margin: 0 40px;
 }
 
@@ -45,7 +55,7 @@
 .glider-slide {
     min-width: 220px;
 
-}
+} */
 
 
 
