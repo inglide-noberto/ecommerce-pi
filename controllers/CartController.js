@@ -22,17 +22,28 @@ const CartController = {
     //teste de vinculo products
     show: (req,res) => {
         const {slug} = req.params
-
         const product = productsData.find(product => product.slug === slug)
 
         if(product){
-            // retornar os dados
-
-            dataCart[0].products.push({ "products-id": product.id , "quantity": 1})
+            // Inclui o produto no objeto do carrinho
+            dataCart[0].products.push({ "products-id": product.id , "quantity": "1"})
+            // transforma o retorno em JSON
             let carrinho = JSON.stringify(dataCart)
-            fs.writeFileSync( '/data/data-cart.json' , carrinho)
 
-            res.redirect('/')
+            // console log das variaveis para ver que tipo de objeto estão armazenando
+            console.log("-------------------------------")
+            console.log(dataCart)
+            console.log("-------------------------------")
+            console.log(carrinho)
+
+            // escreve no data-cart.json o novo JSON com o produto produto inserido
+            fs.writeFileSync( 'data/data-cart.json' , carrinho, (err) => {
+                if (err) { console.error(err) };
+                console.log("File has been created");
+            })
+
+            // redireciona para renderizar o carrinho
+            res.redirect('/cart')
         }
         else{
             res.status(404).send()
