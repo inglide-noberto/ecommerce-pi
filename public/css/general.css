@@ -66,9 +66,18 @@ body {
     }
 }
 
-.margin-header {
-    margin-top: 130px; 
+@media screen and (max-height: 820px) {
+    .margin-header {
+        margin-top: 115px; 
+    }
 }
+
+@media screen and (min-height: 821px) {
+    .margin-header {
+        margin-top: 130px; 
+    }
+}
+
 
 .margin-header-over {
     margin-top: 200px; 
