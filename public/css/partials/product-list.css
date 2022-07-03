@@ -44,7 +44,20 @@
     }
 }
 .carousel {
-    width: 90%;
+    width: 91.4%;
+    margin:-40px auto;
+}
+
+.glider-next {
+    right: 0;
+}
+
+.glider-prev {
+    left: 0;
+}
+
+div.slick-track {
+    padding: 3% 2% 3% .67%;
 }
 
 /* .glider.draggable {

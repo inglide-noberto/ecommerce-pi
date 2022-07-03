@@ -44,6 +44,9 @@
     z-index: 1;
 }
 
+.product-item .image {
+    height: 260px;
+}
 
 .product-item .image img {
     width: 100%;

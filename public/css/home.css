@@ -100,7 +100,7 @@
 
 
 @media screen and (max-width: 950px) {
-    button.left-arrow-button, button.right-arrow-button {
+    button.left-arrow-button.swiper-button-prev, button.right-arrow-button.swiper-button-next {
         visibility: hidden;
     }
 }
@@ -173,8 +173,24 @@
     }
 }
 
-@media screen and (max-width: 680px) { 
-
+@media screen and (max-width: 560px) { 
+        /****** HERO ******/
+        div.hero-banner-infos h1 {
+            font-size: 36px;
+        }
+        
+        div.hero-banner-infos span {
+            font-size: 22px;
+        }
+        
+        div.hero-banner-infos button {
+            max-width: 20%;
+            min-width: 185px;
+            height: 46px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 15px;
+        } 
 }
 
 
@@ -246,14 +262,16 @@ main {
     font-size: 24px;
     text-transform: uppercase;
     font-weight: 600;
-
+    color: var(--color-text);
     border-radius: 20px;
-    background: var(--color-gradient);
+    background: none;
+    background-color: var(--color-background-3);
     cursor: pointer;
 } 
 
 .hero-banner-infos button:hover {
-    background: var(--color-gradient-hover);
+    background: none;
+    background-color: var(--color-background-pages);
 }
 
 .hero-banner img {
@@ -263,7 +281,16 @@ main {
     object-fit: cover;
 }
 
+.swiper-pagination-bullet {
+    background-color: var(--color-background-3);
+    opacity: 90%;
+    box-shadow: 20px 20px 20px var(--color-background-3);
+}
 
+.swiper-pagination-bullet-active {
+    background-color: var(--color-text);
+    opacity: 100;
+}
 
 /*---------------- BAR ----------------*/
 .bar {
