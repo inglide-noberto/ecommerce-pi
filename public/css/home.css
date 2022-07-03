@@ -61,11 +61,6 @@
         font-weight: 700;
     } 
 
-
-    /****** TITLES OF PRODUCT LIST (PRODUCT CAROUSEL) ******/
-    h2.h2-sections {
-        font-size: 32px;
-    }   
 }
 
 
@@ -81,21 +76,6 @@
         margin: 0 8vw;
     }
 
-
-    /****** BUTTONS RIGHT AND LEFT ******/
-    button.left-arrow-button, button.right-arrow-button {
-        width: 40px;
-        min-width: auto;
-        height: 40px;
-        min-height: auto;
-    }
-
-    button.left-arrow-button::after, button.right-arrow-button::after {
-        width: 18px;
-        min-width: auto;
-        height: 18px;
-        min-height: auto;
-    }
 }
 
 
