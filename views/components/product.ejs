@@ -14,7 +14,7 @@
             <div class="product-infos-images">
     
                 <div class="principal-image">
-                    <img src="<%= product.images[0] %>" alt="">
+                    <img id="principal-image" src="<%= product.images[0] %>" alt="">
 
                     <div class="share-buttons">
                         <a href=""></a>
@@ -27,9 +27,9 @@
                     <div>
                         <a href="" class="left-arrow-button button no-more"></a>
                         <% for(image of product.images){ %>
-                            <a href="" class="secondary-images-min">
+                            <div class="secondary-images-min">
                                 <img src="<%= image %>" alt="">
-                            </a>
+                            </div>
                         <% } %>
 
                         <a href="" class="right-arrow-button button no-more"></a>

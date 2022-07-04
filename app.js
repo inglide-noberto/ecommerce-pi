@@ -29,7 +29,6 @@ app.use(express.static(path.join(__dirname, 'script')))
 
 
 
-
 //-------------- ROUTES -----------------
 app.use('/', routersIndex)
 app.use('/loja', routersProducts)
@@ -38,6 +37,10 @@ app.use('/cart', routerCart)
 app.use('/entrar', routersEntry)
 
 
+//-------------- N0T FOUND ROUTE -----------------
+app.use((req, res, next) => {
+    res.status(404).render('layout', {'page':'not-found'})
+})
 
 
 app.listen(3000, () => console.log("Servidor rodando na porta 3000"))
