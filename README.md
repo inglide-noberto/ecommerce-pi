@@ -1,74 +1,52 @@
-# PI E-COMMERCE
+<div align="center">
 
-Projeto Integrador desenvolvido junto a escola Digital House, com aplicações de desenvolvimento Web Full Stack e Metodologias Ágeis.
+# Plataforma para E-Commerce
 
+Plataforma para e-commerce com CRUD completo, com acessebilidade e 100% responsivo
+
+[![made in brazil](https://img.shields.io/badge/made%20in-brazil-008751.svg?style=for-the-badge)](https://www.google.com/maps/place/brazil)
+</div>
+
+
+<br>
+<br>
+
+# Preview
 ![image](https://user-images.githubusercontent.com/73858741/175830385-bf5cbb9b-4a62-4dc2-ba80-26ed5388a135.png)
 
 
-FICHA TÉCNICA - Hard Skills
+<br>
+<br>
 
-## HTML5 e Estrutura
-- Tags e Semântica
-- Rotas, hiperlinks e imagens
-- Formulários
-  - Radio Buttons e Checkbox
-- HTTP
-- Estrutura de Pastas
-- Arquitetura Client/Server
+# Techs
 
-# CSS3
-- Tipografia
-- Pseudoseletores
-- Position Z-index
-- Layout Responsivo 
-  - Viewports
-  - Media Queries
-  - Modelo de Caixa
+## Front-end
+- HTML semântico
+- CSS modular e dinâmico
+- EJS
+- Javascrip vanilla
+- JQuery
 
-# NodeJS
-- NPM
-- Sistema de módulo
+
+## Back-end
+- API REST
+- NodeJS
 - Express
-  - MVC
-    - Controllers
-    - Rotas parametrizadas
-    - express-generator
-  - EJS
-    - Tags em EJS
-    - Parâmetros compartilhados
-    - Partial files
-    - Views
-  - CRUD
-    - GET
-    - POST
-    - PUT
-    - DELETE
-    - Error 404
-    - Path e FS
-    - Multer
-  - Middlewares
-  - Session e Cookies
+- Sequelize
+- MySQL
 
-# Javascript 
-- Manipulação de variavés e Arrays
-- Funções e Laços de Repetição
-- Callback
-- Json
+<br>
+<br>
+
+# Running the app
+```bash
+# Install dependes
+$ npm install
+
+# Run app
+$ npm star
+```
 
 
-# Banco de Dados
-  - Manipulação de dados e Consulta
-  - Funções de Agregação e consulta avançada
-  - Sequelize
-
-# API
-  - Rest
-  - Postman
-  - Criação de API
-  
  
-   
 
-## Versacionamento Git
-
-## Metodologias Ágeis
