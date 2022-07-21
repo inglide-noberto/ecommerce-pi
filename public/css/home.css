@@ -1,5 +1,14 @@
 /*---------------- RESPONSIVE ADJUSTMENTS ----------------*/
+@media screen and (max-height:850px) {
+    /****** HERO ******/
+    section.hero {
+        height: 70vh;
+    }
+}
+
+
 @media screen and (max-width: 1470px) {
+    /****** HERO ******/
     .hero {
         display: flex;
         align-items: center;
@@ -8,7 +17,6 @@
     .hero-banner-infos .container {
         margin: 0 2vw;
     }
-
 
     div.hero-banner-infos h1 {
         max-width: 55%;
@@ -25,6 +33,7 @@
 
 
 @media screen and (max-width: 1052px) {
+    /****** BANNERS VERTICALS ******/
     section.banners-vertical{
         height: 39.8vw;
     }
@@ -33,17 +42,23 @@
 
 
 @media screen and (max-width: 1115px) {
-
+    /****** HERO ******/
     div.hero-banner-infos h1 {
         max-width: 65%;
+        font-size: 42px;
     }
     
     div.hero-banner-infos span {
-        max-width: 65%;
+        max-width: 45%;
+        font-size: 26px;
     }
     
-    div.hero-banner-infos input {
-        max-width: 65%;
+    div.hero-banner-infos button {
+        max-width: 24%;
+        min-width: 192px;
+        height: 52px;
+        font-size: 18px;
+        font-weight: 700;
     } 
     
     section.hero {
@@ -54,8 +69,17 @@
 
 
 @media screen and (max-width: 815px) {
-    div.bar-item {
-        width: 38vw;
+    /****** HERO ******/
+    div.hero-banner-infos span {
+        max-width: 55%;
+        font-size: 26px;
+    }
+
+
+    /****** BAR ******/
+    section.bar {
+        height: 100%;
+        padding: 10px 0;
     }
 
     div.bar-container {
@@ -72,26 +96,13 @@
         padding: 10px 0;
     }
 
+    div.bar-item {
+        width: 38vw;
+    }
 }
 
 @media screen and (max-width: 750px) {
-    section.banners-horizontal {
-        flex-wrap: wrap;
-        max-height: none;
-        height: 100%;
-        gap: 20px;
-    } 
-    section.banners-horizontal a {
-        height: 45vw;
-    }
-
-    section.banners-vertical {
-        flex-wrap: wrap;
-        height: 100%;
-    }
-}
-
-@media screen and (max-width: 680px) { 
+    /****** BAR ******/
     div.bar-item-text h5 {
         font-size: 14px;
         font-weight: 600;
@@ -106,6 +117,45 @@
         width: 40px;
         height: 30px;
     }
+
+
+    /****** BANNERS HORIZONTALS ******/
+    section.banners-horizontal {
+        flex-wrap: wrap;
+        max-height: none;
+        height: 100%;
+        gap: 20px;
+    } 
+    section.banners-horizontal a {
+        height: 45vw;
+    }
+
+
+    /****** BANNERS VERTICALS ******/
+    section.banners-vertical {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 560px) { 
+        /****** HERO ******/
+        div.hero-banner-infos h1 {
+            font-size: 36px;
+        }
+        
+        div.hero-banner-infos span {
+            font-size: 22px;
+        }
+        
+        div.hero-banner-infos button {
+            max-width: 20%;
+            min-width: 185px;
+            height: 46px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 15px;
+        } 
 }
 
 
@@ -187,14 +237,16 @@ main {
     font-size: 24px;
     text-transform: uppercase;
     font-weight: 600;
-
+    color: var(--color-text);
     border-radius: 20px;
-    background: var(--color-gradient);
+    background: none;
+    background-color: var(--color-background-3);
     cursor: pointer;
 } 
 
 .hero-banner-infos button:hover {
-    background: var(--color-gradient-hover);
+    background: none;
+    background-color: var(--color-background-pages);
 }
 
 .hero-banner img {
@@ -204,7 +256,16 @@ main {
     object-fit: cover;
 }
 
+.swiper-pagination-bullet {
+    background-color: var(--color-background-3);
+    opacity: 90%;
+    box-shadow: 20px 20px 20px var(--color-background-3);
+}
 
+.swiper-pagination-bullet-active {
+    background-color: var(--color-text);
+    opacity: 100;
+}
 
 /*---------------- BAR ----------------*/
 .bar {
