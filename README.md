@@ -36,7 +36,7 @@ Plataforma para e-commerce com CRUD completo, com acessebilidade e 100% responsi
 - MySQL
 
 <br>
-<br>
+
 
 # Running the app
 ```bash
@@ -49,6 +49,10 @@ $ npm install
 # run app
 $ npm star
 ```
+<br>
+
+# Database config
+Use with databe config rename .env.exemple file to .env and insert your database informations
 
 
  
