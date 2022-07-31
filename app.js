@@ -6,6 +6,9 @@ const appRouter = express.Router()
 const app = express()
 const bodyParser = require('body-parser');
  
+//-------------- IMPORT DATABASE -----------------
+const database = require('./config/database.js')
+
 //-------------- IMPORT ROUTES -----------------
 const routersIndex = require(path.join(__dirname,'/Routers/index.js'))
 const routersProducts = require(path.join(__dirname,'/Routers/products.js'))
@@ -20,6 +23,7 @@ const routersEntry = require(path.join(__dirname, '/Routers/entry.js'))
 app.use(express.json())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended:false}))
+
 
 
 //---------- INITIALS CONFIG FOR EJS ----------
@@ -37,10 +41,18 @@ app.use('/cart', routerCart)
 app.use('/entrar', routersEntry)
 
 
+
 //-------------- N0T FOUND ROUTE -----------------
 app.use((req, res, next) => {
     res.status(404).render('layout', {'page':'not-found'})
 })
 
 
+
+//-------------- DATABASE SYNC -----------------
+database.sync(() => console.log('Banco de dados conectado'))
+
+
+
+//-------------- RUN APP -----------------
 app.listen(3000, () => console.log("Servidor rodando na porta 3000"))
