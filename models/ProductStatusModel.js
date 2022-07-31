@@ -12,6 +12,8 @@ const ProductStatus = database.define('ProductStatus', {
         type: Sequelize.STRING,
         allowNull: false,
     }
+}, {
+    tableName: "product_status"
 })
 
 ProductStatus.associate = (models) => {

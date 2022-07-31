@@ -12,6 +12,8 @@ const Courier = database.define('Courier', {
         type: Sequelize.STRING,
         allowNull: false,
     }
+}, {
+    tableName: "courier"
 })
 
 

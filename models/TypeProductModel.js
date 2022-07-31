@@ -15,6 +15,8 @@ const TypeProduct = database.define('TypeProduct', {
     description: {
         type: Sequelize.STRING
     }
+}, {
+    tableName: "type_product"
 })
 
 

@@ -12,6 +12,8 @@ const PaymentMethod = database.define('PaymentMethod', {
         type: Sequelize.STRING,
         allowNull: false,
     }
+}, {
+    tableName: "payment_method"
 })
 
 

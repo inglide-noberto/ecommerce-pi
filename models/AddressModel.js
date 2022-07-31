@@ -49,6 +49,8 @@ const Adress = database.define('Adress', {
     shipping_contact_phone: {
         type: Sequelize.INTEGER
     }
+}, {
+    tableName: "adress"
 })
 
 Adress.associate = (models) => {

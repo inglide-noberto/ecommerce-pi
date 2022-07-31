@@ -16,4 +16,6 @@ module.exports = database.define('ProductCategory', {
         type: Sequelize.INTEGER,
         allowNull: false
     }
+}, {
+    tableName: "product_category"
 })

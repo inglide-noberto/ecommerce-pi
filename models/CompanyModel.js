@@ -34,4 +34,6 @@ module.exports = database.define('Company', {
     slogan: {
         type: Sequelize.STRING
     },
+}, {
+    tableName: "Company"
 })

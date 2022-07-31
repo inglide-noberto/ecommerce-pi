@@ -12,6 +12,8 @@ const RatingSystem =  database.define('RatingSystem', {
         type: Sequelize.STRING,
         allowNull: false,
     }
+}, {
+    tableName: "rating_system"
 })
 
 RatingSystem.associate = (models) => {

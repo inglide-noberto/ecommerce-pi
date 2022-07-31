@@ -25,10 +25,10 @@ const Product = database.define('Product', {
         type: Sequelize.DECIMAL,
         allowNull: false
     },
-    promotiona_price_status: {
+    promotional_price_status: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        defaultValue: 'false'
+        defaultValue: false
     },
     promotional_price: {
         type: Sequelize.DECIMAL,
@@ -85,6 +85,8 @@ const Product = database.define('Product', {
         allowNull: false,
         defaultValue: 0
     }
+}, {
+    tableName: "product"
 })
 
 
@@ -118,6 +120,13 @@ Product.associate = (models) => {
         foreignKey: 'id_order',
         as: 'orders',
         through: models.OrderProduct
+    }),
+
+    //--------- Está em muitos Product através do TagProducts ---------
+    Product.belongsToMany(models.TagModel, {
+        foreignKey: 'id_tag',
+        as: 'tags',
+        through: models.TagProducts
     })
 }
 

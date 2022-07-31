@@ -12,6 +12,8 @@ const OrderStatus = database.define('OrderStatus', {
         type: Sequelize.STRING,
         allowNull: false,
     }
+}, {
+    tableName: "order_status"
 })
 
 

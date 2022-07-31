@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const database = require('../config/database.js')
 
-const OrderStatus = database.define('OrderStatus', {
+const OrderProduct = database.define('OrderProduct', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -16,8 +16,10 @@ const OrderStatus = database.define('OrderStatus', {
         type: Sequelize.INTEGER,
         allowNull: false,
     }
+}, {
+    tableName: "order_product"
 })
 
 
 
-module.exports = OrderStatus
+module.exports = OrderProduct

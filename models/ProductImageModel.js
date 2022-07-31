@@ -24,6 +24,8 @@ const ProductImage = database.define('ProductImage', {
         type: Sequelize.STRING,
         allowNull: false
     }
+}, {
+    tableName: "product_image"
 })
 
 

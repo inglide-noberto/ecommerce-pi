@@ -16,4 +16,6 @@ module.exports = database.define('ProductTag', {
         type: Sequelize.INTEGER,
         allowNull: false
     }
+}, {
+    tableName: "tag_product"
 })

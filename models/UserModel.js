@@ -46,6 +46,8 @@ const User = database.define('User', {
         allowNull: false,
         defaultValue: 'client'
     }
+}, {
+    tableName: "user"
 })
 
 User.associate = (models) => {

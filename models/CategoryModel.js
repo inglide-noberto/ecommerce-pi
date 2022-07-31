@@ -15,4 +15,6 @@ module.exports = database.define('Category', {
     description: {
         type: Sequelize.STRING
     }
+}, {
+    tableName: "category"
 })

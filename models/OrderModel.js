@@ -58,6 +58,8 @@ const Order = database.define('Order', {
         type: Sequelize.DECIMAL,
         allowNull: false
     }
+}, {
+    tableName: "order"
 })
 
 
