@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'script')))
 //-------------- ROUTES -----------------
 app.use('/', routersIndex)
 app.use('/loja', routersProducts)
-app.use('/user', routersUser)
+app.use('/usuario', routersUser)
 app.use('/cart', routerCart)
 app.use('/entrar', routersEntry)
 

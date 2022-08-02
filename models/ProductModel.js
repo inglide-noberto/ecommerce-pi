@@ -8,10 +8,6 @@ const Product = database.define('Product', {
         autoIncrement: true,
         allowNull: false
     },
-    id_product: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-    },
     title: {
         type: Sequelize.STRING,
         allowNull: false
