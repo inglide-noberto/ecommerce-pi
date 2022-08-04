@@ -1,5 +1,3 @@
-<!-- nunca vai de primeira :(  -->
- <!-- kkkkk  -->
  <main class="container margin-header">
     <section class="page-cart">
         <%- include('../partials/menu-cart')%>
@@ -64,11 +62,12 @@
                 <span class="Oder-summary-fees">
                     <p> Em até 6x sem juros </p>
                 </span>
-                <a class="Oder-summary-link-pix" href="#">R$ 205,00 pagando com PIX</a>
-                <button class="button-submit">continuar</button>
-                <a class="Oder-summary-link-to-add" href="#">Adicionar mais produtos</a>
-            </div>
-            
+                
+                <button class="button-submit">
+                    <a href="/cart/payment">Continuar</a>
+                </button>    
+             </div>
+            <!--<a class="Oder-summary-link-to-add" href="""> Adicionar mais produtos </a>-->
             </div>
             <!-- final divisão de junçao  -->
             
@@ -80,10 +79,18 @@
                 <input class="cart-freight-calcular" type="text" name="fretes" placeholder="CEP">
             </form>
             <form class="cart-freight-deadline" action="">
-                <div><input class="checkbox-delivery" type="checkbox" id="junho" name="junho"> <label
-                        for="junho">Entrega até 04 de <strong> Junho - R$ 14,99 </strong> </label></div>
-                <div><input class="checkbox-delivery" type="checkbox" id="junho" name="junho"> <label
-                        for="junho">Entrega até 04 de <strong> Junho - R$ 14,99 </strong> </label></div>
+                <div>
+                    <input class="checkbox-delivery" type="checkbox" id="junho" name="junho"> 
+                        <label 
+                            for="junho">Entrega até 04 de <strong> Junho - R$ 14,99 </strong> 
+                        </label>
+                    </div>
+                <div>
+                    <input class="checkbox-delivery" type="checkbox" id="junho" name="junho"> 
+                    <label
+                        for="junho">Entrega até 04 de <strong> Junho - R$ 14,99 </strong> 
+                    </label>
+                </div>
             </form>
         </div>
     </section>
