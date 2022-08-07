@@ -2,8 +2,8 @@ const dataOrders = require('../data/data-orders.json')
 const dataClients = require('../data/data-clients.json')
 const dataProducts = require('../data/data-products.json')
 const rootDir = require('../utils/rootDir')
-const UserRepository = require('../models/UserModel')
-const OrderRepository = require('../models/OrderModel')
+const UserRepository = require('../models/user')
+const OrderRepository = require('../models/order')
 
 
 
@@ -20,7 +20,7 @@ const UserController = {
     showUser: async (req, res) => {        
         const { slug } = req.params
 
-        const userBD = await UserRepository.findOne({
+        const user = await UserRepository.findOne({
             where: {
                 slug : 'ana'
             }
@@ -36,9 +36,8 @@ const UserController = {
         console.log(userBD)
         console.log('-------------------------')
         console.log(userBD.orders)
-
-        const user = dataClients.find( user => user.slug == slug)
-        const orders = user
+        
+        const orders = user.orders
 
         res.render('layout', {'page':'user-account', orders, user, dataProducts, rootDir})
     },
