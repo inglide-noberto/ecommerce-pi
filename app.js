@@ -7,7 +7,7 @@ const app = express()
 const bodyParser = require('body-parser');
  
 //-------------- IMPORT DATABASE -----------------
-const database = require('./config/database.js')
+const database = require('./config/database-meu.js')
 
 //-------------- IMPORT ROUTES -----------------
 const routersIndex = require(path.join(__dirname,'/Routers/index.js'))

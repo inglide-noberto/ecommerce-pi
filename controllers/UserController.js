@@ -24,12 +24,12 @@ const UserController = {
             where: {
                 slug : 'ana'
             }
-            // ,
-            // include: {
-            //     model: OrderRepository,
-            //     as: 'orders',
-            //     require: true
-            // }
+            ,
+            include: {
+                model: OrderRepository,
+                as: 'orders',
+                require: true
+            }
         })
 
         console.log('-------------------------')
@@ -37,10 +37,10 @@ const UserController = {
         console.log('-------------------------')
         console.log(userBD.orders)
 
-        // const user = dataClients.find( user => user.slug == slug)
-        // const orders = user
+        const user = dataClients.find( user => user.slug == slug)
+        const orders = user
 
-        // res.render('layout', {'page':'user-account', orders, user, dataProducts, rootDir})
+        res.render('layout', {'page':'user-account', orders, user, dataProducts, rootDir})
     },
 
     indexOrders: (req, res) => {        
