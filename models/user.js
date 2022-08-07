@@ -2,6 +2,8 @@
 const {
   Model
 } = require('sequelize');
+
+
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -29,9 +31,15 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   User.associate = function(models) {
-    User.hasMany(models.Adress, as = 'adresses');
+    User.hasMany(models.Adress, {
+      foreignKey: 'id_user',
+      as:'adresses'
+    });
 
-    User.hasMany(models.Order, as = 'orders');
+    User.hasMany(models.Order, {
+      foreignKey: 'id_user',
+      as:'orders'
+    });
   };
   
   return User;

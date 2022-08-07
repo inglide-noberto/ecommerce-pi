@@ -2,8 +2,11 @@ const dataOrders = require('../data/data-orders.json')
 const dataClients = require('../data/data-clients.json')
 const dataProducts = require('../data/data-products.json')
 const rootDir = require('../utils/rootDir')
-const UserRepository = require('../models/user')
-const OrderRepository = require('../models/order')
+var models = require('../models');
+const UserRepository = models.User
+const OrderRepository = models.Order
+const AdressRepository = models.Adress
+const ProductRepository = models.Product
 
 
 
@@ -22,22 +25,54 @@ const UserController = {
 
         const user = await UserRepository.findOne({
             where: {
-                slug : 'ana'
-            }
-            ,
-            include: {
+                slug : slug
+            },
+            include: [{
+                model: AdressRepository,
+                as: 'adresses',
+                require: true
+            },
+            {
                 model: OrderRepository,
                 as: 'orders',
                 require: true
             }
+        ]
+            
         })
 
         console.log('-------------------------')
-        console.log(userBD)
+        console.log('User')
+        console.log(user)
         console.log('-------------------------')
-        console.log(userBD.orders)
+        
+        console.log('-------------------------')
+        console.log('Ordens')
+        console.log(user.orders)
+        console.log('-------------------------')
         
         const orders = user.orders
+        let products = []
+
+        orders.forEach(order => {
+            products = await UserRepository.findAll({
+                where: {
+                    id : order.id
+                },
+                include: [{
+                    model: AdressRepository,
+                    as: 'adresses',
+                    require: true
+                },
+                {
+                    model: OrderRepository,
+                    as: 'orders',
+                    require: true
+                }
+            ]
+                
+            })
+        });
 
         res.render('layout', {'page':'user-account', orders, user, dataProducts, rootDir})
     },

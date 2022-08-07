@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Courier.associate = function(models) {
-    Courier.hasMany(models.Order, as = 'orders')
+    Courier.hasMany(models.Order, {
+      foreignKey: 'id_courier',
+      as: 'orders'})
   };
 
 

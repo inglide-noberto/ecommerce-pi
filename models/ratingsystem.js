@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   RatingSystem.associate = function(models) {
-    RatingSystem.hasMany(models.Product, as = 'products')
+    RatingSystem.hasMany(models.Product, {as: 'products'})
   };
 
   return RatingSystem;

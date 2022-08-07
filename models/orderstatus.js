@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   OrderStatus.associate = function(models) {
-    OrderStatus.hasMany(models.Order, as = 'orders');
+    OrderStatus.hasMany(models.Order, {
+      foreignKey: 'id_status',
+      as:'orders'});
   };
 
   return OrderStatus;
