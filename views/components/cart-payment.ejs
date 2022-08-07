@@ -49,7 +49,7 @@
             <div class="address-order_summary-abstract">
                 <div class="resumo-pedido">
                     <h4 class="subp-resumo-pedido">RESUMO DO PEDIDO</h4>
-                    <a class="voltar" href="#">voltar</a>
+                    <a class="voltar" href="/cart">voltar</a>
                 </div>
                 <div class="produtos-precos">
                     <div class="produto-frete">
@@ -83,49 +83,16 @@
     <!-- ------------------fim da section - cart-payment -------------------------- -->
     <section class="payment-dice">
         <div class="menu-cartao-pix">
-            <a class="menu-cartao" href="#">CARTÃO</a> <a class="menu-pix" href="#">PIX</a>
+            <a class="menu-cartao" >CARTÃO</a>
+            <a class="menu-pix">PIX</a>
         </div>
-        
-        
         <form class="form-payment" action="/cart/payment" method="post">
-            <h2 class="Dados-do-Cartao">Dados do Cartão</h2>
-            <div class="labels-e-inputs">
-                <div class="labels">
-                    <label for="cep">CPF</label>
-                    <label for="cartaoNumero">Número do cartão</label>
-                    <label for="nome">Nome Completo</label>
-                    <label for="validade">Validade</label>
-                    <label for="pacelas">Número de Parcelas</label>
-                </div>
-                <div class="inputs">
-                    <input class="cpf" type="text" id="cpf" name="cpf">
-                    <input class="cartaoNumero" type="text" id="cartaoNumero" name="cartaoNumero">
-                    <input class="nome" type="text" id="nome" name="nome">
-                    
-                    <div>
-                        <input class="validade" type="text" id="validade" name="validade">
-                        <div>
-                            <label for="cv">CV</label>
-                            <input class="cv" type="text" id="cv" name="cv">
-                        </div>
-                    </div> 
-                    <input class="pacelas" type="text" id="pacelas" name="pacelas">  
-                </div>
-            </div>
-    
-            <!-- <div class="form-total-proce">
-                <span class="total">Total</span>
-                <div class="juros-pix ">
-                        <span class="strong">R$244,98</span>
-                        <span class="hovers">Em até 6x sem juros</span>
-                        <span class="hovers">R$ 205,00 pagando com PIX</span>
-                </div>
-            </div> -->
+            
+            <%- include('../partials/cart-payment-credit' ) -%>
+            <%- include('../partials/cart-payment-pix' ) -%>
 
             <button class="button-submit" type="submit">finalizar pedido</button>
         </form>
-        
-    
-       </section>
+    </section>
 </main>
 <!-- ------------------fim do main-------------------------- -->
