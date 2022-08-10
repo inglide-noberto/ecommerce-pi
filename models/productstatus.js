@@ -18,11 +18,11 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'ProductStatus',
-  });
+  }); 
 
 
   ProductStatus.associate = function(models) {
-    ProductStatus.hasMany(models.Product, {as: 'products'})
+    ProductStatus.hasMany(models.Product, {foreignKey: 'id_product_status', as: 'product_status'})
   };
 
   return ProductStatus;

@@ -8,8 +8,8 @@
             <th style="width:12%" class="button"></th>
         </tr>
 
-        <% for(order of orders) { %>
-            <%- include('../partials/order-line.ejs') -%>
+        <% for(const [index, order] of orders.entries()) { %>
+             <%- include('../partials/order-line.ejs', {index}) -%>
         <% } %>
     </table>
 </div>

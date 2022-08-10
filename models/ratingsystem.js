@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   RatingSystem.associate = function(models) {
-    RatingSystem.hasMany(models.Product, {as: 'products'})
+    RatingSystem.hasMany(models.Product, {foreignKey: 'id_rating_system',as: 'products'})
   };
 
   return RatingSystem;

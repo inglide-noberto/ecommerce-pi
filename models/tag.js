@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     Tag.belongsToMany(models.Product, {
       through: 'TagProduct', 
       foreignKey: 'id_tag', 
-      as: 'tag'
+      as: 'tag_product'
     })
   }
   return Tag;

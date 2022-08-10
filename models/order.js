@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Order.belongsTo(models.OrderStatus, {
       foreignKey: 'id_status',
-      as: 'status'
+      as: 'orders_status'
     })
 
     Order.belongsTo(models.PaymentMethod, {
@@ -60,8 +60,8 @@ module.exports = (sequelize, DataTypes) => {
     
     Order.belongsToMany(models.Product, {
       through: 'OrderProducts', 
-      foreignKey: 'id_order', 
-      as: 'order'
+      foreignKey: 'id_order',
+      as: 'order_product'
     });
   };
   

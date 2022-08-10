@@ -24,13 +24,19 @@ module.exports = (sequelize, DataTypes) => {
   OrderProducts.associate = function(models) {
     OrderProducts.belongsTo(models.Order, {
       foreignKey: 'id_order',
-      as: 'order',
+      otherKey: 'id_order',
+      as:'order_product'
     });
 
     OrderProducts.belongsTo(models.Product, {
       foreignKey: 'id_product',
-      as: 'product',
+      otherKey: 'id_order'
     });
+
+    // OrderProducts.hasMany(models.Product, {
+    //   foreignKey: 'id_order',
+    //   as:'product_order'
+    // });
 
     
   };

@@ -7,6 +7,10 @@ const UserRepository = models.User
 const OrderRepository = models.Order
 const AdressRepository = models.Adress
 const ProductRepository = models.Product
+const OrderStatusRepository = models.OrderStatus
+const PaymentMethodRepository = models.PaymentMethod
+const CourierRepository = models.Courier
+const OrderProductsRepository = models.OrderProducts
 
 
 
@@ -23,75 +27,176 @@ const UserController = {
     showUser: async (req, res) => {        
         const { slug } = req.params
 
-        const user = await UserRepository.findOne({
+        const userSearch = await UserRepository.findOne({
             where: {
                 slug : slug
-            },
-            include: [{
-                model: AdressRepository,
-                as: 'adresses',
-                require: true
-            },
+            },  
+            include: [
             {
                 model: OrderRepository,
                 as: 'orders',
-                require: true
-            }
-        ]
-            
+                require: true,
+                all: true, 
+                nested: true,
+
+            },
+            ],
+            subQuery: false,   
         })
 
-        console.log('-------------------------')
-        console.log('User')
-        console.log(user)
-        console.log('-------------------------')
-        
-        console.log('-------------------------')
-        console.log('Ordens')
-        console.log(user.orders)
-        console.log('-------------------------')
-        
+
+        if(userSearch == null) {
+            return res.status(404);
+        }
+
+        const user = (userSearch).toJSON()
+
         const orders = user.orders
-        let products = []
 
-        orders.forEach(order => {
-            products = await UserRepository.findAll({
+        for(const [index, order] of orders.entries()){
+            console.log('------------ID Order-------------')
+            console.log(order.id)
+            const productsInOrder = await OrderProductsRepository.findAll({
                 where: {
-                    id : order.id
-                },
-                include: [{
-                    model: AdressRepository,
-                    as: 'adresses',
-                    require: true
-                },
-                {
-                    model: OrderRepository,
-                    as: 'orders',
-                    require: true
+                    id_order: order.id
                 }
-            ]
-                
             })
-        });
+            console.log('------------productsInOrder-------------')
+            console.log('productsInOrder')
+            console.log(productsInOrder)
 
-        res.render('layout', {'page':'user-account', orders, user, dataProducts, rootDir})
+            const arrayProducts = []
+            for(product of productsInOrder) {
+                console.log('------------product.id-------------')
+                console.log('product.id')
+                console.log(product.id_product)
+                await arrayProducts.push( 
+                    await ProductRepository.findOne ({
+                        where: {
+                            id: product.id_product
+                        }
+                }))
+
+            orders[index].products = arrayProducts
+            }
+
+        }
+
+        res.render('layout', {'page':'user-account', orders, user, rootDir})
     },
 
-    indexOrders: (req, res) => {        
+    indexOrders: async (req, res) => {        
         const { slug } = req.params
-        const user = dataClients.find( user => user.slug == slug)
-        const orders = dataOrders.filter( order => order.id_user == user.id)
 
-        res.render('layout', {'page':'user-orders', orders, user, dataProducts, rootDir})
+        const userSearch = await UserRepository.findOne({
+            where: {
+                slug : slug
+            },  
+            include: [
+            {
+                model: OrderRepository,
+                as: 'orders',
+                require: true,
+                all: true, 
+                nested: true,
+
+            },
+            ],
+            subQuery: false,   
+        })
+
+        if(userSearch == null) {
+            return res.status(404);
+        }
+
+        const user = (userSearch).toJSON()
+
+        const orders = user.orders
+
+        for(const [index, order] of orders.entries()){
+            console.log('------------ID Order-------------')
+            console.log(order.id)
+            const productsInOrder = await OrderProductsRepository.findAll({
+                where: {
+                    id_order: order.id
+                }
+            })
+            console.log('------------productsInOrder-------------')
+            console.log('productsInOrder')
+            console.log(productsInOrder)
+
+            const arrayProducts = []
+            for(product of productsInOrder) {
+                console.log('------------product.id-------------')
+                console.log('product.id')
+                console.log(product.id_product)
+                await arrayProducts.push( 
+                    await ProductRepository.findOne ({
+                        where: {
+                            id: product.id_product
+                        }
+                }))
+
+            orders[index].products = arrayProducts
+            }
+
+        }
+
+        res.render('layout', {'page':'user-orders', orders, user, rootDir})
     },
  
-    showOrder: (req, res) => {        
+    showOrder: async (req, res) => {        
         const { slug, id } = req.params
-        const user = dataClients.find( user => user.slug == slug)
-        const orders = dataOrders.filter( order => order.id_user == user.id)
-        const order = orders.find( order => order.id == id)
+        const arrayProducts = []
 
-        res.render('layout', {'page':'user-order', order, user, dataProducts, rootDir})
+
+        const userSearch = await UserRepository.findOne({
+            where: {
+                slug : slug
+            },  
+            include: [
+            {
+                model: OrderRepository,
+                as: 'orders',
+                where:{
+                    id: id
+                },
+                require: true,
+                all: true, 
+                nested: true,
+
+            },
+            ],
+            subQuery: false,   
+        })
+
+        if(userSearch == null) {
+            return res.status(404);
+        }
+
+        const user = (userSearch).toJSON()
+
+        const order = user.orders
+
+        const productsInOrder = await OrderProductsRepository.findAll({
+            where: {
+                id_order: id
+            }
+        })
+
+        for(product of productsInOrder) {
+            await arrayProducts.push( 
+                await ProductRepository.findOne ({
+                    where: {
+                        id: product.id_product
+                    }
+            }))
+        }
+
+        order.products = arrayProducts
+
+        res.render('layout', {'page':'user-order', order, user, rootDir})
+
     },
     
     showAccount: (req, res) => {

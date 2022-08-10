@@ -53,22 +53,26 @@ module.exports = (sequelize, DataTypes) => {
       as: 'product_status',
     });
 
-    Product.hasMany(models.ProductImage, {as:'images'});
+    Product.hasMany(models.ProductImage, {foreignKey:'id_product', as:'images'});
 
     Product.belongsToMany(models.Category, {
       through: 'ProductCategory', 
+      as: 'product_category',
       foreignKey: 'id_product'
     });
 
     Product.belongsToMany(models.Tag, {
       through: 'TagProduct', 
-      foreignKey: 'id_product'
+      foreignKey: 'id_product',
+      as:'product_tag'
     });
 
     Product.belongsToMany(models.Order, {
       through: 'OrderProducts', 
-      foreignKey: 'id_product'
+      foreignKey: 'id_product',
+      as:'product_order'
     });
+    
   };
 
   return Product;
