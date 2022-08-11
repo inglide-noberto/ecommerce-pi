@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
   OrderStatus.associate = function(models) {
     OrderStatus.hasMany(models.Order, {
       foreignKey: 'id_status',
-      as:'orders_status'
+      as:'orders_status' 
     });
   };
 

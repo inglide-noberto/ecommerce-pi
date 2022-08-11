@@ -38,7 +38,6 @@ const UserController = {
                 require: true,
                 all: true, 
                 nested: true,
-
             },
             ],
             subQuery: false,   
@@ -51,38 +50,7 @@ const UserController = {
 
         const user = (userSearch).toJSON()
 
-        const orders = user.orders
-
-        for(const [index, order] of orders.entries()){
-            console.log('------------ID Order-------------')
-            console.log(order.id)
-            const productsInOrder = await OrderProductsRepository.findAll({
-                where: {
-                    id_order: order.id
-                }
-            })
-            console.log('------------productsInOrder-------------')
-            console.log('productsInOrder')
-            console.log(productsInOrder)
-
-            const arrayProducts = []
-            for(product of productsInOrder) {
-                console.log('------------product.id-------------')
-                console.log('product.id')
-                console.log(product.id_product)
-                await arrayProducts.push( 
-                    await ProductRepository.findOne ({
-                        where: {
-                            id: product.id_product
-                        }
-                }))
-
-            orders[index].products = arrayProducts
-            }
-
-        }
-
-        res.render('layout', {'page':'user-account', orders, user, rootDir})
+        res.render('layout', {'page':'user-account', user, rootDir})
     },
 
     indexOrders: async (req, res) => {        
@@ -99,11 +67,11 @@ const UserController = {
                 require: true,
                 all: true, 
                 nested: true,
-
             },
             ],
             subQuery: false,   
         })
+
 
         if(userSearch == null) {
             return res.status(404);
@@ -111,44 +79,11 @@ const UserController = {
 
         const user = (userSearch).toJSON()
 
-        const orders = user.orders
-
-        for(const [index, order] of orders.entries()){
-            console.log('------------ID Order-------------')
-            console.log(order.id)
-            const productsInOrder = await OrderProductsRepository.findAll({
-                where: {
-                    id_order: order.id
-                }
-            })
-            console.log('------------productsInOrder-------------')
-            console.log('productsInOrder')
-            console.log(productsInOrder)
-
-            const arrayProducts = []
-            for(product of productsInOrder) {
-                console.log('------------product.id-------------')
-                console.log('product.id')
-                console.log(product.id_product)
-                await arrayProducts.push( 
-                    await ProductRepository.findOne ({
-                        where: {
-                            id: product.id_product
-                        }
-                }))
-
-            orders[index].products = arrayProducts
-            }
-
-        }
-
-        res.render('layout', {'page':'user-orders', orders, user, rootDir})
+        res.render('layout', {'page':'user-orders', user, rootDir})
     },
  
-    showOrder: async (req, res) => {        
-        const { slug, id } = req.params
-        const arrayProducts = []
-
+    showOrder: async (req, res) => {      
+        const { slug } = req.params
 
         const userSearch = await UserRepository.findOne({
             where: {
@@ -158,56 +93,58 @@ const UserController = {
             {
                 model: OrderRepository,
                 as: 'orders',
-                where:{
-                    id: id
-                },
                 require: true,
                 all: true, 
                 nested: true,
-
             },
             ],
             subQuery: false,   
         })
 
+
         if(userSearch == null) {
-            return res.status(404);
+            return res.render('layout', {'page':'not-found'});
         }
 
         const user = (userSearch).toJSON()
 
-        const order = user.orders
-
-        const productsInOrder = await OrderProductsRepository.findAll({
-            where: {
-                id_order: id
-            }
-        })
-
-        for(product of productsInOrder) {
-            await arrayProducts.push( 
-                await ProductRepository.findOne ({
-                    where: {
-                        id: product.id_product
-                    }
-            }))
-        }
-
-        order.products = arrayProducts
-
-        res.render('layout', {'page':'user-order', order, user, rootDir})
+        return res.render('layout', {'page':'user-order', order, user, rootDir})
 
     },
     
-    showAccount: (req, res) => {
+    showAccount: async (req, res) => {
         const { slug } = req.params
-        const user = dataClients.find( user => user.slug == slug)
         const message = {
             type: "", 
             content: ""
         }
+
+        const userSearch = await UserRepository.findOne({
+            where: {
+                slug : slug
+            },  
+            include: [
+            {
+                model: OrderRepository,
+                as: 'orders',
+                require: true,
+                all: true, 
+                nested: true,
+            },
+            ],
+            subQuery: false,   
+        })
+
+
+        if(userSearch == null) {
+            return res.render('layout', {'page':'not-found'});
+        }
+
+        const user = (userSearch).toJSON()
+
+
         
-        res.render('layout', {'page':'user-informations', user, rootDir, message})
+        return res.render('layout', {'page':'user-informations', user, rootDir, message})
     },
 
     create: async (req, res) => {
@@ -316,22 +253,44 @@ const UserController = {
 
     },
 
-    updateUser: (req, res) => {
+    updateUser: async (req, res) => {
         const { slug } = req.params
         const reqInfos = req.body
-        const user = dataClients.find( user => user.slug == slug)
-        let message = {
-            type: "account", 
-            content: "Alterações salvas com sucesso!"
+        const message = {
+            type: "", 
+            content: ""
+        }
+        const userSearch = await UserRepository.findOne({
+            where: {
+                slug : slug
+            },  
+            include: [
+            {
+                model: OrderRepository,
+                as: 'orders',
+                require: true,
+                all: true, 
+                nested: true,
+            },
+            ],
+            subQuery: false,   
+        })
+
+        if(userSearch == null) {
+            return res.render('layout', {'page':'not-found'});
         }
 
-        console.log(reqInfos)
+        const user = (userSearch).toJSON()
+
 
         if(user.name == reqInfos.name || user.email == reqInfos.email) {
+            message.type = "account"
             message.content = "Algo deu errado"
         } else {
+            message.type = "account"
             message.content = user.name
         }
+
 
 
         res.render('layout', {'page':'user-informations', user, rootDir, message})

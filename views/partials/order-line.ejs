@@ -1,21 +1,19 @@
-<%  const order = orders[index];
-    let products = order.products;
+<%  let products = order.order_product;
     let quantProducts = products.length; %>
-    
 
-        <tr class="row" style="height:100px">
-            <td class="product-image"><img class="product-image" src="" alt="imagem do produto teste" class="image-product-order"></td>
-            <td class="order-title-info"> <%= products[0].title %> 
-                <% if(quantProducts - 1 < 2 && quantProducts - 1 != 0) { %>
-                e mais <%= quantProducts - 1  %> item
-                <% } 
-                else if(quantProducts - 1 >= 2) { %>
-                    e mais <%= quantProducts - 1  %> itens
-                <% } %>
-            </td>
-            <td class="order-td-hidden"> <%= order.date_order %> </td>
-            <td> <%= order.status %> </td>
-            <td><a href="/usuario/<%=  user.slug %>/pedidos/<%= order.id %>" class="button-submit">Ver Pedido</a></td>
-        </tr>
+    <tr class="row" style="height:100px">
+        <td class="product-image"><img class="product-image" src="" alt="imagem do produto teste" class="image-product-order"></td>
+        <td class="order-title-info"> <%= products[0].title %> 
+            <% if(quantProducts - 1 < 2 && quantProducts - 1 != 0) { %>
+            e mais <%= quantProducts - 1  %> item
+            <% } 
+            else if(quantProducts - 1 >= 2) { %>
+                e mais <%= quantProducts - 1  %> itens
+            <% } %>
+        </td>
+        <td class="order-td-hidden"> <%= order.date_order %> </td>
+        <td> <%= order.status %> </td>
+        <td><a href="/usuario/<%=  user.slug %>/pedidos/<%= order.id %>" class="button-submit">Ver Pedido</a></td>
+    </tr>
 
 
