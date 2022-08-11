@@ -1,18 +1,21 @@
-<%  let product = dataProducts.find(productOrder => productOrder.id == productId) %>
+<%  for([index, product] of order.products.entries()) {  %>
+        <% console.log('------Estou no produto-----') 
+        console.log(index)%>
+    <tr class="row" style="height:100px; white-space: normal;">
+        <td class="product-image"><a href="/loja/<%= product.slug %>"><img class="product-image" src="" alt="imagem do produto teste" class="image-product-order"></a></td>
+        
+        <td class="order-title-info"><a href="/loja/<%= product.slug %>"><%= product.title %></a>
+        </td>
+        
+        <td> 1 </td>
+        
+        <td>R$ <%= product.promotional_price %> </td>
+        
+        <td class="mobile-hidden">R$ <%= (parseFloat(product.promotional_price) * 1).toFixed([2]).toString().replace('.', ',') %> </td>
+        
+        <td><a href="/loja/<%= product.slug %>" class="button-submit mobile-hidden">Ver produto</a></td>
+    </tr>
 
-<tr class="row" style="height:100px; white-space: normal;">
-    <td class="product-image"><a href="/loja/<%= product.slug %>"><img class="product-image" src="<%= product.images[0]%>" alt="imagem do produto teste" class="image-product-order"></a></td>
-    
-    <td class="order-title-info"><a href="/loja/<%= product.slug %>"><%= product.title %></a>
-    </td>
-    
-    <td> 1 </td>
-    
-    <td>R$ <%= product.promotional_price %> </td>
-    
-    <td class="mobile-hidden">R$ <%= (parseFloat(product.promotional_price) * 1).toFixed([2]).toString().replace('.', ',') %> </td>
-    
-    <td><a href="/loja/<%= product.slug %>" class="button-submit mobile-hidden">Ver produto</a></td>
-</tr>
+<% }  %>
 
 

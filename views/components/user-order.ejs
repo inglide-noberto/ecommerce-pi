@@ -18,29 +18,24 @@
                     </div>
                 </div>
 
-
+ 
                 <div class="order-resume">
                     <h2 class="title">RESUMO DO PEDIDO</h2>
                     <table>
                         <tr style="height:25px">
-                            <%  let quantProducts = 0
-                                let products = []
+                            <%  let products = order.products;
+                                let quantProducts = products.length;
+
                                 let totalValueproducts = 0
 
-                                for(productId of order.products) {
+                                for(product of products) {
                                     
-                                    productOrder = dataProducts.find( productOrder => productOrder.id == productId)
-                                    products.push(dataProducts.find( productOrder => productOrder.id == productId))
-                                    
-                                    
-                                    if (productOrder.promotional_price_status == true) {
-                                        totalValueproducts += parseFloat(productOrder.promotional_price)
+                                    if (product.promotional_price_status == true) {
+                                        totalValueproducts += parseFloat(product.promotional_price)
                                     } else {
-                                        totalValueproducts += parseFloat(productOrder.price)
+                                        totalValueproducts += parseFloat(product.price)
                                     }
-                                } 
-                
-                                quantProducts = products.length 
+                                }
                             %>
 
                                 
@@ -70,6 +65,7 @@
 
 
             <!-- ----------------- Listing Order Products ------------------ -->
+            <%  console.log('------Order page----')%>
             <%- include('../partials/product-listing.ejs') -%>
             
 
