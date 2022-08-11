@@ -41,7 +41,7 @@ Plataforma para e-commerce com CRUD completo, com acessebilidade e 100% responsi
 # Running the app
 ```bash
 # clone repository
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+$ git clone https://github.com/analyceferreira/ecommerce-pi.git
 
 # install dependes
 $ npm install
