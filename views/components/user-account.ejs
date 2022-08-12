@@ -16,16 +16,27 @@
                     </div>
                     <a href="/usuario/<%= user.slug %>/conta"><button class="button-submit">ALTERAR</button></a>
                 </div>
+
+                <% if (user.adresses[0]) {%>
                 <div class="user-page-data-infos adress-infos">
-                    <h2 class="title">Endereço Principal</h2>
+                    <h2 class="title">Endereço</h2>
                     <div>
                         <span class="info">Apelido: <%= user.adresses[0].title %></span>
                         <span class="info"><%= user.adresses[0].street %> - nº <%= user.adresses[0].number %></span>
-                        <span class="info"><%= user.adresses[0].city %>, <%= user.adresses[0].state %> - <%= user.adresses[0].zip_code %></span>
+                        <span class="info"><%= user.adresses[0].city %>, <%= user.adresses[0].district %> - <%= user.adresses[0].zip_code %></span>
                         <span class="info">Tel: (66) 98411-5450</span>
                     </div>
                     <a href="/usuario/<%= user.slug %>/conta"><button class="button-submit">ALTERAR</button></a>
                 </div>
+                <% } else {%>
+                <div class="user-page-data-infos adress-infos">
+                    <h2 class="title">Endereço Principal</h2>
+                    <span class="info">Não há endereços cadastrados ainda</span>
+                    <a href="/usuario/<%= user.slug %>/conta"><button class="button-submit">CADASTRAR ENDEREÇO</button></a>
+                </div>
+                <% } %>
+
+
             </div>
 
             <div class="background-block

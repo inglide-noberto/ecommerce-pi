@@ -1,5 +1,7 @@
 <div class="orders-list">
     <h3>PEDIDOS</h1>
+    
+    <% if(user.orders.length != 0) { %>
     <table class="orders-list-table"  BORDER RULES=rows>
         <tr class="table-titles" style="height:35px">
             <th class="order" colspan="2">Pedido</th>
@@ -8,8 +10,12 @@
             <th style="width:12%" class="button"></th>
         </tr>
 
+        
         <% user.orders.map(order => { %>
-             <%- include('../partials/order-line.ejs', {order}) -%>
+                <%- include('../partials/order-line.ejs', {order}) -%>
         <% }) %>
     </table>
+    <% } else { %>
+        <span>Não há pedidos ainda</span>
+    <% } %>
 </div>
