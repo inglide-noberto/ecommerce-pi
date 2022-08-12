@@ -34,10 +34,10 @@
                         </div>
                         <div class="user-informations-block-div">
                             <label for="gender">Gênero</label>
-                            <select name="gender" id="gender" value="a">
-                                <option value="masc"></option>
+                            <select name="gender" id="gender">
+                                <option value="null"></option>
                                 <option value="masc">Masculino</option>
-                                <option value="fem" selected>Feminino</option>
+                                <option value="fem">Feminino</option>
                                 <option value="outher">Outro</option>
                                 <option value="uninformed">Prefiro não informar</option>
                            </select>
@@ -59,35 +59,39 @@
 
                 <form method="post" action="/conta/endereco">
                     <div class="user-informations-block-div">
-                        <label for="">Nome do Desitnatário</label>
-                        <input type="text" name="" id="">
+                        <label for="">Apelido do Endereço</label>
+                        <input type="text" name="title" id="title">
                     </div>
+                    <!-- <div class="user-informations-block-div">
+                        <label for="">Nome do Destinatário</label>
+                        <input type="text" name="name" id="name">
+                    </div> -->
                     <div class="user-informations-block-div">
                         <label for="">Endereço</label>
-                        <input type="text" name="" id="">
+                        <input type="text" name="street" id="street">
                     </div>
                     <div class="user-informations-block-div user-informations-block-div-duo">
                         <div class="user-informations-block-div duo40">
                             <label for="">Número</label>
-                            <input type="text" name="" id="">
+                            <input type="text" name="number" id="number">
                         </div>
                         <div class="user-informations-block-div">
                             <label for="">Bairro</label>
-                            <input type="text" name="" id="">
+                            <input type="text" name="district" id="district">
                         </div>
                     </div>
                     <div class="user-informations-block-div">
                         <label for="">Complemento</label>
-                        <input type="text" name="" id="">
+                        <input type="text" name="complement" id="complement">
                     </div>
                     <div class="user-informations-block-div user-informations-block-div-duo">
                         <div class="user-informations-block-div">
                             <label for="">Cidade</label>
-                            <input type="text" name="" id="">
+                            <input type="text" name="city" id="city">
                         </div>
                         <div class="user-informations-block-div">
                             <label for="">Estado</label>
-                            <input type="text" name="" id="">
+                            <input type="text" name="state" id="state">
                         </div>
                     </div>
                     <div class="user-informations-block-div">
@@ -97,11 +101,11 @@
                     <div class="user-informations-block-div user-informations-block-div-duo">
                         <div class="user-informations-block-div ">
                             <label for="">Telefone de Contato</label>
-                            <input type="text" name="" id="">
+                            <input type="text" name="contact" id="contact">
                         </div>
                         <div class="user-informations-block-div">
                             <label for="">CEP</label>
-                            <input type="text" name="" id="">
+                            <input type="text" name="cep" id="cep">
                         </div>
                     </div>
 

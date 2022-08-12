@@ -49,6 +49,7 @@ const UserController = {
         }
 
         const user = (userSearch).toJSON()
+        console.log(user)
 
         res.render('layout', {'page':'user-account', user, rootDir})
     },
@@ -201,13 +202,10 @@ const UserController = {
             email:  email,
             password:  password,
             phone:  phoneFormated,
-            type_user: 'clint'
+            type_user: 'client'
         })
 
-        const users = await UserRepository.findAll()
-        console.log(users)
-
-        
+    res.redirect(`/usuario/${slug}`)
         //res.render('layout', {'page':'user-informations', user, message})
     },
 
