@@ -109,7 +109,7 @@ a {
 
 
 /*--------- INPUTS  ---------*/
-input[type=text], input[type=email], input[type=number], input[type=date], input[type=tel], select {
+input[type=text], input[type=email], input[type=number], input[type=date], input[type=tel], select, input[type=password] {
     /* width: 100%; */
     height: 40px;
     padding: 0 10px;

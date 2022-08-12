@@ -15,12 +15,12 @@
                 <div class="content-juction-specification-product">
                     <div class="juction-specification-2-image-name-information">
                         <div class="especificanton-2-rectangle-img">
-                            <img class="produtc-img" src="/img/icons/img-icon.png" alt="imagem do produto">
+                            <img class="produtc-img" src="<%= product.slug%>" alt="imagem do produto">
                         </div>
                         <span class="information-product-img">
-                            <h2 class="sub1">Lorem Ipsum</h2>
+                            <h2 class="sub1"> <%= product.title %> </h2>
                             <p class="name-product">
-                                Lorem ipsum dolor sit int amet, consectetur
+                                <%= product.short_description %>
                             </p>
                         </span>
                     </div>
@@ -29,17 +29,20 @@
                             <h4>QUANTIDADE</h4>
                             <form action="" method="">
                                 <div class="juction-spacificantion-2-product-quantity">
-                                    <button class="button-qunatity">+</button>
+                                    <button class="button-quantity more">+</button>
+                                  
+                                    <!--  <input class="the-amount" type="text" name="quatidadeProduto"> -->
+                                    <p>0</p>  
 
-                                    <input class="the-amount" type="text" name="quatidadeProduto">
-
-                                    <button class="button-qunatity">-</button>
+                                    <button class="button-quantity less">-</button>
                                 </div>
                             </form>
                         </div>
                         <div class="div-preco">
                             <h4 class="subpa-preco">PREÇO</h4>
-                            <h4>R$23,99</h4>
+                            <h4>
+                               R$ <%= product.price %>
+                            </h4>
                         <!-- </div> -->
                     </div>
                     <div><button class="button-remover">REMOVER</button></div>
@@ -48,8 +51,8 @@
                 <div class="cart-contect-Oder-summary">
                 <h3 class="Oder-summary">RESUMO DO MEU PEDIDO</h3>
                 <div class="Oder_summary_name_value">
-                    <p> 10 PRODUTO</p>
-                    <P> R$239,90 </P>
+                    <p> <%= product.title %> </p>
+                    <P> R$ <%= product.price %> </P>
                 </div>
                 <span class="Oder-summary-freight-value">
                     <p> Frete </p>
@@ -57,8 +60,8 @@
                 </span>
                 <span class="Oder-summary-total-value">
                     <p> TOTAL </p>
-                    <p> R$244,98 </p>
-                </span>
+                    <p> R$244,98 </p>  <!--(condição somando valores )-->
+                </span><br>
                 <span class="Oder-summary-fees">
                     <p> Em até 6x sem juros </p>
                 </span>
