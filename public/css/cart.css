@@ -107,7 +107,7 @@ main {
 
 .juction-spacificantion-2-product-quantity {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 90px;
     border: 1px solid var(--color-border);
@@ -115,7 +115,7 @@ main {
     margin-left: 12px;
 }
 
-.button-qunatity {
+.button-quantity {
     font-size: 34px;
     border: solid 1px yellowgreen;
 }

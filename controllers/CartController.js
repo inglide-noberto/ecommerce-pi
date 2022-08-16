@@ -1,6 +1,9 @@
 const dataorders = require('../data/data-orders.json')
 const productsData = require('../data/data-products.json')
 const dataCart = require('../data/data-cart.json')
+const models = require('../models')
+const productRepository = models.Product
+
 
 const fs = require('fs')
 
@@ -21,34 +24,22 @@ const CartController = {
         return res.send("sucesso")
     },
     //teste de vinculo products
-    show: (req,res) => {
+    show: async (req,res) => {
         const {slug} = req.params
-        const product = productsData.find(product => product.slug === slug)
+        const product = await productRepository.findOne({  
+            where: {
+                slug:slug
+            },
+            include: {
+                require: true,
+                all: true, 
+                nested: true,
+            }
 
-        if(product){
-            // Inclui o produto no objeto do carrinho
-            dataCart[0].products.push({ "products-id": product.id , "quantity": "1"})
-            // transforma o retorno em JSON
-            let carrinho = JSON.stringify(dataCart)
-
-            // console log das variaveis para ver que tipo de objeto estão armazenando
-            console.log("-------------------------------")
-            console.log(dataCart)
-            console.log("-------------------------------")
-            console.log(carrinho)
-
-            // escreve no data-cart.json o novo JSON com o produto produto inserido
-            fs.writeFileSync( 'data/data-cart.json' , carrinho, (err) => {
-                if (err) { console.error(err) };
-                console.log("File has been created");
-            })
-
-            // redireciona para renderizar o carrinho
-            res.redirect('/cart')
-        }
-        else{
-            res.status(404).send()
-        }
+         })
+         
+        console.log(product)
+         return res.render('layout', {'page': 'cart', product})
     }
 }
 
