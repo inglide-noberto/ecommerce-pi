@@ -32,6 +32,7 @@
     --color-gradient-hover-invert: linear-gradient(to left, #0095be, #8803ca);
 
     --color-contrast-1: #6B79F6;  
+    --color-contrast-1-opacity-60: #6b79f61c;  
     --color-contrast-2: #43A6F4;
     --color-contrast-3: #5bc9ad;
     --color-contrast-4: #c95b5b;

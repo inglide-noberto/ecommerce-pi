@@ -1,7 +1,7 @@
 const page = window.location.pathname
 const buttonsSidebar = document.querySelectorAll('.sidebar-button')
 
-const pageAdmin = '/admin'
+const pageAdmin = '/admin/'
 const pageSales = '/admin/vendas'
 const pageProducts = '/admin/produtos'
 

@@ -31,7 +31,6 @@ aside {
 
     display: flex;
     flex-direction: column;
-
     position: fixed;
 }
 
@@ -40,6 +39,7 @@ aside {
 }
 
 .sidebar-button {
+    margin-bottom: 3px;
     padding-left: .5rem;
     padding-right: .5rem;
     width: 100%;
