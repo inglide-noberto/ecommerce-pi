@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
       through: 'OrderProducts', 
       foreignKey: 'id_order',
       as: 'order_product'
-    });
+    });    
   };
   
   return Order;

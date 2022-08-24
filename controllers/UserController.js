@@ -24,6 +24,8 @@ const UserController = {
         res.render('layout', {'page': 'login', message})
      }, 
     
+
+
     showUser: async (req, res) => {        
         const { slug } = req.params
 
@@ -54,6 +56,9 @@ const UserController = {
         res.render('layout', {'page':'user-account', user, rootDir})
     },
 
+
+
+
     indexOrders: async (req, res) => {        
         const { slug } = req.params
 
@@ -83,21 +88,23 @@ const UserController = {
         res.render('layout', {'page':'user-orders', user, rootDir})
     },
  
+
+
     showOrder: async (req, res) => {      
-        const { slug } = req.params
+        const { slug, id } = req.params
 
         const userSearch = await UserRepository.findOne({
             where: {
                 slug : slug
             },  
             include: [
-            {
-                model: OrderRepository,
-                as: 'orders',
-                require: true,
-                all: true, 
-                nested: true,
-            },
+                {
+                    model: OrderRepository,
+                    as: 'orders',
+                    require: true,
+                    all: true, 
+                    nested: true,
+                },
             ],
             subQuery: false,   
         })
@@ -106,13 +113,34 @@ const UserController = {
         if(userSearch == null) {
             return res.render('layout', {'page':'not-found'});
         }
-
-        const user = (userSearch).toJSON()
-
-        return res.render('layout', {'page':'user-order', order, user, rootDir})
-
-    },
     
+        
+        const user = (userSearch).toJSON()
+        const order = user.orders.find(order => order.id == id)
+
+        const productsSearch = await OrderProductsRepository.findAll({
+            where: {
+                id_order : order.id
+            },  
+            include: [
+            {
+                model: ProductRepository,
+                require: true
+            },
+            ],
+            subQuery: false,   
+        })
+
+        const products = productsSearch.map(product => product.toJSON())
+
+        
+
+        return res.render('layout', {'page':'user-order', order,products, user})
+    },
+
+    
+
+
     showAccount: async (req, res) => {
         const { slug } = req.params
         const message = {

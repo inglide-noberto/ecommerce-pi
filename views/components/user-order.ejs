@@ -23,8 +23,8 @@
                     <h2 class="title">RESUMO DO PEDIDO</h2>
                     <table>
                         <tr style="height:25px">
-                            <%  let products = order.products;
-                                let quantProducts = products.length;
+                            <%  let products = order.order_product;
+                                let quantProducts = products.lenght;
 
                                 let totalValueproducts = 0
 
@@ -60,13 +60,14 @@
 
             <div class="background-block user-page-data-infos shipping-infos user-page-data-blocks">
                 <h2 class="title">Metodo de Entrega</h2>
-                <span class="info"> Intelipost - Jadlog - de 1 a 9 dias úteis </span>
+                <% console.log(order.courier)%>
+                <span class="info"> <%= order.currier %> - Jadlog - de 1 a 9 dias úteis </span>
             </div>
 
 
             <!-- ----------------- Listing Order Products ------------------ -->
             <%  console.log('------Order page----')%>
-            <%- include('../partials/product-listing.ejs') -%>
+            <%- include('../partials/product-listing.ejs', {order}) -%>
             
 
         </div>

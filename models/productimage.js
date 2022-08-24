@@ -15,9 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   ProductImage.init({
     id_product: DataTypes.INTEGER,
-    file: DataTypes.BLOB,
-    file_original_name: DataTypes.STRING,
-    file_ext: DataTypes.STRING
+    file_url: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'ProductImage',
@@ -26,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
   ProductImage.associate = function(models) {
     ProductImage.belongsTo(models.Product, {
       foreignKey: 'id_product',
-      as: 'product',
+      as: 'product_image',
     });
   };
 

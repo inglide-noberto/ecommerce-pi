@@ -1,15 +1,16 @@
-<%  for([index, product] of order.products.entries()) {  %>
-        <% console.log('------Estou no produto-----') 
-        console.log(index)%>
+<%  const uniqueProducts = [...new Set(order.order_product)];
+    for(product of uniqueProducts) {  %>
+        
     <tr class="row" style="height:100px; white-space: normal;">
-        <td class="product-image"><a href="/loja/<%= product.slug %>"><img class="product-image" src="" alt="imagem do produto teste" class="image-product-order"></a></td>
+        <td class="product-image"><a href="/loja/<%= product.slug %>"><img class="product-image" src="<%= product.images[0].file_url %>" alt="imagem do produto teste" class="image-product-order"></a></td>
         
         <td class="order-title-info"><a href="/loja/<%= product.slug %>"><%= product.title %></a>
-        </td>
+    </td>
         
-        <td> 1 </td>
+    <td> <%= order.order_product.filter(product => order.order_product.id) %> </td>
+        <%console.log(order.order_product.filter(productDaOrder => product.id == productDaOrder.id))%>
         
-        <td>R$ <%= product.promotional_price %> </td>
+        <td class="transforme-values-to-float-with-js">R$ <%= product.price %></td>
         
         <td class="mobile-hidden">R$ <%= (parseFloat(product.promotional_price) * 1).toFixed([2]).toString().replace('.', ',') %> </td>
         

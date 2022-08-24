@@ -16,13 +16,7 @@ module.exports = {
           key: 'id'
         }
       },
-      file: {
-        type: Sequelize.BLOB
-      },
-      file_original_name: {
-        type: Sequelize.STRING
-      },
-      file_ext: {
+      file_url: {
         type: Sequelize.STRING
       },
       createdAt: {
