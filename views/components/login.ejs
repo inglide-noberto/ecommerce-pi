@@ -1,39 +1,42 @@
 <div class="container form-login margin-header">
 
     <div class="first-content">
-        <form method="post" action="/entrar/criar" >
+        <form method="post" action="/usuario/criar" >
             <h1>CRIAR CONTA</h1>
 
             <div>
-            
                 <div class="div-input">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="name" name="name"  placeholder="Lorem Ipson">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="name" name="name"  placeholder="">
                 </div>
                 <div class="div-input">
                     <label for="Email">Email:</label>
-                    <input type="text" id="email" name="email" placeholder="I">
+                    <input type="text" id="email" name="email" placeholder="">
                 </div>
                 
                 <div class="div-input">
                     <label for="Telefone">Telefone:</label>
-                    <input type="text" id="telefone" name="telefone" placeholder="Telefone">
+                    <input type="text" id="telefone" name="phone" placeholder="">
                 </div>
                 
                 <div class="div-input">
                     <label for="Senha">Senha:</label>
-                    <input type="text" id="senha" name="Senha" placeholder="Senha">
+                    <input type="password" id="senha" name="password" placeholder="Senha">
                 </div>
 
                 <div class="div-input">
-                    <label for="Confirmar Senha">Confirmar Senha:</label>
-                    <input type="text" id="Confirme a Senha" name="Confirme a Senha" placeholder="Confirme a Senha">
+                    <label for="passwordConfirm">Confirmar Senha:</label>
+                    <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Senha">
                 </div>
 
             </div>
 
+            <% if (message.type == "criar" && message.content != "") { %>
+                <span class="in-line-message"> <%= message.content %> </span>
+            <% } %>
+
             
-            <button class="button-submit" type="submit">criar</button> 
+            <button class="button-submit" type="submit">Criar</button> 
             
 
         </form>
@@ -44,31 +47,15 @@
     </div>
 
     <div class="second-colum">
-        <form>
-            <h1>LOGIN</h1>
-            
-            <div>
-                <input type="text" id="login" nome="login" placeholder="login">
-            
-          
-                <input type="text" id="Senha" nome="senha" placeholder="senha">
-            
-            </div>
-            <button class="button-submit" type="submit">entrar</button>
-            
-        </form>
-       
 
-        <!-- <div class=" field-box">
-            <form>
-                <input type="login" class="form-input" autocomplete="off" required>
-                <label for="" class="form-label">login</label>
-        </div>
-        <div>
-            <input type="senha" class="form-input" autocomplete="off" required>
-            <label for="" class="form-label">senha</label>
-        </div>
-                </form> -->
+        <h1>LOGIN</h1>
+        
+        <form method="post" action="/usuario/logar">
+            <input type="text" id="email" name="email" placeholder="Email">
+            <input type="password" id="password" name="password" placeholder="Senha">
+        
+            <button class="button-submit" type="submit">entrar</button>
+        </form>
 
     </div>
 </div>

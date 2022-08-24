@@ -1,0 +1,220 @@
+
+
+/*---------- main ----------*/
+main {
+    padding-left: 250px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .header {
+    padding-top: 5em;
+    height: 390px;
+    background-color: var(--color-background-5);
+}
+
+.div-section {
+    width: 100%;
+}
+
+.status-cards {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.status-card {
+    background-color: var(--color-background-pages);
+    width: 100%;
+    min-height: 120px;
+    padding: 2em 4%;
+    box-shadow: var(--color-shadow-50);
+
+
+    border-radius: 1em;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.status-card-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-card-data .titles{
+    display: flex;
+    flex-direction: column;
+    row-gap: .4rem;
+}
+
+.status-card-data .titles :first-child {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.status-card-data .titles :last-child {
+    font-size: 26px;
+    color: var(--color-text);
+}
+
+div .status-card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 78px;
+    height: 78px;
+    background-color: var(--color-contrast-1);
+    border-radius: 50%;
+    font-weight: 500;
+    line-height: 0;
+
+    font-size: 34px;
+    color: var(--color-text);
+}
+
+
+.status-card-description{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.status-card-description :first-child{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -3.5px;
+}
+
+
+
+div .arrow_upward {
+    color: var(--color-contrast-3);
+}
+
+div .arrow_downward {
+    color: var(--color-contrast-4);
+}
+
+
+
+
+
+
+.tables-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em; 
+
+}
+
+.card {
+    width: 100%;
+    height: 450px;
+    background-color: var(--color-background-6);
+    border-radius: 1em;
+    
+    padding: 0 2.5rem;
+    box-shadow: var(--color-shadow-50);
+
+    position: relative;
+    top: -95px;
+    z-index: 10;
+}
+
+.card-block {
+    width: 100%;
+    height: 45px;
+    background-color: var(--color-background-pages);
+
+    position: absolute;
+    top: 69px;
+    left: 0;
+    z-index: 1;
+}
+
+.card-header {
+    height: 70px;
+    width: 100%;
+    padding-top: .4em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top-left-radius: .4em ;
+    border-top-right-radius: .4em;
+}
+
+.card-header h2{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    z-index: 5;
+}
+
+.card-header a{
+    background-color: var(--color-contrast-1);
+    padding: .5em 1em;
+    border-radius: .4em;
+}
+
+.table-responsive {
+    position: relative;
+    z-index: 10;
+}
+
+table {
+    width: 100%;
+    padding-bottom: 1em;
+    border-collapse: collapse;
+
+}
+
+thead {
+    width: 100%;
+}
+
+th {
+    display: table-cell;
+    margin: -10px;
+    height: 3rem;
+    font-weight: 600;
+}
+
+tbody tr {
+    text-align: center;
+    height: 3rem;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+
+    text-decoration: underline;
+}
+
+th.id {
+    width: 10%;
+}
+
+th.price {
+    width: 15%;
+}

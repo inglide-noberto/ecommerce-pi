@@ -3,13 +3,17 @@ const ProfileController = require('../controllers/UserController')
 
 const router = express.Router()
 
-router.get('/:slug', ProfileController.index)
+router.get('/', ProfileController.index)
+router.get('/:slug', ProfileController.showUser)
 router.get('/:slug/pedidos', ProfileController.indexOrders)
-router.get('/:slug/pedidos/:id', ProfileController.indexOrder)
+router.get('/:slug/pedidos/:id', ProfileController.showOrder)
 
-router.get('/:slug/conta', ProfileController.indexUser)
+router.get('/:slug/conta', ProfileController.showAccount)
 router.post('/:slug/conta', ProfileController.updateUser)
 router.post('/:slug/conta/endereco', ProfileController.updateShipping)
+
+router.post('/criar', ProfileController.create)
+router.post('/logar', ProfileController.login)
 
 
 module.exports = router
