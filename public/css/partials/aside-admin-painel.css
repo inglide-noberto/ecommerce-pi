@@ -1,0 +1,88 @@
+*{
+    color: var(--color-text-opacity-70);
+    font-size: 0.935413rem;
+    font-weight: 400;
+}
+
+div .button-icon-material {
+    background: none;
+}
+
+div .button-icon-material {
+    color: var(--color-text-opacity-45);
+}
+
+
+
+
+
+/*---------- Aside ----------*/
+.logo-185px {
+    margin: 24px 0;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+aside {
+    background-color: var(--color-background-3);
+    width: 250px;
+    height: 100%;
+    padding: 1rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+}
+
+.sidebar-buttons {
+    padding: 24px 0;
+}
+
+.sidebar-button {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.sidebar-button:hover, .sidebar-button:hover  :where(a, span) {
+    background-color: var(--color-background-pages);
+    border-radius: .3rem;
+    
+    color: var(--color-text);
+}
+
+.selected {
+    background-color: var(--color-background-6);
+    border-radius: .3rem;
+    
+    color: var(--color-text);
+}
+
+
+
+
+
+/*---------- footer ----------*/
+
+footer {
+    margin-top: 100%;
+    height: 60px;
+    min-height: 40px;
+
+    position: fixed;
+    bottom: 0;
+}
+
+footer :where(p, a) {
+    font-size: .8rem;
+    color: var(--color-text-opacity-45);
+}
+
+footer  a {
+    color: var(--color-contrast-1);
+}
