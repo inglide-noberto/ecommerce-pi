@@ -4,7 +4,7 @@
 
 Plataforma para e-commerce com CRUD completo, com acessebilidade e 100% responsivo
 
-[![made in brazil](https://img.shields.io/badge/state%20-in%20progress-009.svg?style=for-the-badge)]() [![made in brazil](https://img.shields.io/badge/made%20in-brazil-008751.svg?style=for-the-badge)](https://www.google.com/maps/place/brazil)
+[![made in brazil](https://img.shields.io/badge/state%20-bulding-009.svg?style=for-the-badge)]() [![made in brazil](https://img.shields.io/badge/made%20in-brazil-008751.svg?style=for-the-badge)](https://www.google.com/maps/place/brazil)
 </div>
 
 
