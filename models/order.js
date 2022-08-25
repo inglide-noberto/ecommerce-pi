@@ -17,15 +17,15 @@ module.exports = (sequelize, DataTypes) => {
     id_user: DataTypes.INTEGER,
     id_status: DataTypes.INTEGER,
     date_order: DataTypes.DATE,
-    price: DataTypes.DECIMAL,
-    descouint: DataTypes.DECIMAL,
-    price_payment: DataTypes.DECIMAL,
+    price: DataTypes.FLOAT,
+    descouint: DataTypes.FLOAT,
+    price_payment: DataTypes.FLOAT,
     id_payment_method: DataTypes.INTEGER,
     payment_status: DataTypes.STRING,
     id_adress: DataTypes.INTEGER,
     id_courier: DataTypes.INTEGER,
     delivery_time: DataTypes.INTEGER,
-    delivery_price: DataTypes.DECIMAL
+    delivery_price: DataTypes.FLOAT
   }, {
     sequelize,
     modelName: 'Order',

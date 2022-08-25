@@ -27,11 +27,11 @@ module.exports = (sequelize, DataTypes) => {
     full_description: DataTypes.STRING,
     id_rating_system: DataTypes.INTEGER,
     id_product_status: DataTypes.INTEGER,
-    weight: DataTypes.DECIMAL,
+    weight: DataTypes.FLOAT,
     formart: DataTypes.INTEGER,
-    length: DataTypes.DECIMAL,
-    width: DataTypes.DECIMAL,
-    diameter: DataTypes.DECIMAL
+    length: DataTypes.FLOAT,
+    width: DataTypes.FLOAT,
+    diameter: DataTypes.FLOAT
   }, {
     sequelize,
     modelName: 'Product',

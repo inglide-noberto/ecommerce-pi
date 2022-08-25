@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       promotional_price: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       brand: {
         type: Sequelize.STRING
@@ -63,19 +63,19 @@ module.exports = {
         }
       },
       weight: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       formart: {
         type: Sequelize.INTEGER
       },
       length: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       width: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       diameter: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       createdAt: {
         allowNull: false,

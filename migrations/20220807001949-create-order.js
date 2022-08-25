@@ -28,13 +28,13 @@ module.exports = {
         type: Sequelize.DATE
       },
       price: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       descouint: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       price_payment: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       id_payment_method: {
         type: Sequelize.INTEGER,
@@ -67,7 +67,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       delivery_price: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       createdAt: {
         allowNull: false,
