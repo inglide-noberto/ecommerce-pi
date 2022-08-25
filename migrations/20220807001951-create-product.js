@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       price: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       promotional_price_status: {
         type: Sequelize.BOOLEAN

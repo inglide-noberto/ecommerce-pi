@@ -7,7 +7,6 @@
 
             <div class="user-informations-block background-block">
                 <h2>Dados Pessoais</h2>
-                <% console.log(user) %>
 
                 <form method="post" action="/usuario/<%= user.slug%>/conta">
                     <div class="user-informations-block-div">
@@ -25,7 +24,7 @@
                         </div>
                         <div class="user-informations-block-div">
                             <label for="birth-date">Data Nascimento</label>
-                            <input type="date" name="birthDate" id="birth-date" value="<%= user.birt_date%>">
+                            <input type="date" name="birthDate" id="birth-date" value="">
                         </div>
                     </div>
                     <div class="user-informations-block-div user-informations-block-div-duo">
