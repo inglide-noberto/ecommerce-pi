@@ -39,6 +39,17 @@ const UserController = {
 
         res.render('adminPainel', {'page': 'admin-products', message})
      }, 
+
+
+
+     showFormProducts: (req, res) => {
+        const message = {
+            type: "", 
+            content: ""
+        }
+
+        res.render('adminPainel', {'page': 'admin-product-details', message})
+     }, 
 }
 
 

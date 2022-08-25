@@ -7,6 +7,7 @@ const UserRepository = models.User
 const OrderRepository = models.Order
 const AdressRepository = models.Adress
 const ProductRepository = models.Product
+const ProductImageRepository = models.ProductImage
 const OrderStatusRepository = models.OrderStatus
 const PaymentMethodRepository = models.PaymentMethod
 const CourierRepository = models.Courier
@@ -84,6 +85,24 @@ const UserController = {
         }
 
         const user = (userSearch).toJSON()
+        // const productsSearch = await OrderProductsRepository.findAll({
+        //     where: {
+        //         id_order : id
+        //     },  
+        //     include: [
+        //     {
+        //         model: ProductRepository,
+        //         require: true,
+        //         all: true,
+        //         nested: true,
+        //     },
+        //     ],
+        //     subQuery: false,   
+        // })
+
+        // const products = (productsSearch.map(product => product.toJSON())).map(product => product.Product)
+
+
 
         res.render('layout', {'page':'user-orders', user, rootDir})
     },
@@ -98,44 +117,53 @@ const UserController = {
                 slug : slug
             },  
             include: [
-                {
-                    model: OrderRepository,
-                    as: 'orders',
-                    require: true,
-                    all: true, 
-                    nested: true,
-                },
+            {
+                model: OrderRepository,
+                as: 'orders',
+                require: true,
+                all: true, 
+                nested: true,
+            },
             ],
             subQuery: false,   
         })
 
 
         if(userSearch == null) {
-            return res.render('layout', {'page':'not-found'});
+            return res.status(404);
         }
-    
-        
+
         const user = (userSearch).toJSON()
-        const order = user.orders.find(order => order.id == id)
+        
 
         const productsSearch = await OrderProductsRepository.findAll({
             where: {
-                id_order : order.id
+                id_order : id
             },  
             include: [
             {
                 model: ProductRepository,
-                require: true
+                require: true,
+                all: true,
+                nested: true,
             },
             ],
             subQuery: false,   
         })
 
-        const products = productsSearch.map(product => product.toJSON())
+        const products = (productsSearch.map(product => product.toJSON())).map(product => product.Product)
+        const ordersArray = user.orders.filter(orderUser => orderUser.id == id)
+        const order = ordersArray[0]
+        console.log('----Produto----')
+        console.log(products)
 
-        
 
-        return res.render('layout', {'page':'user-order', order,products, user})
+        if(order == undefined) {
+            return res.status(404);
+        }
+
+
+        return res.render('layout', {'page':'user-order', order, user, products})
     },
 
     
@@ -157,7 +185,7 @@ const UserController = {
                 model: OrderRepository,
                 as: 'orders',
                 require: true,
-                all: true, 
+                all: true,
                 nested: true,
             },
             ],
@@ -171,10 +199,13 @@ const UserController = {
 
         const user = (userSearch).toJSON()
 
-
         
         return res.render('layout', {'page':'user-informations', user, rootDir, message})
     },
+
+
+
+
 
     create: async (req, res) => {
         const { name, email, phone, password, passwordConfirm } = req.body

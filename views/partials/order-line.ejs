@@ -1,19 +1,27 @@
 <%  let products = order.order_product;
-    let quantProducts = products.length; %>
+    let quantProducts = products.length;
+    console.log(order)
+    function pad(n) {
+        return n<10 ? '0'+n : n;
+    }
 
-    <tr class="row" style="height:100px">
-        <td class="product-image"><img class="product-image" src="" alt="imagem do produto teste" class="image-product-order"></td>
-        <td class="order-title-info"> <%= products[0].title %> 
-            <% if(quantProducts - 1 < 2 && quantProducts - 1 != 0) { %>
-            e mais <%= quantProducts - 1  %> item
-            <% } 
-            else if(quantProducts - 1 >= 2) { %>
-                e mais <%= quantProducts - 1  %> itens
-            <% } %>
-        </td>
-        <td class="order-td-hidden"> <%= order.date_order %> </td>
-        <td> <%= order.status %> </td>
-        <td><a href="/usuario/<%=  user.slug %>/pedidos/<%= order.id %>" class="button-submit">Ver Pedido</a></td>
-    </tr>
+    let dataOrder = pad(order.date_order.getDay() )+ '/' + pad(order.date_order.getMonth() + 1) + '/' + order.date_order.getFullYear();
+ %>
+
+<tr class="row" style="height:100px">
+    <td class="product-image"><img class="product-image" src="<%= products[0].images[0].file_url %>" alt="imagem do produto teste" class="image-product-order"></td>
+    <td class="order-title-info"> 
+        <strong> Pedido #<%= order.id %> <br><br></strong>
+        <%= products[0].title %> 
+        <% if(quantProducts - 1 < 2 && quantProducts - 1 != 0) { %>
+        e mais <%= quantProducts - 1  %> item
+        <% } else if(quantProducts - 1 >= 2) { %>
+            e mais <%= quantProducts - 1  %> itens
+        <% } %>
+    </td>
+    <td class="order-td-hidden"> <%= dataOrder %> </td>
+    <td> <%= order.orders_status.title %> </td>
+    <td><a href="/usuario/<%=  user.slug %>/pedidos/<%= order.id %>" class="button-submit">Ver Pedido</a></td>
+</tr>
 
 

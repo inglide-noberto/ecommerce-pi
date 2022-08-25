@@ -1,18 +1,19 @@
-<%  const uniqueProducts = [...new Set(order.order_product)];
+<%  const uniqueProducts = [...new Set(products)];
+
     for(product of uniqueProducts) {  %>
         
     <tr class="row" style="height:100px; white-space: normal;">
         <td class="product-image"><a href="/loja/<%= product.slug %>"><img class="product-image" src="<%= product.images[0].file_url %>" alt="imagem do produto teste" class="image-product-order"></a></td>
         
-        <td class="order-title-info"><a href="/loja/<%= product.slug %>"><%= product.title %></a>
-    </td>
+        <td class="order-title-info"><a href="/loja/<%= product.slug %>"><%= product.title %></a></td>
         
-    <td> <%= order.order_product.filter(product => order.order_product.id) %> </td>
-        <%console.log(order.order_product.filter(productDaOrder => product.id == productDaOrder.id))%>
+        <% const totalItens = products.filter(productDaOrder => product.id == productDaOrder.id)%>
+        <td> <%= totalItens.length %> </td>
         
-        <td class="transforme-values-to-float-with-js">R$ <%= product.price %></td>
-        
-        <td class="mobile-hidden">R$ <%= (parseFloat(product.promotional_price) * 1).toFixed([2]).toString().replace('.', ',') %> </td>
+        <td class="transforme-values-to-float-with-js">R$ <%= parseFloat(product.promotional_price).toFixed([2]).toString().replace('.', ',') %></td>
+
+        <% const totalPromotional = parseFloat(product.promotional_price) * totalItens.length %>
+        <td class="mobile-hidden">R$ <%= totalPromotional.toFixed([2]).toString().replace('.', ',') %> </td>
         
         <td><a href="/loja/<%= product.slug %>" class="button-submit mobile-hidden">Ver produto</a></td>
     </tr>

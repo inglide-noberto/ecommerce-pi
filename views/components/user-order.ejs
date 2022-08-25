@@ -1,20 +1,21 @@
 
-<main class="container margin-header-over">
+<main class="container margin-header-over"> 
     <section class="user-page">
         
         <%- include('../partials/user-sidebar.ejs') -%>
 
         <div class="user-page-data">
-            <h1 class="user-page-data-title">Pedido #<%= order.id%></h1> 
-
+            <h1 class="user-page-data-title">Pedido # <%= order.id%></h1> 
+            <% console.log('-----Order------')%>
+            <% console.log(order)%>
             <div class="user-page-data-blocks">
                 <div class="user-page-data-infos shipping-address">
                     <h2 class="title">Endereço de Entrega</h2>
                     <div>
-                        <span class="info"> <%= user.name %> </span>
-                        <span class="info"><%= user.adresses[0].street %> - nº <%= user.adresses[0].number %></span>
-                        <span class="info"><%= user.adresses[0].city %>, <%= user.adresses[0].state %> - <%= user.adresses[0].zip_code %></span>
-                        <span class="info">Tel: (66) 98411-5450</span>
+                        <span class="info"> <%= order.adress.title %> </span>
+                        <span class="info"><%= order.adress.street %> - nº <%= order.adress.number %></span>
+                        <span class="info"><%= order.adress.district %>, <%= order.adress.city %> - <%= user.adresses[0].zip_code %></span>
+                        <span class="info">Tel: <%= order.adress.shipping_contact_phone %></span>
                     </div>
                 </div>
 
@@ -23,13 +24,11 @@
                     <h2 class="title">RESUMO DO PEDIDO</h2>
                     <table>
                         <tr style="height:25px">
-                            <%  let products = order.order_product;
-                                let quantProducts = products.lenght;
-
+                            <%  let quantProducts = products.length;
+                                
                                 let totalValueproducts = 0
 
                                 for(product of products) {
-                                    
                                     if (product.promotional_price_status == true) {
                                         totalValueproducts += parseFloat(product.promotional_price)
                                     } else {
@@ -38,14 +37,18 @@
                                 }
                             %>
 
-                                
-                            <td> <%= quantProducts %> Produtos </td>
+                            <% if(quantProducts > 1) { %>  
+                                <td> <%= quantProducts %> Produtos </td>
+                            <% } else { %>
+                                <td> <%= quantProducts %> Produto </td>
+                            <% } %>
+
                             <td class="text-end"> R$ <%= totalValueproducts.toFixed([2]).toString().replace('.', ',') %> </td>
                         </tr>
                         <tr style="height:25px">
                                 
                             <td>Frete</td>
-                            <td class="text-end"> R$ <%= order.delivery_price %> </td>
+                            <td class="text-end"> R$ <%= parseFloat(order.delivery_price).toFixed([2]).toString().replace('.', ',') %> </td>
                         </tr>
                     </table>
                     <hr>
@@ -60,14 +63,14 @@
 
             <div class="background-block user-page-data-infos shipping-infos user-page-data-blocks">
                 <h2 class="title">Metodo de Entrega</h2>
-                <% console.log(order.courier)%>
-                <span class="info"> <%= order.currier %> - Jadlog - de 1 a 9 dias úteis </span>
+                <% console.log(order)%>
+                <span class="info"> <%= order.courier.title %> de <%= order.delivery_time%> dias úteis </span>
             </div>
 
 
             <!-- ----------------- Listing Order Products ------------------ -->
             <%  console.log('------Order page----')%>
-            <%- include('../partials/product-listing.ejs', {order}) -%>
+            <%- include('../partials/product-listing.ejs', {products}) -%>
             
 
         </div>

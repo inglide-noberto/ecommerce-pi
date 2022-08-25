@@ -10,9 +10,10 @@ module.exports = {
     street: 'rua das ruas',
     number: '28',
     complement: '',
-    district: 'Mato Grosso',
+    district: 'Bairro 01',
     zip_code: 78888888,
     city: 'Sinop',
+    state: 'Mato Grosso',
     country: 'Brasil',
     shipping_contact_name: 'Minha mãe',
     shipping_contact_phone: '66 99999-9999'
