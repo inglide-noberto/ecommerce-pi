@@ -13,7 +13,7 @@ module.exports = {
     email: 'joao@mail.com',
     password: '12345',
     phone: '66 99999-9999',
-    cpf: '440.444.444-44',
+    cpf: 44044444444,
     birt_date: null,
     gender: 'masc',
     type_user: 'client'
