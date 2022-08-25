@@ -154,9 +154,6 @@ const UserController = {
         const products = (productsSearch.map(product => product.toJSON())).map(product => product.Product)
         const ordersArray = user.orders.filter(orderUser => orderUser.id == id)
         const order = ordersArray[0]
-        console.log('----Produto----')
-        console.log(products)
-
 
         if(order == undefined) {
             return res.status(404);
@@ -288,7 +285,6 @@ const UserController = {
                 'email': email
             }
         })
-        console.log('procurou user')
 
         if(!userExists) {
             message.type = 'login'
@@ -317,6 +313,10 @@ const UserController = {
             type: "", 
             content: ""
         }
+
+        reqInfos.cpf = reqInfos.cpf.replace(/\D/gim, '')
+
+
         const userSearch = await UserRepository.findOne({
             where: {
                 slug : slug
@@ -339,31 +339,154 @@ const UserController = {
 
         const user = (userSearch).toJSON()
 
+        if(user.name == reqInfos.name && user.email == reqInfos.email && user.cpf == reqInfos.cpf && user.birt_date == reqInfos.birthDate && user.phone == reqInfos.phone && user.gender == reqInfos.gender) {
 
-        if(user.name == reqInfos.name || user.email == reqInfos.email) {
             message.type = "account"
-            message.content = "Algo deu errado"
-        } else {
-            message.type = "account"
-            message.content = user.name
+            message.content = "Nenhum alteração informada"
+
+            return res.render('layout', {'page':'user-informations', user, message})
         }
 
 
+        if(user.email != reqInfos.email) {
+            const existUserWithNewEmail = await UserRepository.findOne({
+                where: {
+                    'email': reqInfos.email
+                }
+            })
+            if(existUserWithNewEmail) {
+                message.type = 'account'
+                message.content = 'Email já cadastrado'
+                return res.render('layout', {'page': 'user-informations',user, message})
+            }
+        }
 
-        res.render('layout', {'page':'user-informations', user, rootDir, message})
+        user.name = reqInfos.name
+        user.email = reqInfos.email 
+        user.cpf = parseInt(reqInfos.cpf) 
+        user.birt_date = reqInfos.birthDate 
+        user.phone = reqInfos.phone 
+        user.gender = reqInfos.gender
+
+
+        const update = await UserRepository.update(user, {where: { slug : slug}})
+
+
+        message.type = "account"
+        message.content = "Atualizações realizadas com sucesso"
+
+        return res.render('layout', {'page':'user-informations', user, message})
+    
 
     },
 
-    updateShipping: (req, res) => {
+
+
+
+
+    updateShipping: async (req, res) => {
         const { slug } = req.params
         const reqInfos = req.body
-        const user = dataClients.find( user => user.slug == slug)
-        let message = {
-            type: "shipping", 
-            content: "Alterações salvas com sucesso!"
+        const message = {
+            type: "", 
+            content: ""
         }
 
-        res.render('layout', {'page':'user-informations', user, rootDir, message})
+        reqInfos.zipCode = reqInfos.zipCode.replace(/\D/gim, '')
+
+
+        const userSearch = await UserRepository.findOne({
+            where: {
+                slug : slug
+            },  
+            include: [
+            {
+                model: OrderRepository,
+                as: 'orders',
+                require: true,
+                all: true, 
+                nested: true,
+            },
+            ],
+            subQuery: false,   
+        })
+
+
+        if(userSearch == null) {
+            return res.render('layout', {'page':'not-found'});
+        }
+
+
+        const user = (userSearch).toJSON()
+
+
+        if(user.adresses[0].title == reqInfos.title && user.adresses[0].street == reqInfos.street && user.adresses[0].number == reqInfos.number && user.adresses[0].district == reqInfos.birthDate && user.adresses[0].complement == reqInfos.complement && user.adresses[0].city == reqInfos.city && user.adresses[0].state == reqInfos.state && user.adresses[0].shipping_contact_phone == reqInfos.contact && user.adresses[0].zip_code == reqInfos.zipCode) {
+
+            message.type = "shipping"
+            message.content = "Nenhum alteração informada"
+
+            return res.render('layout', {'page':'user-informations', user, message})
+        }
+
+        user.adresses[0].title = reqInfos.title
+        user.adresses[0].street = reqInfos.street
+        user.adresses[0].number = reqInfos.number
+        user.adresses[0].district = reqInfos.district
+        user.adresses[0].complement = reqInfos.complement
+        user.adresses[0].city = reqInfos.city
+        user.adresses[0].state = reqInfos.state
+        user.adresses[0].shipping_contact_phone = reqInfos.contact
+        user.adresses[0].zip_code = reqInfos.zipCode
+
+        const update = await AdressRepository.update(user.adresses[0], {where: { id : user.adresses[0].id}})
+
+        message.type = "shipping"
+        message.content = "Atualizações realizadas com sucesso"
+
+        return res.render('layout', {'page':'user-informations', user, message})
+    },
+
+
+
+
+
+    updateShipping: async (req, res) => {
+        const { slug } = req.params
+        const message = {
+            type: "", 
+            content: ""
+        }
+        
+        const userSearch = await UserRepository.findOne({
+            where: {
+                slug : slug
+            },  
+            include: [
+            {
+                model: OrderRepository,
+                as: 'orders',
+                require: true,
+                all: true, 
+                nested: true,
+            },
+            ],
+            subQuery: false,   
+        })
+
+
+        if(userSearch == null) {
+            return res.render('layout', {'page':'not-found'});
+        }
+
+
+        const user = (userSearch).toJSON()
+
+        const update = await AdressRepository.update(user.adresses[0], {where: { id : user.adresses[0].id}})
+
+        message.type = "delete"
+        message.content = "Sua conta foi excluida, sentiremos sua falta 🥺"
+
+        return res.render('layout', {'page':'user-informations', user, message})
     }
 
 }

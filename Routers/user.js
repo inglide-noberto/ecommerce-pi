@@ -11,6 +11,7 @@ router.get('/:slug/pedidos/:id', ProfileController.showOrder)
 router.get('/:slug/conta', ProfileController.showAccount)
 router.post('/:slug/conta', ProfileController.updateUser)
 router.post('/:slug/conta/endereco', ProfileController.updateShipping)
+router.delete('/<%= user.slug%>/excluir', ProfileController.delete)
 
 router.post('/criar', ProfileController.create)
 router.post('/logar', ProfileController.login)
