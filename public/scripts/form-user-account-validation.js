@@ -2,6 +2,7 @@ window.addEventListener('load', () => {
 
     const formAccount = document.querySelector('.form-user-account');
     const formAddress = document.querySelector('.form-user-address');
+    const formDelete = document.querySelector('.delete-account');
     const divMessageAccount = document.querySelector('.account-message');
     const divMessageAddress = document.querySelector('.address-message');
     
@@ -46,4 +47,19 @@ window.addEventListener('load', () => {
         }
 
     })
+
+    formDelete.addEventListener('submit', (event) => {
+        event.preventDefault()
+
+        var name = confirm("Sua conta será apagada permanentemente e não poderá ser recuperada. Tem certeza que deseja apaga-la?")
+        if (name==true)
+        {
+        document.write("Você pressionou o botão OK!")
+        }
+        else
+        {
+        document.write("Você pressionou o botão CANCELAR")
+        }
+    })
+
 })

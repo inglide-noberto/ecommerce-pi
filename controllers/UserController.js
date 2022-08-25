@@ -450,43 +450,20 @@ const UserController = {
 
 
 
-    updateShipping: async (req, res) => {
+    delete: async (req, res) => {
         const { slug } = req.params
         const message = {
             type: "", 
             content: ""
         }
         
-        const userSearch = await UserRepository.findOne({
-            where: {
-                slug : slug
-            },  
-            include: [
-            {
-                model: OrderRepository,
-                as: 'orders',
-                require: true,
-                all: true, 
-                nested: true,
-            },
-            ],
-            subQuery: false,   
-        })
 
-
-        if(userSearch == null) {
-            return res.render('layout', {'page':'not-found'});
-        }
-
-
-        const user = (userSearch).toJSON()
-
-        const update = await AdressRepository.update(user.adresses[0], {where: { id : user.adresses[0].id}})
+        const userDelete = await AdressRepository.delete({where: { slug : slug}})
 
         message.type = "delete"
         message.content = "Sua conta foi excluida, sentiremos sua falta 🥺"
 
-        return res.render('layout', {'page':'user-informations', user, message})
+        return res.render('layout', {'page':'home', message})
     }
 
 }
