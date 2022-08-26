@@ -16,6 +16,7 @@ module.exports = {
       full_description: '',
       id_rating_system: 1,
       id_product_status: 1,
+      quantity_stock: 1,
       weight: 1,
       formart: 1,
       length: 1,

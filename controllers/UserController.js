@@ -1,16 +1,8 @@
-const dataOrders = require('../data/data-orders.json')
-const dataClients = require('../data/data-clients.json')
-const dataProducts = require('../data/data-products.json')
-const rootDir = require('../utils/rootDir')
 var models = require('../models');
 const UserRepository = models.User
 const OrderRepository = models.Order
 const AdressRepository = models.Adress
 const ProductRepository = models.Product
-const ProductImageRepository = models.ProductImage
-const OrderStatusRepository = models.OrderStatus
-const PaymentMethodRepository = models.PaymentMethod
-const CourierRepository = models.Courier
 const OrderProductsRepository = models.OrderProducts
 
 
@@ -52,9 +44,8 @@ const UserController = {
         }
 
         const user = (userSearch).toJSON()
-        console.log(user)
 
-        res.render('layout', {'page':'user-account', user, rootDir})
+        res.render('layout', {'page':'user-account', user, })
     },
 
 
@@ -104,7 +95,7 @@ const UserController = {
 
 
 
-        res.render('layout', {'page':'user-orders', user, rootDir})
+        res.render('layout', {'page':'user-orders', user, })
     },
  
 
@@ -197,7 +188,7 @@ const UserController = {
         const user = (userSearch).toJSON()
 
         
-        return res.render('layout', {'page':'user-informations', user, rootDir, message})
+        return res.render('layout', {'page':'user-informations', user, message})
     },
 
 
@@ -451,19 +442,33 @@ const UserController = {
 
 
     delete: async (req, res) => {
-        const { slug } = req.params
-        const message = {
-            type: "", 
-            content: ""
-        }
+        const { id } = req.params
         
+        console.log('--------------------------------')
+        console.log('entrou delete')
 
-        const userDelete = await AdressRepository.delete({where: { slug : slug}})
+        await UserRepository.destroy({where: {id: id}})
+        console.log('delete feito')
 
-        message.type = "delete"
-        message.content = "Sua conta foi excluida, sentiremos sua falta 🥺"
+        // const user = await UserRepository.findOne({
+        //     where: {
+        //         slug : slug
+        //     },  
+        //     include: [
+        //     {
+        //         model: OrderRepository,
+        //         as: 'orders',
+        //         require: true,
+        //         all: true, 
+        //         nested: true,
+        //     },
+        //     ],
+        //     subQuery: false,   
+        // })
 
-        return res.render('layout', {'page':'home', message})
+        // await user.destroy()
+
+        return res.redirect('/');
     }
 
 }

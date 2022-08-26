@@ -1,0 +1,22 @@
+<% if (orders.length < 1) { %>
+    <tr><td><span>Não há pedidos ainda..</span></td></tr>
+<% } if (orders.length < 2) {%>
+    <tr onclick="location.href='/admin/vendas/<%= orders[0].id %>'">
+        <td class="id"># <%= orders[0].id%></td>
+        <td><%= orders[0].user.name %></td>
+        <td><%= orders[0].createdAt %></td>
+        <td><%= orders[0].orders_status.title %></td>
+        <td>R$ <%= orders[0].price_payment.toFixed(2) %></td>
+        <td><%= orders[0].payment_method.title %></td>
+    </tr>
+
+<% } else {for(order in orders) {%>
+<tr onclick="location.href='/admin/vendas/<%= order.id %>'">
+    <td class="id"># <%= order.id%></td>
+    <td><%= order.user.name %></td>
+    <td><%= order.createdAt %></td>
+    <td><%= order.orders_status.title %></td>
+    <td>R$ <%= order.price_payment.toFixed(2) %></td>
+    <td><%= order.payment_method.title %></td>
+</tr>
+<% } }%>

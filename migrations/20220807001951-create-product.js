@@ -62,6 +62,9 @@ module.exports = {
           key: 'id'
         }
       },
+      quantity_stock: {
+        type: Sequelize.INTEGER
+      },
       weight: {
         type: Sequelize.FLOAT
       },

@@ -14,7 +14,7 @@ const routersProducts = require(path.join(__dirname,'/Routers/products.js'))
 const routersUser = require(path.join(__dirname,'/Routers/user.js'))
 const routerCart = require(path.join(__dirname, '/Routers/cartRoutes.js'))
 const routersEntry = require(path.join(__dirname, '/Routers/entry.js'))
-const routersAdminPainel = require(path.join(__dirname, '/Routers/adminPainel.js'))
+const routersAdmin = require(path.join(__dirname, '/Routers/admin.js'))
 
 
 
@@ -37,7 +37,7 @@ app.use('/loja', routersProducts)
 app.use('/usuario', routersUser)
 app.use('/cart', routerCart)
 app.use('/entrar', routersEntry)
-app.use('/admin', routersAdminPainel)
+app.use('/admin', routersAdmin)
 
 
 //-------------- N0T FOUND ROUTE -----------------

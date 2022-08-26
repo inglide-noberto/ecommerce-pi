@@ -51,15 +51,24 @@ window.addEventListener('load', () => {
     formDelete.addEventListener('submit', (event) => {
         event.preventDefault()
 
-        var name = confirm("Sua conta será apagada permanentemente e não poderá ser recuperada. Tem certeza que deseja apaga-la?")
-        if (name==true)
-        {
-        document.write("Você pressionou o botão OK!")
-        }
-        else
-        {
-        document.write("Você pressionou o botão CANCELAR")
-        }
+        swal({
+            title: "Sua conta será apagada permanentemente!",
+            text: "Todos os seus dados e registros de compra serão apagados e você não poderá recupera-los posteriormente. Tem certeza que deseja apaga-la?",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Sua conta foi deletada! Sentiremos suas falta..", {
+                icon: "success",
+            }
+            )
+              setTimeout(() => {
+                  formDelete.submit()
+              }, 3000);
+            }
+          });
     })
 
 })
