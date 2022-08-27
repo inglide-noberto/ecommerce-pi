@@ -5,8 +5,20 @@ const path = require('path')
 const appRouter = express.Router()
 const app = express()
 const bodyParser = require('body-parser');
- 
-//-------------- IMPORT DATABASE -----------------
+const passport = require('passport');
+const session = require('express-session');
+const dotenv = require('dotenv/config')
+var models = require('./models');
+const UserRepository = models.User
+
+
+
+//-------------- AUTHENTICATION MIDDLEWARE -----------------
+function authenticationMiddleware(req, res, next) {
+  if (req.isAuthenticated()) return next();
+  res.redirect('/logar?fail=true');
+}
+
 
 //-------------- IMPORT ROUTES -----------------
 const routersIndex = require(path.join(__dirname,'/Routers/index.js'))
@@ -31,13 +43,27 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'script')))
 
 
+
+//---------- AUTHENTICATION CONFIG ----------
+require('./config/auth')(passport, UserRepository);
+app.use(session({  
+  secret: '123',
+  //secret: process.env.SESSION_SECRET,//configure um segredo seu aqui,
+  resave: false,
+  saveUninitialized: false,
+}))
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
 //-------------- ROUTES -----------------
-app.use('/', routersIndex)
 app.use('/loja', routersProducts)
-app.use('/usuario', routersUser)
 app.use('/cart', routerCart)
 app.use('/entrar', routersEntry)
-app.use('/admin', routersAdmin)
+app.use('/usuario', routersUser)
+app.use('/admin', authenticationMiddleware, routersAdmin)
+app.use('/', routersIndex)
 
 
 //-------------- N0T FOUND ROUTE -----------------

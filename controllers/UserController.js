@@ -4,6 +4,8 @@ const OrderRepository = models.Order
 const AdressRepository = models.Adress
 const ProductRepository = models.Product
 const OrderProductsRepository = models.OrderProducts
+const bcrypt = require('bcrypt')
+const LocalStrategy = require('passport-local').Strategy;
 
 
 
@@ -76,24 +78,6 @@ const UserController = {
         }
 
         const user = (userSearch).toJSON()
-        // const productsSearch = await OrderProductsRepository.findAll({
-        //     where: {
-        //         id_order : id
-        //     },  
-        //     include: [
-        //     {
-        //         model: ProductRepository,
-        //         require: true,
-        //         all: true,
-        //         nested: true,
-        //     },
-        //     ],
-        //     subQuery: false,   
-        // })
-
-        // const products = (productsSearch.map(product => product.toJSON())).map(product => product.Product)
-
-
 
         res.render('layout', {'page':'user-orders', user, })
     },
@@ -231,7 +215,7 @@ const UserController = {
             message.content = 'telefone invalido'
             return res.render('layout', {'page': 'login', message})
         }
-
+        
         const slugExists = await UserRepository.findOne({
             where: {
                 slug
@@ -241,13 +225,15 @@ const UserController = {
         if(slugExists) {
             slug += Math.floor(Math.random() * 9999)
         }
-
-
+        
+        
+        console.log(bcrypt.hashSync(password, 10))
+        
         UserRepository.create({
             name:  name,
             slug:  slug,
             email:  email,
-            password:  password,
+            password:  bcrypt.hashSync(password, 10),
             phone:  phoneFormated,
             type_user: 'client'
         })
@@ -256,44 +242,90 @@ const UserController = {
         //res.render('layout', {'page':'user-informations', user, message})
     },
 
-    login: async (req, res) => {
+
+
+    login: (req, res) => {
         const {email, password} = req.body
         const message = {
             type: "", 
             content: ""
         }
 
-        console.log('---------------------------------')
-        console.log('email')
-        console.log(email)
-        console.log('---------------------------------')
-        console.log('password')
-        console.log(password)
+        console.log('------Entei login-----')
 
-        // -------------------- Validations --------------------
-        const userExists = await UserRepository.findOne({
-            where: {
-                'email': email
-            }
-        })
+        return res.redirect(`/usuario/${userExists.slug}`)
 
-        if(!userExists) {
+        if (req.query.fail) {
+            console.log('------faillll-----')
+
             message.type = 'login'
             message.content = 'Usuário não cadastrado, por favor crie uma conta'
             return res.render('layout', {'page': 'login', message})
+        } else {
+            console.log('------deu-----')
+
+            return res.redirect(`/usuario/${userExists.slug}`)
         }
-        console.log('validou user')
 
-        if (password != userExists.password) {
-            message.type = 'login'
-            message.content = 'Senha inválida'
-            return res.render('layout', {'page': 'login', message})
-        }
-        console.log('senha ok')
 
-        console.log('---------------> Só redirecionar')
 
-        return res.redirect(`/usuario/${userExists.slug}`)
+        // const userExists = await UserRepository.findOne({
+        //     where: {
+        //         'email': email
+        //     }
+        // })
+
+
+        // if(!userExists) {
+        //     message.type = 'login'
+        //     message.content = 'Usuário não cadastrado, por favor crie uma conta'
+        //     return res.render('layout', {'page': 'login', message})
+        // }
+
+        // if (!bcrypt.compareSync(password, userExists.password)) {
+        //     message.type = 'login'
+        //     message.content = 'Senha inválida'
+        //     return res.render('layout', {'page': 'login', message})
+        // } else {
+        //     const user = (userSearch).toJSON()
+        //     const userIsValid = true
+        // }
+
+
+        // passport.serializeUser((user, done) => {
+        //     done(null, user.id);
+        // });
+    
+
+        // passport.deserializeUser((id, done) => {
+        //     try {
+        //         if (userIsValid) {
+        //             done(null, user);
+        //             return res.redirect(`/usuario/${userExists.slug}`)
+        //         }
+
+        //     } catch (err) {
+        //         done(err, null);
+        //     }
+        // });
+
+
+        // passport.use(new LocalStrategy({
+        //     emailField: 'email',
+        //     passwordField: 'password'
+        // },
+        //     (email, password, done) => {
+        //         try {
+                    
+        //             if (!userIsValid) return done(null, false)
+                    
+        //             return done(null, user)
+        //         } catch (err) {
+        //             done(err, false);
+        //         }
+        //     }
+        // ));
+
 
     },
 
