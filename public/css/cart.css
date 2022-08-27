@@ -221,7 +221,7 @@ main {
 .cart-freight {
     width: 400px;
     margin-top: 30px;
-    
+    border: solid 4px blanchedalmond;
     /* border:solid 2px rgba(11, 242, 53, 0.6); */
 
 }
