@@ -5,7 +5,6 @@ const AdressRepository = models.Adress
 const ProductRepository = models.Product
 const OrderProductsRepository = models.OrderProducts
 const bcrypt = require('bcrypt')
-const LocalStrategy = require('passport-local').Strategy;
 
 
 
@@ -46,6 +45,9 @@ const UserController = {
         }
 
         const user = (userSearch).toJSON()
+        console.log('----------No user---------')
+        console.log(req.session.authData)
+
 
         res.render('layout', {'page':'user-account', user, })
     },
@@ -180,7 +182,7 @@ const UserController = {
 
 
     create: async (req, res) => {
-        const { name, email, phone, password, passwordConfirm } = req.body
+        const { name, emailCreate, phone, password, passwordConfirm } = req.body
         const message = {
             type: "", 
             content: ""
@@ -191,7 +193,7 @@ const UserController = {
         //-------------------- Validations --------------------
         const userExists = await UserRepository.findOne({
             where: {
-                email
+                email: emailCreate,
             }
         })
 
@@ -232,102 +234,63 @@ const UserController = {
         UserRepository.create({
             name:  name,
             slug:  slug,
-            email:  email,
+            email:  emailCreate,
             password:  bcrypt.hashSync(password, 10),
             phone:  phoneFormated,
             type_user: 'client'
         })
 
-    res.redirect(`/usuario/${slug}`)
+        res.redirect(`/usuario/${slug}`)
         //res.render('layout', {'page':'user-informations', user, message})
     },
 
 
 
-    login: (req, res) => {
+    login: async (req, res) => {
         const {email, password} = req.body
         const message = {
             type: "", 
             content: ""
         }
 
-        console.log('------Entei login-----')
 
-        return res.redirect(`/usuario/${userExists.slug}`)
+        const userExists = await UserRepository.findOne({
+            where: {
+                'email': email
+            }
+        })
 
-        if (req.query.fail) {
-            console.log('------faillll-----')
 
+        if(!userExists) {
             message.type = 'login'
             message.content = 'Usuário não cadastrado, por favor crie uma conta'
             return res.render('layout', {'page': 'login', message})
-        } else {
-            console.log('------deu-----')
-
-            return res.redirect(`/usuario/${userExists.slug}`)
         }
 
+        if (!bcrypt.compareSync(password, userExists.password)) {
+            message.type = 'login'
+            message.content = 'Senha inválida'
+            return res.render('layout', {'page': 'login', message})
+        } 
 
+        
 
-        // const userExists = await UserRepository.findOne({
-        //     where: {
-        //         'email': email
-        //     }
-        // })
+        console.log('------Entei login-----')
 
+        const userSessionData = {
+            name: userExists.name,
+            id: userExists.id,
+            slug: userExists.slug,
+            type_user: userExists.type_user
+        }
 
-        // if(!userExists) {
-        //     message.type = 'login'
-        //     message.content = 'Usuário não cadastrado, por favor crie uma conta'
-        //     return res.render('layout', {'page': 'login', message})
-        // }
-
-        // if (!bcrypt.compareSync(password, userExists.password)) {
-        //     message.type = 'login'
-        //     message.content = 'Senha inválida'
-        //     return res.render('layout', {'page': 'login', message})
-        // } else {
-        //     const user = (userSearch).toJSON()
-        //     const userIsValid = true
-        // }
-
-
-        // passport.serializeUser((user, done) => {
-        //     done(null, user.id);
-        // });
-    
-
-        // passport.deserializeUser((id, done) => {
-        //     try {
-        //         if (userIsValid) {
-        //             done(null, user);
-        //             return res.redirect(`/usuario/${userExists.slug}`)
-        //         }
-
-        //     } catch (err) {
-        //         done(err, null);
-        //     }
-        // });
-
-
-        // passport.use(new LocalStrategy({
-        //     emailField: 'email',
-        //     passwordField: 'password'
-        // },
-        //     (email, password, done) => {
-        //         try {
-                    
-        //             if (!userIsValid) return done(null, false)
-                    
-        //             return done(null, user)
-        //         } catch (err) {
-        //             done(err, false);
-        //         }
-        //     }
-        // ));
-
-
+        req.session.authData = userSessionData
+        console.log(res)
+        return res.redirect(`/usuario/${userExists.slug}`)
     },
+
+
+
 
     updateUser: async (req, res) => {
         const { slug } = req.params

@@ -1,13 +1,16 @@
+const dotenv = require('dotenv/config')
 var bCrypt = require('bcrypt');
+
 
 module.exports = function (passport, user) {
     var User = user;
     var LocalStrategy = require('passport-local').Strategy;
+
     //serialize
     passport.serializeUser(function (user, done) {
-        console.log('serializing user: ', user);
-        done(null, user.slug);
+        done(null, [user.slug, user.name]);
     });
+
     // deserialize user 
     passport.deserializeUser(async function (slug, done) {
         try {
@@ -16,14 +19,19 @@ module.exports = function (passport, user) {
                     slug: slug
                 }
             });
+            if(user) {
 
-            done(null, user.slug);
-            
+                return done(null, user.slug);
+            }
+            return done(null, false)
+
         } catch (err){
             done(err, null);
         }
         
     });
+
+
      //LOCAL SIGNUP
     passport.use('local-signup', new LocalStrategy(
         {
@@ -78,29 +86,23 @@ module.exports = function (passport, user) {
         }
     ))
 
+
     //LOCAL SIGNIN
     passport.use('local-signin', new LocalStrategy(
         {
-
             // by default, local strategy uses username and password, we will override with email
-
             usernameField: 'email',
-
             passwordField: 'password',
-
             passReqToCallback: true // allows us to pass back the entire request to the callback
-
         },
 
 
-        function (req, username, password, done) {
+        function (req, res, username, password, done) {
 
             var User = user;
 
             var isValidPassword = function (userpass, password) {
-
                 return bCrypt.compareSync(password, userpass);
-
             }
 
             User.findOne({
@@ -110,7 +112,6 @@ module.exports = function (passport, user) {
             }).then(function (user) {
 
                 if (!user) {
-
                     return done(null, false, {
                         message: 'Email does not exist'
                     });
@@ -118,7 +119,6 @@ module.exports = function (passport, user) {
                 }
 
                 if (!isValidPassword(user.password, password)) {
-
                     return done(null, false, {
                         message: 'Incorrect password.'
                     });
@@ -127,14 +127,17 @@ module.exports = function (passport, user) {
 
 
                 var userinfo = user.get();
+                req.session.username = userinfo.name
+                req.session.save();
+
+                res.cookie("userData", userinfo.name);
+
 
                 return done(null, userinfo);
 
 
             }).catch(function (err) {
-
                 console.log("Error:", err);
-
                 return done(null, false, {
                     message: 'Something went wrong with your Signin'
                 });

@@ -10,14 +10,15 @@ const session = require('express-session');
 const dotenv = require('dotenv/config')
 var models = require('./models');
 const UserRepository = models.User
+const cookieParser = require('cookie-parser');
 
 
 
 //-------------- AUTHENTICATION MIDDLEWARE -----------------
-function authenticationMiddleware(req, res, next) {
-  if (req.isAuthenticated()) return next();
-  res.redirect('/logar?fail=true');
-}
+// function authenticationMiddleware(req, res, next) {
+//   if (req.isAuthenticated()) return next();
+//   res.redirect('usuario/logar');
+// }
 
 
 //-------------- IMPORT ROUTES -----------------
@@ -34,6 +35,7 @@ const routersAdmin = require(path.join(__dirname, '/Routers/admin.js'))
 app.use(express.json())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended:false}))
+app.use(cookieParser())
 
 
 
@@ -52,8 +54,12 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
 }))
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+
+
+
 
 
 
@@ -62,7 +68,7 @@ app.use('/loja', routersProducts)
 app.use('/cart', routerCart)
 app.use('/entrar', routersEntry)
 app.use('/usuario', routersUser)
-app.use('/admin', authenticationMiddleware, routersAdmin)
+app.use('/admin', routersAdmin)
 app.use('/', routersIndex)
 
 
