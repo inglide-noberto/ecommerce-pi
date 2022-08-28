@@ -48,28 +48,30 @@
                     <div><button class="button-remover">REMOVER</button></div>
                 </div> 
 
+            <form action="/cart/delivery" method="post">   
                 <div class="cart-contect-Oder-summary">
-                <h3 class="Oder-summary">RESUMO DO MEU PEDIDO</h3>
-                <div class="Oder_summary_name_value">
-                    <p> <%= product.title %> </p>
-                    <P> R$ <%= product.price %> </P>
-                </div>
-                <span class="Oder-summary-freight-value">
-                    <p> Frete </p>
-                    <P> R$4,99 </P>
-                </span>
-                <span class="Oder-summary-total-value">
-                    <p> TOTAL </p>
-                    <p> R$244,98 </p>  <!--(condição somando valores )-->
-                </span><br>
-                <span class="Oder-summary-fees">
-                    <p> Em até 6x sem juros </p>
-                </span>
+                    <h3 class="Oder-summary">RESUMO DO MEU PEDIDO</h3>
+                    <div class="Oder_summary_name_value">
+                        <p> <%= product.title %> </p>
+                        <P> R$ <%= product.price %> </P>
+                    </div>
+                    <span class="Oder-summary-freight-value">
+                        <p> Frete </p>
+                        <P> R$4,99 </P>
+                    </span>
+                    <span class="Oder-summary-total-value">
+                        <p> TOTAL </p>
+                        <p> R$244,98 </p>  <!--(condição somando valores )-->
+                    </span><br>
+                    <span class="Oder-summary-fees">
+                        <p> Em até 6x sem juros </p>
+                    </span>
                 
-                <button class="button-submit">
-                    <a href="/cart/payment">Continuar</a>
-                </button>    
-             </div>
+                     <button class="button-submit">
+                        Continuar
+                    </button>    
+                </div>
+            </form>
             <!--<a class="Oder-summary-link-to-add" href="""> Adicionar mais produtos </a>-->
             </div>
             <!-- final divisão de junçao  -->
