@@ -4,38 +4,38 @@
         <!-- começo div do conteudo  -->
         <div class="cart-content">
             <!-- começo divisão de junçao  -->
-            <h1 class="subparagraph-my-cart">MEU CARRINHO</h1>
-            
-            <div class="cart-content-juction-specification-1">
-                <h4>MEU CARRINHO</h4>
-            </div>
-            
-            <div class="cart-content-juction">
+            <form action="" method="">
+                <h1 class="subparagraph-my-cart">MEU CARRINHO</h1>
                 
-                <div class="content-juction-specification-product">
-                    <div class="juction-specification-2-image-name-information">
-                        <div class="especificanton-2-rectangle-img">
-                            <img class="produtc-img" src="<%= product.slug%>" alt="imagem do produto">
+                <div class="cart-content-juction-specification-1">
+                    <h4>MEU CARRINHO</h4>
+                </div>
+                
+                <div class="cart-content-juction">
+                    
+                    <div class="content-juction-specification-product">
+                        <div class="juction-specification-2-image-name-information">
+                            <div class="especificanton-2-rectangle-img">
+                                <img class="produtc-img" src="<%= product.slug%>" alt="imagem do produto">
+                            </div>
+                            <span class="information-product-img">
+                                <h2 class="sub1"> <%= product.title %> </h2>
+                                <p class="name-product">
+                                    <%= product.short_description %>
+                                </p>
+                            </span>
                         </div>
-                        <span class="information-product-img">
-                            <h2 class="sub1"> <%= product.title %> </h2>
-                            <p class="name-product">
-                                <%= product.short_description %>
-                            </p>
-                        </span>
-                    </div>
-                    <!-- <div class="content-juction-spacificantion-2"> -->
-                        <div class="div-quantidade">
-                            <h4>QUANTIDADE</h4>
-                            <form action="" method="">
-                                <div class="juction-spacificantion-2-product-quantity">
-                                    <button class="button-quantity more">+</button>
-                                  
-                                    <!--  <input class="the-amount" type="text" name="quatidadeProduto"> -->
-                                    <p>0</p>  
+                        <!-- <div class="content-juction-spacificantion-2"> -->
+                            <div class="div-quantidade">
+                                <h4>QUANTIDADE</h4>
+                            
+                                    <div class="juction-spacificantion-2-product-quantity">
+                                        <button class="button-quantity more" id="more">+</button>
+                                    
+                                        <input class="the-amount"  type="text" id="soma" value="0" > 
 
-                                    <button class="button-quantity less">-</button>
-                                </div>
+                                        <button class="button-quantity less" id="less">-</button>
+                                    </div>
                             </form>
                         </div>
                         <div class="div-preco">
