@@ -221,7 +221,7 @@ main {
 .cart-freight {
     width: 400px;
     margin-top: 30px;
-    
+    border: solid 4px blanchedalmond;
     /* border:solid 2px rgba(11, 242, 53, 0.6); */
 
 }
@@ -230,7 +230,9 @@ main {
     margin: 0 0 9px 0;
 }
 
-.cart-freight-calcular input[type=text] {
+.cart-freight-calcular {
+    position: relative;
+    z-index: 10;
     width: 265px;
     margin-bottom: 17px;
 }
@@ -241,7 +243,7 @@ main {
 }
 
 .checkbox-delivery {
-    border: solid 2px blue;
+  border: solid 2px blue;
 }
 
 /* -------- RESPONSIVIDADE ---------------- */
