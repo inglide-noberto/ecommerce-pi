@@ -5,8 +5,21 @@ const path = require('path')
 const appRouter = express.Router()
 const app = express()
 const bodyParser = require('body-parser');
- 
-//-------------- IMPORT DATABASE -----------------
+const passport = require('passport');
+const session = require('express-session');
+const dotenv = require('dotenv/config')
+var models = require('./models');
+const UserRepository = models.User
+const cookieParser = require('cookie-parser');
+
+
+
+//-------------- AUTHENTICATION MIDDLEWARE -----------------
+// function authenticationMiddleware(req, res, next) {
+//   if (req.isAuthenticated()) return next();
+//   res.redirect('usuario/logar');
+// }
+
 
 //-------------- IMPORT ROUTES -----------------
 const routersIndex = require(path.join(__dirname,'/Routers/index.js'))
@@ -14,7 +27,7 @@ const routersProducts = require(path.join(__dirname,'/Routers/products.js'))
 const routersUser = require(path.join(__dirname,'/Routers/user.js'))
 const routerCart = require(path.join(__dirname, '/Routers/cartRoutes.js'))
 const routersEntry = require(path.join(__dirname, '/Routers/entry.js'))
-const routersAdminPainel = require(path.join(__dirname, '/Routers/adminPainel.js'))
+const routersAdmin = require(path.join(__dirname, '/Routers/admin.js'))
 
 
 
@@ -22,6 +35,7 @@ const routersAdminPainel = require(path.join(__dirname, '/Routers/adminPainel.js
 app.use(express.json())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended:false}))
+app.use(cookieParser())
 
 
 
@@ -31,13 +45,31 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'script')))
 
 
+
+//---------- AUTHENTICATION CONFIG ----------
+require('./config/auth')(passport, UserRepository);
+app.use(session({  
+  secret: '123',
+  //secret: process.env.SESSION_SECRET,//configure um segredo seu aqui,
+  resave: false,
+  saveUninitialized: false,
+}))
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+
+
+
+
+
+
 //-------------- ROUTES -----------------
-app.use('/', routersIndex)
 app.use('/loja', routersProducts)
-app.use('/usuario', routersUser)
 app.use('/cart', routerCart)
 app.use('/entrar', routersEntry)
-app.use('/admin', routersAdminPainel)
+app.use('/usuario', routersUser)
+app.use('/admin', routersAdmin)
+app.use('/', routersIndex)
 
 
 //-------------- N0T FOUND ROUTE -----------------

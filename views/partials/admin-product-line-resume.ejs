@@ -1,0 +1,17 @@
+<% if(products.length < 1) { %>
+    <tr><td><span>Não há produtos ainda</span></td></tr>
+<% } else if (products.length < 2) { %>
+    <tr onclick="location.href='/admin/produtos/<%= products[0].id%>'">
+        <td class="id"># <%= products[0].id%></td>
+        <td><%= products[0].title%></td>
+        <td><%= products[0].quantity_stock%></td>
+        <td>R$ <%= products[0].promotional_price.toFixed(2) %></td>
+    </tr>
+<% } else { for (product of products) { %>
+    <tr onclick="location.href='/admin/produtos/<%= product.id %>'">
+        <td class="id"># <%= product.id%></td>
+        <td><%= product.title%></td>
+        <td><%= product.quantity_stock%></td>
+        <td>R$ <%= product.promotional_price.toFixed(2) %></td>
+    </tr>
+<% }} %>

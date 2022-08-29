@@ -9,9 +9,9 @@ const fs = require('fs')
 
 const CartController = {
     index: (req,res)=>{
-        let cart = dataCart[0]
+        // let cart = dataCart[0]
         
-        return res.render('layout', {'page': 'cart' , cart })
+         return res.render('layout', {'page': 'cart' })
     },
     delivery: (req,res)=>{
         return res.render('layout', {'page': 'cart-delivery'})
@@ -40,7 +40,7 @@ const CartController = {
          
         console.log(product)
          return res.render('layout', {'page': 'cart', product})
-    }
+    },
 }
 
 module.exports = CartController;

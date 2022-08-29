@@ -11,7 +11,7 @@
 
             </div>
             <div class="table-responsive">
-                <table>
+                <table class="paginate">
                     <thead>
                         <th class="id">ID</th>
                         <th>Titulo</th>
@@ -22,29 +22,23 @@
                         <th >Tipo</th>
                         <th>Status</th>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td class="id">#0004</td>
-                            <td>Minecraft Java Edition</td>
-                            <td>Mojang</td>
-                            <td>8</td>
-                            <td>R$241,20</td>
-                            <td>R$199,90</td>
-                            <td>Game</td>
-                            <td>Ativo</td>
-                        </tr>
-                        
+                    <tbody class="list">
+                        <%- include('../partials/admin-product-line.ejs')%>                      
                     </tbody>
                 </table>
             </div>
-            <form action="" class="pagination-itens">
-                <button class="arrow"><</button>
-                <button class="selected">1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button class="arrow active">></button>
-            </form>
+            <div class="pagination-itens controls">
+                <button class="arrow first"><<</button>
+                <button class="arrow prev"><</button>
+                <div class="numbers">
+                    <button class="selected">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                </div>
+                <button class="arrow next">></button>
+                <button class="arrow last">>></button>
+            </div>
         </div>
     </section>
 </main>

@@ -89,6 +89,7 @@ body {
     margin-top: 200px; 
 }
 
+
 .background-block {
     padding: 30px 26px;
     border-radius: 20px;
@@ -281,13 +282,22 @@ div .button-icon-material {
 
 
 /*---------------- IN LINE MESSAGE ----------------*/
-  .in-line-message {
+.div-message {
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.in-line-message {
+    margin-top: 5px;
     width: 100%;
     padding: 4px 0;
     font-size: 14px;
     text-align: center;
-    
+    color: var(--color-background-1);
+    font-weight: 600;
+
     background-color: var(--color-contrast-1);
     border-radius: 4px;
-  }
+}

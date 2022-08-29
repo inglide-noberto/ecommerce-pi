@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     full_description: DataTypes.STRING,
     id_rating_system: DataTypes.INTEGER,
     id_product_status: DataTypes.INTEGER,
+    quantity_stock: DataTypes.INTEGER,
     weight: DataTypes.FLOAT,
     formart: DataTypes.INTEGER,
     length: DataTypes.FLOAT,

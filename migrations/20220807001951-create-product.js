@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       price: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       promotional_price_status: {
         type: Sequelize.BOOLEAN
@@ -61,6 +61,9 @@ module.exports = {
           model: 'ProductStatuses',
           key: 'id'
         }
+      },
+      quantity_stock: {
+        type: Sequelize.INTEGER
       },
       weight: {
         type: Sequelize.FLOAT

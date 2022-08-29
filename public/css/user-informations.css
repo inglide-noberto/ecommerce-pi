@@ -85,3 +85,27 @@
 .user-informations-block input, .user-informations-block select{
     border: 1px solid var(    --color-text-opacity-45);
 }
+
+.delete-account {
+    width: 100%;
+    font-size: .9rem;
+    font-weight: 300;
+    color: var(--color-contrast-4);
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    gap: .4em
+}
+
+.delete-account button{
+    cursor: pointer;
+}
+
+.buttom-delete-red {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--color-contrast-4);
+    text-align: center;
+
+}

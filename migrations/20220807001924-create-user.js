@@ -24,7 +24,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       cpf: {
-        type: Sequelize.INTEGER
+        type: Sequelize.BIGINT
       },
       birt_date: {
         type: Sequelize.DATEONLY

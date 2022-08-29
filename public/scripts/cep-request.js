@@ -1,11 +1,7 @@
-
-
 const cep = document.querySelector('#cep')
 const button = document.querySelector('#button-cep')
 const slug = (window.location.pathname).replace("/loja/", '')
 const divInfos = document.querySelector('#shipping-infos')
-
-
 
 button.addEventListener('click', (event) => {
     let search = cep.value.replace("-", "")
