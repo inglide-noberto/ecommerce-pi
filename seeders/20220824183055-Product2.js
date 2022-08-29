@@ -12,7 +12,7 @@ module.exports = {
       year: 2021,
       id_type_product: 1,
       plataform: 'PC',
-      short_description: '',
+      short_description: 'Um breve resumo sobre o produto deve ser incluido nesse campo.',
       full_description: '',
       id_rating_system: 1,
       id_product_status: 1,

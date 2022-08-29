@@ -14,6 +14,8 @@ const UserController = {
             type: "", 
             content: ""
         }
+        console.log(req.session)
+
 
         res.render('layout', {'page': 'login', message})
      }, 
@@ -22,6 +24,8 @@ const UserController = {
 
     showUser: async (req, res) => {        
         const { slug } = req.params
+        console.log('----------No user SLUG---------')
+        console.log(slug)
 
         const userSearch = await UserRepository.findOne({
             where: {
@@ -45,11 +49,12 @@ const UserController = {
         }
 
         const user = (userSearch).toJSON()
+
         console.log('----------No user---------')
         console.log(req.session.authData)
 
 
-        res.render('layout', {'page':'user-account', user, })
+        res.render('layout', {'page':'user-account', user })
     },
 
 
@@ -173,6 +178,7 @@ const UserController = {
 
         const user = (userSearch).toJSON()
 
+        console.log(res)
         
         return res.render('layout', {'page':'user-informations', user, message})
     },
@@ -240,6 +246,22 @@ const UserController = {
             type_user: 'client'
         })
 
+        const userCreate = await UserRepository.findOne({
+            where: {
+                'email': emailCreate
+            }
+        })
+
+        const userSessionData = {
+            name: userCreate.name,
+            id: userCreate.id,
+            slug: userCreate.slug,
+            type_user: userCreate.type_user
+        }
+
+        req.session.authData = userSessionData
+        req.session.save()
+
         res.redirect(`/usuario/${slug}`)
         //res.render('layout', {'page':'user-informations', user, message})
     },
@@ -253,6 +275,8 @@ const UserController = {
             content: ""
         }
 
+        console.log('-----Login-----')
+        console.log(req.body)
 
         const userExists = await UserRepository.findOne({
             where: {
@@ -281,15 +305,26 @@ const UserController = {
             name: userExists.name,
             id: userExists.id,
             slug: userExists.slug,
-            type_user: userExists.type_user
+            type_user: userExists.type_user,
+            isLogged: true
         }
 
         req.session.authData = userSessionData
-        console.log(res)
+        console.log(userSessionData)
+        
+        return res.json(userSessionData)
         return res.redirect(`/usuario/${userExists.slug}`)
     },
 
 
+
+    logout: (req, res) => {
+        console.log('-----Entrou no logout------')
+
+        req.session.destroy();
+        console.log('-----Saiu------')
+        return res.redirect('/');
+    },
 
 
     updateUser: async (req, res) => {

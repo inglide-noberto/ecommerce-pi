@@ -4,7 +4,7 @@
         <span>></span>
         <a href="../loja">Loja</a>
         <span>></span>
-        <a href="../loja?categorie=<%= product.principal_categorie %>"><%= product.principal_categorie %></a>
+        <a href="../loja?categorie=<%= product.product_category[0] %>"><%= product.product_category[0] %></a>
         <span>></span>
         <a href=""><strong><%= product.title %></strong></a>
     </section>
@@ -14,7 +14,7 @@
             <div class="product-infos-images">
     
                 <div class="principal-image">
-                    <img id="principal-image" src="<%= product.images[0] %>" alt="">
+                    <img id="principal-image" src="<%= product.images[0].file_url %>" alt="">
 
                     <div class="share-buttons">
                         <a href=""></a>
@@ -25,14 +25,17 @@
     
                 <div class="secondary-images">
                     <div>
-                        <a href="" class="left-arrow-button button no-more"></a>
+                        <% if(product.images.length > 2) { %>
+                            <a href="" class="left-arrow-button button no-more"></a>
                         <% for(image of product.images){ %>
                             <div class="secondary-images-min">
-                                <img src="<%= image %>" alt="">
+                                <img src="<%= image.file_url %>" alt="">
                             </div>
+                            
+                        <% } %>
+                            <a href="" class="right-arrow-button button no-more"></a>
                         <% } %>
 
-                        <a href="" class="right-arrow-button button no-more"></a>
 
                     </div>
                 </div>
@@ -48,10 +51,17 @@
                     </div>
                 </div>
                 <div class="product-info-price">
-                    <span>R$ <%= product.price %></span>
-                    <h3>R$ <%= product.promotional_price %></h3>
-                    
-                    <span>6x de R$<%=  (parseInt(product.promotional_price)/6).toFixed(2) %> sem juros</span>
+                    <span>R$ <%= (product.price).toFixed(2) %></span>
+                    <h3>R$ <%= (product.promotional_price).toFixed(2) %></h3>
+                    <% if (product.promotional_price >= 50) { %>
+                        <span>6x de R$<%=  (parseInt(product.promotional_price)/6).toFixed(2) %> sem juros</span>
+                    <% } %>
+                    <% if (product.promotional_price >= 20 && product.promotional_price < 50) { %>
+                        <span>3x de R$<%=  (parseInt(product.promotional_price)/3).toFixed(2) %> sem juros</span>
+                    <% } %>
+                    <% if (product.promotional_price <20) { %>
+                        <span>2x de R$<%=  (parseInt(product.promotional_price)/2).toFixed(2) %> sem juros</span>
+                    <% } %>
                 </div>
     
                 <div class="product-info-shipping">
@@ -73,8 +83,10 @@
                         <button><img src="../public/img/icons/img-icon.png" alt=""></button>
                     </div>
                 </div> -->
-    
-                <a class="button" href="/cart/<%= product.slug%>"><button class="product-info-button button-submit">Comprar</button ></a>
+                <a class="button" href="/cart"><button class="product-info-button button-submit">Comprar</button ></a>
+
+                <script  src="/scripts/add-to-cart.js"></script>
+
             </div>
     
         </div>
@@ -96,9 +108,9 @@
                         <p>Título: <%= product.title %></p>
                         <p>Marca: <%= product.brand %></p>
                         <p>Ano lançamento: <%= product.year %></p>
-                        <p>Categoria Principal: <%= product.principal_categorie %></p>
-                        <% for(categorie of product.categories){ %>
-                            <p>Categorias:  <%= categorie %></p>
+                        <p>Categoria Principal: <%= product.product_category[0] %></p>
+                        <% for(category of product.product_category){ %>
+                            <p>Categorias:  <%= category.title %></p>
                         <% } %>
                     </div>
                 </div>

@@ -48,3 +48,6 @@ npx sequelize-cli seed:generate --name TagProduct
 
 #ProductImage
 npx sequelize-cli seed:generate --name ProductImage
+
+#CartUser
+npx sequelize-cli seed:generate --name CartUser
