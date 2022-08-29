@@ -29,7 +29,6 @@ const AdminController = {
             
         const orders = ordersSearch.map(product => product.toJSON())
 
-        console.log(orders)
 
         const productsSearch = await ProductRepository.findAll({
             include: [
@@ -43,6 +42,9 @@ const AdminController = {
             
         const products = productsSearch.map(product => product.toJSON())
 
+        console.log(orders)
+        console.log('----------------------')
+        console.log(products)
 
         res.render('adminPainel', {'page': 'admin-dashboard', orders, products, message})
     }, 

@@ -4,7 +4,7 @@
     <tr onclick="location.href='/admin/vendas/<%= orders[0].id %>'">
         <td># <%= orders[0].id %> </td>
         <td><%= orders[0].createdAt %></td>
-        <td><%= orders[0].orders_status.title.toFixed(2) %></td>
+        <td><%= orders[0].orders_status.title %></td>
         <td>R$ <%= orders[0].price_payment %></td>
     </tr>
 <% } else {for(order in orders) {%>
