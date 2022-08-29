@@ -1,11 +1,41 @@
 const { url } = require('inspector')
 const data = require('../data/data-products.json')
 const ApiNodeCorreios = require('node-correios')
+var models = require('../models');
+const productCategory = models.ProductCategory
+const category = models.Category
+const ProductRepository = models.Product
 
 const correios = new ApiNodeCorreios()
 
-
 const ProductsController = {
+    productFilter: async (req, res) => {
+        
+        const productsFind = await productCategory.findAll({
+            where: {
+                id_category: 1
+            },
+            include: [
+                {
+                    models: ProductRepository,
+                    require: true,
+                    all: true,
+                    nested: true,
+                },
+            ],
+            subQuery: false,
+        })
+        console.log(productsFind)
+        let productsData = []
+
+        if(productsFind.length <= 1){
+            productsData = productsFind[0].toJson();
+        }
+        else{
+            productsData = productsFind.map(product => product.toJSON())
+        }
+        res.render('layout', {'page':'store', productsData})
+    },
     storeView:(req, res) => {
         const query = req.query
         const acao = req.query.Ação
@@ -82,7 +112,7 @@ const ProductsController = {
             return res.send(error)
     
         });
-    }
+    },
 }
 
 
