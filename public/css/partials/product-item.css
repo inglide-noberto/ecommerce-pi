@@ -32,6 +32,7 @@
 
 .product-item {
     width: 212px;
+    min-width: 212px;
     border-radius: 20px;
 
     display: flex;
