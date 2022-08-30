@@ -58,11 +58,13 @@ const CartController = {
                 nested: true,
             }
 
-         })
-         res.locals.cart = product;
+        })
+        res.locals.cart = product;
         console.log(product.toJSON())
-         return res.render('layout', {'page': 'cart', product})
+        return res.render('layout', {'page': 'cart', product})
     },
+
+    
 
     
 }

@@ -172,7 +172,7 @@ td {
     text-align: end;
 }
 
-.order-total-resume .p-pix {
+.order-total-resume .p-pix, #p-pix {
     text-align: end;
     margin-top: .4em;
     color: var(--color-contrast-1);
