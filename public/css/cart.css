@@ -226,7 +226,7 @@ button.button-submit {
 
 
 
-/*------- SHIPPING --------*/
+/*----------- SHIPPING ------------*/
 .product-info-shipping {
     position: relative;
     max-width: 255px;
@@ -276,7 +276,7 @@ input:-webkit-autofill:active {
 
 
 
-/*------- SHIPPING VALUE --------*/
+/*----------- SHIPPING VALUE ------------*/
 .product-info-cep-price {
     display: flex;
     flex-direction: column;
@@ -295,5 +295,8 @@ input:-webkit-autofill:active {
 
 
 
-
+/*------------ IF NOT ORDER ------------*/
+.not-order-in-cart {
+    width: 3em;
+}
 
