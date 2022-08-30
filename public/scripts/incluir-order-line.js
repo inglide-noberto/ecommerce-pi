@@ -43,11 +43,11 @@ window.addEventListener('load', () => {
         for(product in productsCart){
             const productLine = document.createElement(`tr`)
             productLine.innerHTML = `<td class="td-product-image-title">
-                                        <a href="/loja/${productsCart.slug}">
+                                        <a id="link" href="/loja/${productsCart.slug}">
                                             <img class="cart-product-image" src="${product.images[0].file_url}" alt="imagem do produto ${product.title}">
                                             <div class="cart-product-description">
-                                                <h3>${product.title}</h3>
-                                                <p>${product.short_description}</p>
+                                                <h3 id='productTilte'>${product.title}</h3>
+                                            <p id="productDescription">${product.short_description}</p>
                                             </div>
                                         </a>
                                     </td>
@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
                                             <button>-</button>
                                         </div>
                                     </td>
-                                    <td>R$ ${product.price}</td>
+                                    <td id="productPrice">R$ ${product.price}</td>
                                     <td>
                                         <button class="button-remove" id=${product.id}>remover</button>
                                     </td>`
@@ -126,4 +126,24 @@ const removerItem = () => {
     localStorage.setItem("cartProducts", JSON.stringify(productsCart));
 
 }
+})
+
+window.addEventListener('load', function(){
+    const remove = document.querySelector('.button-remove');
+    remove.addEventListener('click', function(event){
+        console.log('click')
+
+        let removerElemento = document.querySelector('.cart-product-image');
+removerElemento.remove();
+
+        let productTilte = document.querySelector('#productTilte');
+        link.innerHTML = 'vazio'
+
+        let productDescription = document.querySelector('#productDescription');
+        link.innerHTML = 'vazio'
+
+        let productPrice = document.querySelector('#productPrice');
+        link.innerHTML = 'vazio'
+
+        event.preventDefault()})
 })
