@@ -1,20 +1,32 @@
-const { url } = require('inspector')
 const data = require('../data/data-products.json')
 const ApiNodeCorreios = require('node-correios')
 var models = require('../models');
 const productCategory = models.ProductCategory
-const category = models.Category
 const ProductRepository = models.Product
+const { Op } = require('sequelize'); 
 
 
 const correios = new ApiNodeCorreios()
 
 const ProductsController = {
-    productFilter: async (req, res) => {
-        
+    filterById: async (req, res) => {
+        const arrayIds = []
+        const arrayCategories = []
+        const reqBody = req.body
+        const message = {
+            type: "", 
+            content: ""
+        }
+
+        for (const [key, value] of Object.entries(reqBody)) {
+            console.log(key + ' ' + value);
+            arrayIds.push(value)
+            arrayCategories.push(key)
+        }
+
         const productsFind = await productCategory.findAll({
             where: {
-                id_category: 1
+                id: { [Op.in]: arrayIds }
             },
             include: [
                 {
@@ -26,37 +38,108 @@ const ProductsController = {
             ],
             subQuery: false,
         })
-        console.log(productsFind)
+        
         let productsData = []
 
-        if(productsFind.length <= 1){
-            productsData = productsFind[0].toJson();
+        if(productsFind.length == 0) {
+            message.type = 'error'
         }
+        else if(productsFind.length == 1){
+            productsData = [productsFind[0].product_category.dataValues];
+        } 
+        else{
+            productsData = productsFind.map(product => product.product_category.toJSON())
+        }
+
+        for(i = 0; i < arrayCategories.length; i++) {
+            message.type = "filter-category"
+            message.content += arrayCategories[i] + " " 
+        }
+
+        res.render('layout', {'page':'store', productsData, message})
+    },
+
+
+
+
+    filterByWord: async (req, res) => {
+        const arraySearch = []
+        let search = req.body.searchInput
+        const message = {
+            type: "", 
+            content: ""
+        }
+        console.log('---entrei----------------')
+        
+        console.log(search)
+
+        search = "%"+ search +"%"
+
+
+        
+        const productsFind = await ProductRepository.findAll({
+            where: {
+                title: {
+                    [Op.like]: search,
+                }
+            },
+            include: [
+                {
+                    require: true,
+                    all: true,
+                    nested: true,
+                },
+            ],
+            subQuery: false,
+        })
+        // console.log(productsFind)
+        let productsData = []
+
+        if(productsFind.length == 0) {
+            message.type = 'error'
+        }
+        else if(productsFind.length == 1){
+            console.log(productsFind)
+            productsData = productsFind;
+        } 
         else{
             productsData = productsFind.map(product => product.toJSON())
         }
-        res.render('layout', {'page':'store', productsData})
+
+        message.content = search
+
+
+       
+        console.log(productsData)
+
+        res.render('layout', {'page':'store', productsData, message})
     },
-    storeView:(req, res) => {
-        const query = req.query
-        const acao = req.query.Ação
-        const { categorie } = query
 
-        if( categorie != undefined) {
-            const productsData = data.filter( product => product.principal_categorie == categorie)
 
-            res.render('layout', {'page':'store', productsData})
+
+
+    storeView: async (req, res) => {
+        const message = {
+            type: "", 
+            content: ""
         }
-        else if (acao == "on"){
-            const productsData = data.filter( product => product.principal_categorie == "Ação")
 
-            res.render('layout', {'page':'store', productsData})
-        }
-        else{
-            const productsData = data
 
-            res.render('layout', {'page':'store', productsData})      
-        }
+        let productsData = await ProductRepository.findAll({
+            include: {
+                require: true,
+                all: true, 
+                nested: true,
+            }
+        })
+
+
+        productsData = productsData.map(product => product.toJSON())
+        
+
+
+        res.render('layout', {'page':'store', productsData, message})      
+        
     },
 
 
@@ -107,6 +190,12 @@ const ProductsController = {
 
     productView: async (req, res) => {
         const {slug} = req.params
+        const message = {
+            type: "", 
+            content: ""
+        }
+
+
         let product = await ProductRepository.findOne({
             where: {
                 slug: slug
@@ -121,8 +210,6 @@ const ProductsController = {
         
         if (product) {
             product = product.toJSON();
-            console.log('------product-------');
-            console.log(product);
 
             let productsData = await ProductRepository.findAll({
                 include: {
@@ -137,11 +224,8 @@ const ProductsController = {
             else
                 productsData = productsData[0].toJSON()
             
-            console.log('------productSSSSSSSSSSS-------');
-            console.log(productsData[1].product_category);
-
             
-            return res.render('layout', {'page':'product', product, productsData})
+            return res.render('layout', {'page':'product', product, productsData, message})
         }
         else {
             res.render('layout', {'page':'not-found'})
@@ -151,6 +235,8 @@ const ProductsController = {
 
 
     getShipping: (req, res) => {
+
+        
 
         const { slug } = req.params
         const productsData = data

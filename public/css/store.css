@@ -44,7 +44,11 @@
 
 
 
-
+.message-result {
+    display: block;
+    padding: 0 0 2em;
+    font-size: 1.3rem;
+}
 
 
 

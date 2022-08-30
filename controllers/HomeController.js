@@ -15,11 +15,9 @@ const HomeController = {
                     nested: true,
                 }
             })
-        console.log(productsData)
 
         productsData = productsData.map(product => product.toJSON())
         
-        console.log(productsData)
 
         res.render('layout', {'page':'home', productsData})
 

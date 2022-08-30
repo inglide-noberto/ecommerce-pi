@@ -24,58 +24,64 @@
         <div class="store-filters">
             <h2>Loja</h2>
 
-            <form class="store-filters-inputs" action="/loja/filtro" method="get">
+            <form class="store-filters-inputs" action="/loja/filtro" method="post">
                 <div class="store-filter-rule">
                     <h3>Categoria</h3>
                     <div class="checkbox-options">
                         <label class="checkbox-option">Ação
-                            <input type="checkbox" name="Ação" id="acao" >
+                            <input type="checkbox" name="Ação" id="acao" value="1" >
                             <span class="checkmark"></span>
                         </label>
                         <label class="checkbox-option">Aventura
-                            <input type="checkbox" name="aventura" id="aventura">
+                            <input type="checkbox" name="Aventura" id="aventura" value="2" >
                             <span class="checkmark"></span>
                         </label>
                         <label class="checkbox-option">Puzze
-                            <input type="checkbox" name="puzze" id="puzze">
+                            <input type="checkbox" name="Puzze" id="puzze" value="3" >
                             <span class="checkmark"></span>
                         </label>
                         <label class="checkbox-option">Primeira Pessoa
-                            <input type="checkbox" name="primeira-pessoa" id="primeira-pessoa">
+                            <input type="checkbox" name="Primeira Pessoa" id="primeira-pessoa" value="4" >
                             <span class="checkmark"></span>
                         </label>
                         <label class="checkbox-option">RPG
-                            <input type="checkbox" name="rpg" id="rpg">
+                            <input type="checkbox" name="RPG" id="rpg" value="5" >
                             <span class="checkmark"></span>
                         </label>
                         <label class="checkbox-option">Terceira Pessoa
-                            <input type="checkbox" name="terceira-pessoa" id="terceira-pessoa">
+                            <input type="checkbox" name="Terceira Pessoa" id="terceira-pessoa" value="6" >
                             <span class="checkmark"></span>
                         </label>
                         <label class="checkbox-option">Terror
-                            <input type="checkbox" name="terror" id="terror">
+                            <input type="checkbox" name="Terror" id="terror" value="7" >
                             <span class="checkmark"></span>
                         </label>
                     </div>
                 </div>
 
-                <button type="submit" class="button-submit">Filtrar</button>
+                <button id="filtrar-produtos" type="submit" class="button-submit">Filtrar</button>
             </form>
         </div>
 
 
+        <div class="store-gallery">
+            <% if(message && message.type == 'error') { %>
+                <span class="message-result">Nenhum resultado encontrado para "<span><%= message.content %>"</span></span>
+                <% } else if (message.content != "") { %>
+                    <span class="message-result">Resultado para "<span><%= message.content %>"</span></span>
+            <% } %>
+            <form class="store-gallery">
+                <div class="store-gallery-products gallery-products">
 
-        <form class="store-gallery">
-            <div class="store-gallery-products gallery-products">
+                    <% for(product of productsData){ %>
+                        <%- include('../partials/product-item.ejs') %>
+                    <% } %>
+                    
 
-                <% for(product of productsData){ %>
-                    <%- include('../partials/product-item.ejs') %>
-                <% } %>
-                
-
-            </div>
-            <!-- <button type="button" class="button-submit">Ver mais</button> -->
-        </form>
+                </div>
+                <!-- <button type="button" class="button-submit">Ver mais</button> -->
+            </form>
+        </div>
 
     </section>
     
