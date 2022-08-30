@@ -45,7 +45,7 @@ const ProductsController = {
             message.type = 'error'
         }
         else if(productsFind.length == 1){
-            productsData = [productsFind[0].product_category.dataValues];
+            productsData = productsData.push(productsFind[0].product_category.dataValues);
         } 
         else{
             productsData = productsFind.map(product => product.product_category.toJSON())
