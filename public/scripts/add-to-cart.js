@@ -13,7 +13,9 @@ window.onload = () => {
 
 
     buttonComprar.addEventListener('click', event => {
-
+        event.preventDefault();
+        
+        
         fetch(`http://localhost:3000/cart/add/${slug}`, {
             method: 'get',
             headers: {
@@ -45,6 +47,8 @@ window.onload = () => {
                 }
                 
                 localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+                window.location.href = '/cart' 
+
                 
             } else {
                 console.log('INCLUIR NO ELSE ELSE')  
@@ -52,11 +56,15 @@ window.onload = () => {
                 cartProducts.push(resProduct)
                 console.log(cartProducts)
                 localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-            }
+                window.location.href = '/cart' 
 
+            }
+            
         })
         .catch(function(err) {
             console.info(err);
         });
+
+
     })
 } 
