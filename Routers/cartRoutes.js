@@ -6,8 +6,9 @@ router.get('/', CartController.index);
 //router.get('/delivery', CartController.delivery);
 router.post('/delivery', CartController.delivery);
 router.get('/payment', CartController.payment);
+router.get('/add/:slug', CartController.add)
 router.post('/payment', CartController.pedidoFinalizado);
-router.get('/:slug', CartController.show) // teste vinculo produto
+router.get('/', CartController.show) // teste vinculo produto
 // router.get('/finalizado', CartController.finalizado);v 
 
 module.exports = router;

@@ -59,6 +59,21 @@ app.use(session({
 
 
 
+//-------------- AUTHENTICATION MIDDLEWARE -----------------
+// const authenticationMiddleware = (req, res, next) => {
+//   console.log(req.session)
+//   const slugReq = req.params.slug
+//   if (!req.session.authData) {
+//       return res.redirect(`/usuario`)
+//   }
+//   if(slugReq) {
+//       if(slugReq != req.session.authData.slug){
+//          return res.status(403).render('layout', {'page':'not-found'})
+//       }
+//   } 
+//   next();
+// }
+
 
 
 

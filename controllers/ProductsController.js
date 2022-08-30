@@ -6,6 +6,7 @@ const productCategory = models.ProductCategory
 const category = models.Category
 const ProductRepository = models.Product
 
+
 const correios = new ApiNodeCorreios()
 
 const ProductsController = {
@@ -60,19 +61,94 @@ const ProductsController = {
 
 
 
-    productView: (req, res) => {
-        const { slug } = req.params
-        const productsData = data
-        
-        let product = productsData.find(produto => produto.slug == slug)
+    productJson: async (req, res) => {
+        const {slug} = req.params
+        let product = await ProductRepository.findOne({
+            where: {
+                slug: slug
+            },
+            include: {
+                require: true,
+                all: true, 
+                nested: true,
+            }
 
+        });
+        
         if (product) {
-            res.render('layout', {'page':'product', product, productsData})
+            product = product.toJSON();
+            console.log('------product-------');
+            console.log(product);
+
+            let productsData = await ProductRepository.findAll({
+                include: {
+                    require: true,
+                    all: true, 
+                    nested: true,
+                }
+            })
+            
+            if(productsData.length > 1)
+                productsData = productsData.map(product => product.toJSON())
+            else
+                productsData = productsData[0].toJSON()
+            
+            console.log('------productSSSSSSSSSSS-------');
+            console.log(productsData[1].product_category);
+
+            
+            return res.json(product)
+        }
+        else {
+            res.status(404)
+        }
+    },
+
+
+    productView: async (req, res) => {
+        const {slug} = req.params
+        let product = await ProductRepository.findOne({
+            where: {
+                slug: slug
+            },
+            include: {
+                require: true,
+                all: true, 
+                nested: true,
+            }
+
+        });
+        
+        if (product) {
+            product = product.toJSON();
+            console.log('------product-------');
+            console.log(product);
+
+            let productsData = await ProductRepository.findAll({
+                include: {
+                    require: true,
+                    all: true, 
+                    nested: true,
+                }
+            })
+            
+            if(productsData.length > 1)
+                productsData = productsData.map(product => product.toJSON())
+            else
+                productsData = productsData[0].toJSON()
+            
+            console.log('------productSSSSSSSSSSS-------');
+            console.log(productsData[1].product_category);
+
+            
+            return res.render('layout', {'page':'product', product, productsData})
         }
         else {
             res.render('layout', {'page':'not-found'})
         }
     },
+
+
 
     getShipping: (req, res) => {
 
