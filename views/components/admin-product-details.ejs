@@ -5,11 +5,10 @@
         <div class="card ">
             <div class="card-header">
                 <h2>Cadastrar Produto</h2>
-                <a href="/admin/produtos/criar" class="button-see-more">Cadastrar Novo</a>
-
+                
             </div>
 
-            <form method="post" action="" class="form-user-address">
+            <form method="post" action="/admin/produtos/criar" class="form-user-address">
 
                 <div class="user-informations-block-div">
                     <label for="">Titulo do Produto</label>
@@ -24,55 +23,72 @@
                     <input type="text" name="street" id="street" value="">
                 </div> -->
                 <div class="user-informations-block-div user-informations-block-div-duo">
+                    <div class="user-informations-block-div user-informations-block-div-duo input-block">
                     <div class="user-informations-block-div">
                         <label for="">Marca</label>
-                        <input type="text" name="number" id="number" value="">
+                        <input type="text" name="brand" id="brand" value="">
                     </div>
                     <div class="user-informations-block-div">
-                        <label for="">Tipo de Produto</label>
-                        <input type="text" name="number" id="number" value="">
+                        <label for="gender">Gênero</label>
+                        <select name="gender" id="gender">
+                            <option value="1">Game</option>
+                        </select>
                     </div>
                     <div class="user-informations-block-div">
-                        <label for="">Platafoma</label>
-                        <input type="text" name="district" id="district" value="">
-                    </div>
+                        <label for="">Categoria</label>
+                        <select name="category" id="category">
+                            <option value="1">Ação</option>
+                            <option value="2">Aventura</option>
+                            <option value="3">Puzze</option>
+                            <option value="4">Primeira Pessoa</option>
+                            <option value="5">RPG</option>
+                            <option value="6">Terceira Pessoa</option>
+                            <option value="7">Terror</option>
+                        </select>
+                        </div>
                     
                     <div class="user-informations-block-div">
                         <label for="">Ano Lançamento</label>
-                        <input type="text" name="district" id="district" value="">
+                        <input type="text" name="year" id="year" value="">
                     </div>
                     <div class="user-informations-block-div">
-                        <label for="">Classificação indicativa</label>
+                        <label for="">Estoque (UN)</label>
                         <input type="text" name="number" id="number" value="">
                     </div>
                 </div>
+                </div>
+
+                <div class="user-informations-block-div input-block">
+                    <div class="user-informations-block-div">
+                        <div class="user-informations-block-div">
+                            <label for="">Imagem 1</label>
+                            <input type="text" name="image1" id="image1" value="">
+                        </div>
+                        <div class="user-informations-block-div">
+                            <label for="">Imagem 2</label>
+                            <input type="text" name="image2" id="imag2" value="">
+                        </div>
+                        <div class="user-informations-block-div">
+                            <label for="">Imagem 3</label>
+                            <input type="text" name="image3" id="image3" value="">
+                        </div>
+                        
+                    </div>
+                </div>
+                
                 <div class="user-informations-block-div">
-                    <label for="">Descrição curta</label>
-                    <input type="textarea" name="complement" id="complement" value="">
-                </div>
-                <div class="user-informations-block-div user-informations-block-div-duo">
-                    <div class="user-informations-block-div">
-                        <label for="">Cidade</label>
-                        <input type="text" name="city" id="city" value="">
-                    </div>
-                    <div class="user-informations-block-div">
-                        <label for="">Estado</label>
-                        <input type="text" name="state" id="state" value="">
-                    </div>
-                </div>
-                <!-- <div class="user-informations-block-div">
-                    <label for="">Ponto de Referência</label>
-                    <input type="text" name="" id="" value="">
-                </div> -->
-                <div class="user-informations-block-div user-informations-block-div-duo">
                     <div class="user-informations-block-div ">
-                        <label for="">Telefone de Contato da Entrega</label>
-                        <input type="text" name="contact" id="contact" value="">
+                        <label for="">Descrição Curta</label>
+                        <textarea type="text" name="shortDescription" id="shortDescription" class="short-description" value=""></textarea>
                     </div>
                     <div class="user-informations-block-div">
-                        <label for="">CEP</label>
-                        <input type="text" name="zipCode" id="zipCode" value="">
+                        <label for="">Descrição completa</label>
+                        <textarea type="textarea" name="fullDescription" id="fullDescription" class="full-description" value=""></textarea>
                     </div>
+                </div>
+                <div class="product-datails-buttons">
+                    <button type="submit" class="button-options">Salvar</button>
+                    <a href="/admin/produtos/" class="button-options return">Cancelar</a>
                 </div>
 
             </form>

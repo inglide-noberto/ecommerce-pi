@@ -1,12 +1,10 @@
 var models = require('../models');
-const UserRepository = models.User
+
 const OrderRepository = models.Order
-const AdressRepository = models.Adress
 const ProductRepository = models.Product
-const OrderStatusRepository = models.OrderStatus
-const PaymentMethodRepository = models.PaymentMethod
-const CourierRepository = models.Courier
-const OrderProductsRepository = models.OrderProducts
+const ProductImageRepository = models.ProductImage
+const ProductCategoriesRepository = models.ProductImage
+
 
 
 
@@ -131,7 +129,65 @@ const AdminController = {
         }
 
         res.render('adminPainel', {'page': 'admin-product-details', message})
-    }, 
+    },
+
+
+
+    createProduct: async (req, res) => {
+        const { title, brand, gender, category, year, image1, image2, image3, shortDescription, fullDescription } = req.body
+        
+        const message = ""
+
+        let slug = title.toLowerCase().replace(/ /g, '-')
+
+        console.log(title, brand, slug, gender, category, year, image1, image2, image3, shortDescription, fullDescription)
+
+        await ProductRepository.create({
+            title:  title,
+            slug: slug,
+            brand:  brand,
+            id_type_product:  gender,
+            year:  year,
+            shortDescription: shortDescription,
+            fullDescription: fullDescription,
+            id_rating_system: 1,
+            id_product_status: 1
+        })
+
+        let productCreated = await ProductRepository.findOne({
+            where: {
+                slug: slug
+            },
+            include: {
+                require: true,
+                all: true, 
+                nested: true,
+            }
+
+        });
+
+        ProductImageRepository.create({
+            id_product: productCreated.id,
+            id_category: category
+        })
+
+        ProductImageRepository.create({
+            id_product: productCreated.id,
+            url_file: image1
+        })
+
+        ProductImageRepository.create({
+            id_product: productCreated.id,
+            url_file: image2
+        })
+
+        ProductImageRepository.create({
+            id_product: productCreated.id,
+            url_file: image3
+        })
+
+        res.render('adminPainel', {'page': 'admin-products', message})
+    }
 }
 
 
