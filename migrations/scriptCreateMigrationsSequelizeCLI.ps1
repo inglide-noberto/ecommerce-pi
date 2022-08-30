@@ -49,5 +49,6 @@ npx sequelize model:generate --name TagProduct --attributes id_product:INTEGER,i
 #ProductImage
 npx sequelize model:generate --name ProductImage --attributes id_product:INTEGER,file:BLOB,file_original_name:STRING,file_ext:STRING
 
-
+#CartUser
+npx sequelize model:generate --name CartUser --attributes id_usuario:INTEGER,id_product:INTEGER
 

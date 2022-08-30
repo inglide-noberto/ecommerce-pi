@@ -2,99 +2,77 @@
     <section class="page-cart">
         <%- include('../partials/menu-cart')%>
         <!-- começo div do conteudo  -->
+        <h1 class="subparagraph-my-cart">MEU CARRINHO</h1>
+
         <div class="cart-content">
-            <!-- começo divisão de junçao  -->
-            <h1 class="subparagraph-my-cart">MEU CARRINHO</h1>
-            
-            <div class="cart-content-juction-specification-1">
-                <h4>MEU CARRINHO</h4>
+            <div class="cart-infos">
+                <form action="" method="post" id="myCart">
+                
+                    <div class="order-datails">
+                        <table class="table-produtcs">
+                            <thead>
+                                <th class="th-product-image-title">Produto</th>
+                                <th>Quantidade</th>
+                                <th>Preço</th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+
+                            <script src="/scripts/incluir-order-line.js"></script>
+                                
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </form>
+                
+                <div class="product-info-shipping">
+                    <h3>Calcular frete</h3>
+                    <form class="product-info-cep">
+                        <input type="text" placeholder="CEP" id="cep">
+                        <button type="button" id="button-cep"><img src="/img/icons/search-icon-b.png" alt=""></button>
+                    </form>
+                    <div class="product-info-cep-price" id="shipping-infos">
+                    </div>
+                </div>
+
             </div>
             
-            <div class="cart-content-juction">
+            <div class="order-resume">
+                <h2>RESUMO DO PEDIDO</h2>
                 
-                <div class="content-juction-specification-product">
-                    <div class="juction-specification-2-image-name-information">
-                        <div class="especificanton-2-rectangle-img">
-                            <img class="produtc-img" src="<%= product.slug%>" alt="imagem do produto">
+                <div class="resume-content">
+                    <div class="order-itens-resume">
+                        <div>
+                            <span><span id="resumeQuantProducts">10</span> produtos</span>
+                            <span>Frete</span>
                         </div>
-                        <span class="information-product-img">
-                            <h2 class="sub1"> <%= product.title %> </h2>
-                            <p class="name-product">
-                                <%= product.short_description %>
-                            </p>
-                        </span>
-                    </div>
-                    <!-- <div class="content-juction-spacificantion-2"> -->
-                        <div class="div-quantidade">
-                            <h4>QUANTIDADE</h4>
-                            <form action="" method="">
-                                <div class="juction-spacificantion-2-product-quantity">
-                                    <button class="button-quantity more">+</button>
-                                  
-                                    <!--  <input class="the-amount" type="text" name="quatidadeProduto"> -->
-                                    <p>0</p>  
-
-                                    <button class="button-quantity less">-</button>
-                                </div>
-                            </form>
+                        <div class="values">
+                            <span>R$ <span  id="resumeProductsPrice"></span></span>
+                            <span>R$ <span  id="resumeShippingPrice"></span></span>
                         </div>
-                        <div class="div-preco">
-                            <h4 class="subpa-preco">PREÇO</h4>
-                            <h4>
-                               R$ <%= product.price %>
-                            </h4>
-                        <!-- </div> -->
                     </div>
-                    <div><button class="button-remover">REMOVER</button></div>
-                </div> 
-
-                <div class="cart-contect-Oder-summary">
-                <h3 class="Oder-summary">RESUMO DO MEU PEDIDO</h3>
-                <div class="Oder_summary_name_value">
-                    <p> <%= product.title %> </p>
-                    <P> R$ <%= product.price %> </P>
+                    <hr>
+                    <div class="order-total-resume">
+                        <div class="order-total-resume-value">
+                            <strong>TOTAL</strong>
+                            <div>
+                                <strong>R$ <strong id="resumeTotalValue"></strong></strong>
+                                <p>Em até 6x sem juros</p>
+                            </div>
+                        </div>
+                        <p class="p-pix">R$ <span id="p-pix"></span> pagando com pix</p>
+                    </div>
                 </div>
-                <span class="Oder-summary-freight-value">
-                    <p> Frete </p>
-                    <P> R$4,99 </P>
-                </span>
-                <span class="Oder-summary-total-value">
-                    <p> TOTAL </p>
-                    <p> R$244,98 </p>  <!--(condição somando valores )-->
-                </span><br>
-                <span class="Oder-summary-fees">
-                    <p> Em até 6x sem juros </p>
-                </span>
-                
-                <button class="button-submit">
-                    <a href="/cart/payment">Continuar</a>
-                </button>    
-             </div>
-            <!--<a class="Oder-summary-link-to-add" href="""> Adicionar mais produtos </a>-->
+                <div class="order-resume-buttons">
+                    <a href="/cart/"><button class="button-submit">Continuar</button></a>
+                    <a href="/loja">Adicionar mais produtos</a>
+                </div>
+
             </div>
-            <!-- final divisão de junçao  -->
-            
         </div>
-        <!-- final div do conteudo  -->
-        <div class="cart-freight">
-            <h2 class="cart-freigth-subparagrafo">Calcular Frete</h2>
-            <form action="">
-                <input class="cart-freight-calcular" type="text" name="fretes" placeholder="CEP">
-            </form>
-            <form class="cart-freight-deadline" action="">
-                <div>
-                    <input class="checkbox-delivery" type="checkbox" id="junho" name="junho"> 
-                        <label 
-                            for="junho">Entrega até 04 de <strong> Junho - R$ 14,99 </strong> 
-                        </label>
-                    </div>
-                <div>
-                    <input class="checkbox-delivery" type="checkbox" id="junho" name="junho"> 
-                    <label
-                        for="junho">Entrega até 04 de <strong> Junho - R$ 14,99 </strong> 
-                    </label>
-                </div>
-            </form>
-        </div>
+
+
+        
     </section>
 </main>
