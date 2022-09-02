@@ -97,30 +97,7 @@ const AdminController = {
     },
 
 
-    showProducts: async (req, res) => {
-        const message = {
-            type: "", 
-            content: ""
-        }
-
-        const productsSearch = await ProductRepository.findAll({
-            include: [
-                {
-                    require: true,
-                    all: true,
-                    nested: true,
-                }]
-            });
-            
-        const products = productsSearch.map(product => product.toJSON())
-
-        console.log(products)
-
-
-
-        res.render('adminPainel', {'page': 'admin-products', products, message})
-    }, 
-
+    
 
     showFormProducts: (req, res) => {
         const message = {
@@ -166,25 +143,27 @@ const AdminController = {
 
         });
 
-        ProductImageRepository.create({
+        await ProductImageRepository.create({
             id_product: productCreated.id,
             id_category: category
         })
 
-        ProductImageRepository.create({
+        await ProductImageRepository.create({
             id_product: productCreated.id,
             url_file: image1
         })
 
-        ProductImageRepository.create({
+        await ProductImageRepository.create({
             id_product: productCreated.id,
             url_file: image2
         })
 
-        ProductImageRepository.create({
+        await ProductImageRepository.create({
             id_product: productCreated.id,
             url_file: image3
         })
+
+
 
         res.render('adminPainel', {'page': 'admin-products', message})
     }

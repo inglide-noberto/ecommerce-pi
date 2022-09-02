@@ -72,12 +72,20 @@
             <% } %>
             <form class="store-gallery">
                 <div class="store-gallery-products gallery-products">
-
-                    <% for(product of productsData){ %>
-                        <%- include('../partials/product-item.ejs') %>
-                    <% } %>
                     
-
+                    <% if(productsData.length < 1) { %>
+                        <span class="message-result">Nenhum resultado encontrado para "<span><%= message.content %>"</span></span>
+                    <% } else if(productsData.length > 1) { %>
+                        <% for(product of productsData){ %>
+                            <%- include('../partials/product-item.ejs') %>
+                        <% } %>
+                    <% } else { 
+                        let product = productsData[0]; 
+                        console.log('----------------------')
+                        console.log( productsData)%>
+                        <%- include('../partials/product-item.ejs', product) %>
+                    <% } %>
+                            
                 </div>
                 <!-- <button type="button" class="button-submit">Ver mais</button> -->
             </form>

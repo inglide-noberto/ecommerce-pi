@@ -11,7 +11,7 @@ module.exports = {
     name:'Joao Manoel',
     slug: 'joao-manoel',
     email: 'joao@mail.com',
-    password: '12345',
+    password: '$2b$10$tFce0e5oiGtdqz2nKfjiNeYnYmqwKZDPNNiDRBZ2MSwNuvmrmMdGu',
     phone: '66 99999-9999',
     cpf: 44044444444,
     birt_date: null,

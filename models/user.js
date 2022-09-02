@@ -41,8 +41,6 @@ module.exports = (sequelize, DataTypes) => {
       as:'orders'
     });
 
-    User.hasMany(models.CartUser, {foreignKey:'id_user'});
-
   };
 
   

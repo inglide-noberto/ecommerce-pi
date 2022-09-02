@@ -61,11 +61,11 @@
             <div class="user-informations-block background-block">
                 <h2>Endereço</h2>
 
-                <% if(user.address) { %>
+                <% if(user.adresses) { %>
                 <form method="post" action="/usuario/<%= user.slug%>/conta/endereco" class="form-user-address">
                     <div class="user-informations-block-div">
                         <label for="">Apelido do Endereço</label>
-                        <input type="text" name="title" id="title" value="<%= user.adresses[0].title%>">
+                        <input type="text" name="title" id="title" value="<%= user.adresses[0].title %>">
                     </div>
                     <!-- <div class="user-informations-block-div">
                         <label for="">Nome do Destinatário</label>

@@ -196,6 +196,7 @@ const UserController = {
 
         let slug = name.toLowerCase().replace(/ /g, '-')
 
+        console.log(slug, name)
         //-------------------- Validations --------------------
         const userExists = await UserRepository.findOne({
             where: {
@@ -237,7 +238,7 @@ const UserController = {
         
         console.log(bcrypt.hashSync(password, 10))
         
-        UserRepository.create({
+        await UserRepository.create({
             name:  name,
             slug:  slug,
             email:  emailCreate,
@@ -263,7 +264,6 @@ const UserController = {
         req.session.save()
 
         res.redirect(`/usuario/${slug}`)
-        //res.render('layout', {'page':'user-informations', user, message})
     },
 
 
@@ -275,9 +275,6 @@ const UserController = {
             content: ""
         }
 
-        console.log('-----Login-----')
-        console.log(req.body)
-
         const userExists = await UserRepository.findOne({
             where: {
                 'email': email
@@ -288,18 +285,14 @@ const UserController = {
         if(!userExists) {
             message.type = 'login'
             message.content = 'Usuário não cadastrado, por favor crie uma conta'
-            return res.render('layout', {'page': 'login', message})
+            return res.json(message)          
         }
 
         if (!bcrypt.compareSync(password, userExists.password)) {
             message.type = 'login'
             message.content = 'Senha inválida'
-            return res.render('layout', {'page': 'login', message})
+            return res.json(message)
         } 
-
-        
-
-        console.log('------Entei login-----')
 
         const userSessionData = {
             name: userExists.name,
@@ -310,19 +303,14 @@ const UserController = {
         }
 
         req.session.authData = userSessionData
-        console.log(userSessionData)
         
         return res.json(userSessionData)
-        return res.redirect(`/usuario/${userExists.slug}`)
     },
 
 
 
     logout: (req, res) => {
-        console.log('-----Entrou no logout------')
-
         req.session.destroy();
-        console.log('-----Saiu------')
         return res.redirect('/');
     },
 

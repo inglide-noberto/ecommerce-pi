@@ -23,7 +23,6 @@ const authenticationMiddleware = (req, res, next) => {
 
 
 //-------------- ROUTES -----------------
-router.get('/', ProfileController.index)
 router.get('/:slug', authenticationMiddleware, ProfileController.showUser)
 router.get('/:slug/pedidos', authenticationMiddleware, ProfileController.indexOrders)
 router.get('/:slug/pedidos/:id', authenticationMiddleware, ProfileController.showOrder)
@@ -38,6 +37,7 @@ router.get('/:slug/sair', authenticationMiddleware, ProfileController.logout)
 router.post('/criar', ProfileController.create)
 router.post('/logar', ProfileController.login)
 
+router.get('/', ProfileController.index)
 
 
 module.exports = router

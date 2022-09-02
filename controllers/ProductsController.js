@@ -136,56 +136,13 @@ const ProductsController = {
 
         productsData = productsData.map(product => product.toJSON())
         
-
+        console.log(productsData)
 
         res.render('layout', {'page':'store', productsData, message})      
         
     },
 
 
-
-    productJson: async (req, res) => {
-        const {slug} = req.params
-        let product = await ProductRepository.findOne({
-            where: {
-                slug: slug
-            },
-            include: {
-                require: true,
-                all: true, 
-                nested: true,
-            }
-
-        });
-        
-        if (product) {
-            product = product.toJSON();
-            console.log('------product-------');
-            console.log(product);
-
-            let productsData = await ProductRepository.findAll({
-                include: {
-                    require: true,
-                    all: true, 
-                    nested: true,
-                }
-            })
-            
-            if(productsData.length > 1)
-                productsData = productsData.map(product => product.toJSON())
-            else
-                productsData = productsData[0].toJSON()
-            
-            console.log('------productSSSSSSSSSSS-------');
-            console.log(productsData[1].product_category);
-
-            
-            return res.json(product)
-        }
-        else {
-            res.status(404)
-        }
-    },
 
 
     productView: async (req, res) => {

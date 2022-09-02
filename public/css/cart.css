@@ -70,6 +70,10 @@ td {
     padding: 0 1em;
 }
 
+.product-description {
+    font-size: 12px;
+}
+
 .cart-product-image {
     width: 110px;
     min-width: 110px;

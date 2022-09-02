@@ -26,8 +26,10 @@ const CartController = {
 
         })
         console.log('tooooo aqui')
-        console.log(product)
         product = product.toJSON()
+        console.log('-----------------')
+        console.log(product)
+
         return res.json(product)
     },
     index: (req,res)=>{
