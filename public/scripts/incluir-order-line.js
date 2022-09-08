@@ -94,8 +94,10 @@ window.addEventListener('load', () => {
             var totalProducts = productsCart[0].price * productsCart[0].quantity
             var totalOrder = totalProducts
 
+
             resumeQuantProducts.innerHTML = '1'
             resumeProductsPrice.innerHTML = totalProducts
+
 
             console.log()
             resumeTotalValue.innerHTML = totalOrder
@@ -127,4 +129,6 @@ window.addEventListener('load', () => {
 
     }
 
+
 })
+
