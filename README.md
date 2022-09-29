@@ -14,6 +14,23 @@ Plataforma para e-commerce com CRUD completo, com acessebilidade e 100% responsi
 # Preview
 ![image](https://user-images.githubusercontent.com/73858741/175830385-bf5cbb9b-4a62-4dc2-ba80-26ed5388a135.png)
 
+<br>
+
+![Opera Instantâneo_2022-08-30_172911_localhost (2)](https://user-images.githubusercontent.com/37940243/193058784-74c25636-7b37-411c-ad7b-c4e8605bfde8.png)
+
+<br>
+
+![Opera Instantâneo_2022-08-30_172935_localhost (2)](https://user-images.githubusercontent.com/37940243/193058815-59467052-2615-4e62-8bd3-999b4b30889b.png)
+
+<br>
+
+![a](https://user-images.githubusercontent.com/37940243/193058855-7817ae05-b6c7-4b19-88f6-576041489302.png)
+
+<br>
+
+![Opera Instantâneo_2022-08-30_180520_localhost (2)](https://user-images.githubusercontent.com/37940243/193058887-505a2e50-e395-42fa-9be0-0f64faf3231e.png)
+
+
 
 <br>
 <br>
