@@ -1,12 +1,22 @@
-<div align="center">
+# 🛒 Ecommerce PI
 
-# Plataforma para E-Commerce
+Projeto de e-commerce desenvolvido em grupo como parte de um Projeto Integrador. A aplicação oferece funcionalidades completas, como cadastro de usuários, login, gerenciamento de produtos e um painel administrativo.
 
-Plataforma para e-commerce com CRUD completo, com acessebilidade e 100% responsivo
+## 🚀 Tecnologias utilizadas
 
-[![made in brazil](https://img.shields.io/badge/state%20-bulding-009.svg?style=for-the-badge)]() [![made in brazil](https://img.shields.io/badge/made%20in-brazil-008751.svg?style=for-the-badge)](https://www.google.com/maps/place/brazil)
-</div>
+- React.js
+- JavaScript
+- Styled Components
+- JSON Server (fake API)
+- React Router DOM
+- Axios
 
+## 👥 Time de desenvolvimento
+
+- [Analyce Ferreira](https://github.com/analyceferreira)
+- [Inglide Noberto](https://github.com/inglide-noberto)
+- [Alessandro Vieira](https://github.com/Alessandro-VieiraAzu1)
+- [Bruno Brito](https://github.com/bmb2110)
 
 <br>
 <br>
@@ -30,30 +40,8 @@ Plataforma para e-commerce com CRUD completo, com acessebilidade e 100% responsi
 
 ![Opera Instantâneo_2022-08-30_180520_localhost (2)](https://user-images.githubusercontent.com/37940243/193058887-505a2e50-e395-42fa-9be0-0f64faf3231e.png)
 
-
-
 <br>
 <br>
-
-# Techs
-
-## Front-end
-- HTML semântico
-- CSS modular e dinâmico
-- EJS
-- Javascrip vanilla
-- JQuery
-
-
-## Back-end
-- API REST
-- NodeJS
-- Express
-- Sequelize
-- MySQL
-
-<br>
-
 
 # Running the app
 ```bash
